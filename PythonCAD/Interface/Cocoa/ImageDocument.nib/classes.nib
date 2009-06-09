@@ -1,0 +1,21 @@
+{
+    IBClasses = (
+        {CLASS = CADView; LANGUAGE = ObjC; SUPERCLASS = NSView; }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = ImageDocument; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                CADView = CADView; 
+                entryField = NSTextField; 
+                layerOutlineView = NSOutlineView; 
+                locationField = NSTextField; 
+                promptField = NSTextField; 
+                splitView = NSSplitView; 
+            }; 
+            SUPERCLASS = NSDocument; 
+        }, 
+        {CLASS = LayerOutlineView; LANGUAGE = ObjC; SUPERCLASS = NSOutlineView; }
+    ); 
+    IBVersion = 1; 
+}
