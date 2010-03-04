@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Tasks SYSTEM "Tasks-4.2.dtd">
+<!-- eric4 tasks file for project PythonCad -->
+<!-- Saved: 2010-03-03, 19:57:05 -->
+<Tasks version="4.2">
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO:</Summary>
+    <Description></Description>
+    <Created>2010-03-03, 19:10:51</Created>
+    <Resource>
+      <Filename>PythonCAD/Generic/Kernel/pycadentdb.py</Filename>
+      <Linenumber>241</Linenumber>
+    </Resource>
+  </Task>
+</Tasks>
