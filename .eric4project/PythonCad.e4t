@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Tasks SYSTEM "Tasks-4.2.dtd">
 <!-- eric4 tasks file for project PythonCad -->
-<!-- Saved: 2010-03-06, 09:20:33 -->
+<!-- Saved: 2010-03-08, 07:09:28 -->
 <Tasks version="4.2">
   <Task priority="1" completed="False" bugfix="False">
     <Summary>TODO:</Summary>
     <Description></Description>
-    <Created>2010-03-04, 09:23:27</Created>
+    <Created>2010-03-04, 10:23:27</Created>
     <Resource>
       <Filename>PythonCAD/Generic/Kernel/pycadrelation.py</Filename>
       <Linenumber>110</Linenumber>
@@ -15,10 +15,10 @@
   <Task priority="1" completed="False" bugfix="False">
     <Summary>TODO:</Summary>
     <Description></Description>
-    <Created>2010-03-06, 08:46:52</Created>
+    <Created>2010-03-06, 11:09:16</Created>
     <Resource>
       <Filename>PythonCAD/Generic/Kernel/pycadkernel.py</Filename>
-      <Linenumber>434</Linenumber>
+      <Linenumber>422</Linenumber>
     </Resource>
   </Task>
 </Tasks>
