@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-4.6.dtd">
 <!-- eric4 project file for project PythonCad -->
-<!-- Saved: 2010-03-06, 09:20:33 -->
+<!-- Saved: 2010-03-11, 08:46:13 -->
 <!-- Copyright (C) 2010 Matteo Boscolo, matteo.boscolo@boscolini.eu -->
 <Project version="4.6">
   <Language>en</Language>
@@ -160,7 +160,6 @@
     <Source>PythonCAD/Generic/Kernel/pycadrelation.py</Source>
     <Source>PythonCAD/Generic/Kernel/pycadsettings.py</Source>
     <Source>PythonCAD/Generic/Kernel/pycadundodb.py</Source>
-    <Source>PythonCAD/Generic/Kernel/test_kernel.py</Source>
     <Source>PythonCAD/Generic/Kernel/__init__.py</Source>
     <Source>PythonCAD/Generic/keywords.py</Source>
     <Source>PythonCAD/Generic/layer.py</Source>
@@ -359,6 +358,9 @@
     <Source>PythonCAD/pythoncad_wx.py</Source>
     <Source>setup.py</Source>
     <Source>__init__.py</Source>
+    <Source>PythonCAD/test_kernel.py</Source>
+    <Source>PythonCAD/Generic/Kernel/pycadextformat.py</Source>
+    <Source>PythonCAD/Generic/Kernel/pycadinitsetting.py</Source>
   </Sources>
   <Forms>
   </Forms>
@@ -370,7 +372,7 @@
   </Interfaces>
   <Others>
   </Others>
-  <MainScript>PythonCAD/Generic/Kernel/test_kernel.py</MainScript>
+  <MainScript>PythonCAD/test_kernel.py</MainScript>
   <Vcs>
     <VcsType>None</VcsType>
   </Vcs>
