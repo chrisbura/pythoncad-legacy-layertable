@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-4.6.dtd">
 <!-- eric4 project file for project PythonCad -->
-<!-- Saved: 2010-03-11, 08:46:13 -->
+<!-- Saved: 2010-03-12, 08:07:21 -->
 <!-- Copyright (C) 2010 Matteo Boscolo, matteo.boscolo@boscolini.eu -->
 <Project version="4.6">
   <Language>en</Language>
@@ -361,6 +361,7 @@
     <Source>PythonCAD/test_kernel.py</Source>
     <Source>PythonCAD/Generic/Kernel/pycadextformat.py</Source>
     <Source>PythonCAD/Generic/Kernel/pycadinitsetting.py</Source>
+    <Source>PythonCAD/Generic/Kernel/binarytree.py</Source>
   </Sources>
   <Forms>
   </Forms>
