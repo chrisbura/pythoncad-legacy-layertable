@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-4.6.dtd">
 <!-- eric4 project file for project PythonCad -->
-<!-- Saved: 2010-03-19, 13:46:49 -->
+<!-- Saved: 2010-03-19, 15:28:40 -->
 <!-- Copyright (C) 2010 Matteo Boscolo, matteo.boscolo@boscolini.eu -->
 <Project version="4.6">
   <Language>en</Language>
@@ -146,7 +146,6 @@
     <Source>PythonCAD/Generic/imageio.py</Source>
     <Source>PythonCAD/Generic/intersections.py</Source>
     <Source>PythonCAD/Generic/Kernel/Entity/baseobject.py</Source>
-    <Source>PythonCAD/Generic/Kernel/Entity/layer.py</Source>
     <Source>PythonCAD/Generic/Kernel/Entity/point.py</Source>
     <Source>PythonCAD/Generic/Kernel/Entity/pycadobject.py</Source>
     <Source>PythonCAD/Generic/Kernel/Entity/pycadstyle.py</Source>
@@ -361,6 +360,8 @@
     <Source>PythonCAD/Generic/Kernel/pycadinitsetting.py</Source>
     <Source>PythonCAD/Generic/Kernel/binarytree.py</Source>
     <Source>PythonCAD/Generic/Kernel/pycadindex.py</Source>
+    <Source>PythonCAD/Generic/Kernel/pycadlayertree.py</Source>
+    <Source>PythonCAD/Generic/Kernel/pycadlayer.py</Source>
   </Sources>
   <Forms>
   </Forms>
