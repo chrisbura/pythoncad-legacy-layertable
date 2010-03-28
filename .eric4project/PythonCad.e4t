@@ -1,39 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Tasks SYSTEM "Tasks-4.2.dtd">
 <!-- eric4 tasks file for project PythonCad -->
-<!-- Saved: 2010-03-25, 09:08:49 -->
+<!-- Saved: 2010-03-27, 09:55:23 -->
 <Tasks version="4.2">
-  <Task priority="1" completed="False" bugfix="False">
-    <Summary>TODO:</Summary>
+  <Task priority="1" completed="False" bugfix="True">
+    <Summary>FIXME: re-examine this once new text stuff is in place</Summary>
     <Description></Description>
-    <Created>2010-03-04, 10:23:27</Created>
+    <Created>2010-03-27, 07:50:16</Created>
     <Resource>
-      <Filename>PythonCAD/Generic/Kernel/pycadrelation.py</Filename>
-      <Linenumber>110</Linenumber>
+      <Filename>build/lib/PythonCAD/Generic/image.py</Filename>
+      <Linenumber>1716</Linenumber>
     </Resource>
   </Task>
   <Task priority="1" completed="False" bugfix="False">
     <Summary>TODO: Look at using weak references ...</Summary>
     <Description></Description>
-    <Created>2010-03-19, 12:08:44</Created>
+    <Created>2010-03-27, 07:50:16</Created>
     <Resource>
-      <Filename>PythonCAD/Interface/Wx/basetree.py</Filename>
+      <Filename>build/lib/PythonCAD/Generic/quadtree.py</Filename>
       <Linenumber>23</Linenumber>
     </Resource>
   </Task>
-  <Task priority="1" completed="False" bugfix="False">
-    <Summary>TODO: to be tested</Summary>
+  <Task priority="1" completed="False" bugfix="True">
+    <Summary>FIXME: needs error checking ...</Summary>
     <Description></Description>
-    <Created>2010-03-19, 13:57:20</Created>
+    <Created>2010-03-27, 07:50:16</Created>
     <Resource>
-      <Filename>PythonCAD/Generic/Kernel/pycadentdb.py</Filename>
-      <Linenumber>217</Linenumber>
+      <Filename>build/lib/PythonCAD/Generic/tools.py</Filename>
+      <Linenumber>4122</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="True">
+    <Summary>FIXME: re-examine this once new text stuff is in place</Summary>
+    <Description></Description>
+    <Created>2010-03-27, 07:50:17</Created>
+    <Resource>
+      <Filename>PythonCAD/Generic/image.py</Filename>
+      <Linenumber>1774</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: To be tested</Summary>
+    <Description></Description>
+    <Created>2010-03-27, 07:50:17</Created>
+    <Resource>
+      <Filename>PythonCAD/Generic/Kernel/pycadrelation.py</Filename>
+      <Linenumber>125</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: Look at using weak references ...</Summary>
+    <Description></Description>
+    <Created>2010-03-27, 07:50:18</Created>
+    <Resource>
+      <Filename>PythonCAD/Generic/quadtree.py</Filename>
+      <Linenumber>23</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="True">
+    <Summary>FIXME: needs error checking ...</Summary>
+    <Description></Description>
+    <Created>2010-03-27, 07:50:18</Created>
+    <Resource>
+      <Filename>PythonCAD/Generic/Tools/edit_dim_string_tool.py</Filename>
+      <Linenumber>134</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: fix this</Summary>
+    <Description></Description>
+    <Created>2010-03-27, 07:50:19</Created>
+    <Resource>
+      <Filename>PythonCAD/Interface/Menu/filemenu.py</Filename>
+      <Linenumber>237</Linenumber>
     </Resource>
   </Task>
   <Task priority="1" completed="False" bugfix="False">
     <Summary>TODO: get real layer name from entity</Summary>
     <Description></Description>
-    <Created>2010-03-25, 07:29:22</Created>
+    <Created>2010-03-27, 07:50:19</Created>
     <Resource>
       <Filename>PythonCAD/Interface/Wx/viewport.py</Filename>
       <Linenumber>47</Linenumber>
@@ -42,28 +87,37 @@
   <Task priority="1" completed="False" bugfix="False">
     <Summary>TODO: what if min_x == max_x or min_y == max_y</Summary>
     <Description></Description>
-    <Created>2010-03-25, 07:36:51</Created>
+    <Created>2010-03-27, 07:51:31</Created>
     <Resource>
       <Filename>PythonCAD/Generic/Kernel/pycadindex.py</Filename>
-      <Linenumber>94</Linenumber>
+      <Linenumber>96</Linenumber>
     </Resource>
   </Task>
   <Task priority="1" completed="False" bugfix="False">
     <Summary>TODO: make this better</Summary>
     <Description></Description>
-    <Created>2010-03-25, 07:36:51</Created>
+    <Created>2010-03-27, 07:51:31</Created>
     <Resource>
       <Filename>PythonCAD/Generic/Kernel/pycadindex.py</Filename>
-      <Linenumber>128</Linenumber>
+      <Linenumber>129</Linenumber>
     </Resource>
   </Task>
   <Task priority="1" completed="False" bugfix="False">
     <Summary>TODO: create a layer structure</Summary>
     <Description></Description>
-    <Created>2010-03-25, 07:37:40</Created>
+    <Created>2010-03-27, 09:37:01</Created>
     <Resource>
       <Filename>PythonCAD/Generic/Kernel/pycadkernel.py</Filename>
-      <Linenumber>475</Linenumber>
+      <Linenumber>487</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: to be tested</Summary>
+    <Description></Description>
+    <Created>2010-03-27, 09:41:20</Created>
+    <Resource>
+      <Filename>PythonCAD/Generic/Kernel/pycadentdb.py</Filename>
+      <Linenumber>217</Linenumber>
     </Resource>
   </Task>
 </Tasks>
