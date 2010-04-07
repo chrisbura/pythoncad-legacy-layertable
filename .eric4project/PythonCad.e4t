@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Tasks SYSTEM "Tasks-4.2.dtd">
 <!-- eric4 tasks file for project PythonCad -->
-<!-- Saved: 2010-04-03, 11:27:37 -->
+<!-- Saved: 2010-04-07, 19:21:20 -->
 <Tasks version="4.2">
   <Task priority="1" completed="False" bugfix="True">
     <Summary>FIXME: re-examine this once new text stuff is in place</Summary>
