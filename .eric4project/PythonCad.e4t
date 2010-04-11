@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Tasks SYSTEM "Tasks-4.2.dtd">
 <!-- eric4 tasks file for project PythonCad -->
-<!-- Saved: 2010-04-07, 19:21:20 -->
+<!-- Saved: 2010-04-09, 08:50:17 -->
 <Tasks version="4.2">
   <Task priority="1" completed="False" bugfix="True">
     <Summary>FIXME: re-examine this once new text stuff is in place</Summary>
@@ -105,7 +105,7 @@
   <Task priority="1" completed="False" bugfix="False">
     <Summary>TODO: to be tested</Summary>
     <Description></Description>
-    <Created>2010-03-27, 09:41:20</Created>
+    <Created>2010-04-08, 09:05:08</Created>
     <Resource>
       <Filename>PythonCAD/Generic/Kernel/pycadentdb.py</Filename>
       <Linenumber>217</Linenumber>
