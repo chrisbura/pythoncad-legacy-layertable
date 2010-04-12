@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-4.6.dtd">
 <!-- eric4 project file for project PythonCad -->
-<!-- Saved: 2010-04-03, 08:25:51 -->
+<!-- Saved: 2010-04-12, 09:28:33 -->
 <!-- Copyright (C) 2010 Matteo Boscolo, matteo.boscolo@boscolini.eu -->
 <Project version="4.6">
   <Language>en</Language>
@@ -148,17 +148,8 @@
     <Source>PythonCAD/Generic/Kernel/Entity/baseobject.py</Source>
     <Source>PythonCAD/Generic/Kernel/Entity/point.py</Source>
     <Source>PythonCAD/Generic/Kernel/Entity/pycadobject.py</Source>
-    <Source>PythonCAD/Generic/Kernel/Entity/pycadstyle.py</Source>
     <Source>PythonCAD/Generic/Kernel/Entity/segment.py</Source>
     <Source>PythonCAD/Generic/Kernel/Entity/__init__.py</Source>
-    <Source>PythonCAD/Generic/Kernel/pycadbasedb.py</Source>
-    <Source>PythonCAD/Generic/Kernel/pycaddbexception.py</Source>
-    <Source>PythonCAD/Generic/Kernel/pycadent.py</Source>
-    <Source>PythonCAD/Generic/Kernel/pycadentdb.py</Source>
-    <Source>PythonCAD/Generic/Kernel/pycadkernel.py</Source>
-    <Source>PythonCAD/Generic/Kernel/pycadrelation.py</Source>
-    <Source>PythonCAD/Generic/Kernel/pycadsettings.py</Source>
-    <Source>PythonCAD/Generic/Kernel/pycadundodb.py</Source>
     <Source>PythonCAD/Generic/Kernel/__init__.py</Source>
     <Source>PythonCAD/Generic/keywords.py</Source>
     <Source>PythonCAD/Generic/layer.py</Source>
@@ -355,12 +346,8 @@
     <Source>setup.py</Source>
     <Source>__init__.py</Source>
     <Source>PythonCAD/test_kernel.py</Source>
-    <Source>PythonCAD/Generic/Kernel/pycadextformat.py</Source>
-    <Source>PythonCAD/Generic/Kernel/pycadinitsetting.py</Source>
     <Source>PythonCAD/Generic/Kernel/binarytree.py</Source>
     <Source>PythonCAD/Generic/Kernel/pycadindex.py</Source>
-    <Source>PythonCAD/Generic/Kernel/pycadlayertree.py</Source>
-    <Source>PythonCAD/Generic/Kernel/pycadlayer.py</Source>
     <Source>PythonCAD/Generic/Kernel/pycadtransaction.py</Source>
     <Source>PythonCAD/Generic/Kernel/Entity/util.py</Source>
     <Source>PythonCAD/Generic/Kernel/Entity/pyGeoLib.py</Source>
@@ -369,8 +356,25 @@
     <Source>PythonCAD/Interface/Wx/displaypoint.py</Source>
     <Source>PythonCAD/Interface/Wx/layerdisplay.py</Source>
     <Source>PythonCAD/Interface/Wx/segmentdraw.py</Source>
-    <Source>PythonCAD/Generic/Kernel/pycadapplication.py</Source>
-    <Source>PythonCAD/Generic/Kernel/pycadcommands.py</Source>
+    <Source>PythonCAD/Generic/Kernel/exception.py</Source>
+    <Source>PythonCAD/Generic/Kernel/extformat.py</Source>
+    <Source>PythonCAD/Generic/Kernel/undodb.py</Source>
+    <Source>PythonCAD/Generic/Kernel/basedb.py</Source>
+    <Source>PythonCAD/Generic/Kernel/commands.py</Source>
+    <Source>PythonCAD/Generic/Kernel/entity.py</Source>
+    <Source>PythonCAD/Generic/Kernel/entdb.py</Source>
+    <Source>PythonCAD/Generic/Kernel/layer.py</Source>
+    <Source>PythonCAD/Generic/Kernel/settings.py</Source>
+    <Source>PythonCAD/Generic/Kernel/application.py</Source>
+    <Source>PythonCAD/Generic/Kernel/document.py</Source>
+    <Source>PythonCAD/Generic/Kernel/relation.py</Source>
+    <Source>PythonCAD/Generic/Kernel/initsetting.py</Source>
+    <Source>PythonCAD/Generic/Kernel/Entity/style.py</Source>
+    <Source>PythonCAD/Generic/Kernel/layertree.py</Source>
+    <Source>PythonCAD/Generic/Kernel/Entity/ellipse.py</Source>
+    <Source>PythonCAD/Generic/Kernel/Entity/hatch.py</Source>
+    <Source>PythonCAD/Generic/Kernel/Entity/nurbs.py</Source>
+    <Source>PythonCAD/Generic/Kernel/Entity/polyline.py</Source>
   </Sources>
   <Forms>
   </Forms>
