@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE DebuggerProperties SYSTEM "DebuggerProperties-3.9.dtd">
+<!-- eric4 debugger properties file for project PythonCad -->
+<!-- This file was generated automatically, do not edit. -->
+<!-- Saved: 2010-03-20, 00:54:21 -->
+<DebuggerProperties version="3.9">
+  <Interpreter></Interpreter>
+  <DebugClient></DebugClient>
+  <Environment override="0"></Environment>
+  <RemoteDebugger on="0">
+    <RemoteHost></RemoteHost>
+    <RemoteCommand></RemoteCommand>
+  </RemoteDebugger>
+  <PathTranslation on="0">
+    <RemotePath></RemotePath>
+    <LocalPath></LocalPath>
+  </PathTranslation>
+  <ConsoleDebugger on="0"></ConsoleDebugger>
+  <Redirect on="1" />
+  <Noencoding on="0" />
+</DebuggerProperties>
