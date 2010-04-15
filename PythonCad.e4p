@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-4.6.dtd">
 <!-- eric4 project file for project PythonCad -->
-<!-- Saved: 2010-04-15, 08:01:30 -->
+<!-- Saved: 2010-04-15, 08:54:51 -->
 <!-- Copyright (C) 2010 Matteo Boscolo, matteo.boscolo@boscolini.eu -->
 <Project version="4.6">
   <Language>en</Language>
@@ -376,6 +376,13 @@
     <Source>PythonCAD/Generic/Kernel/Entity/nurbs.py</Source>
     <Source>PythonCAD/Generic/Kernel/Entity/polyline.py</Source>
     <Source>PythonCAD/Generic/Kernel/Entity/geometricalentity.py</Source>
+    <Source>PythonCAD/pythoncad_qt.py</Source>
+    <Source>PythonCAD/Interface/Qt/cadscene.py</Source>
+    <Source>PythonCAD/Interface/Qt/cadview.py</Source>
+    <Source>PythonCAD/Interface/Qt/cadwindow.py</Source>
+    <Source>PythonCAD/Interface/Qt/cadwindow_rc.py</Source>
+    <Source>PythonCAD/Interface/Qt/segment.py</Source>
+    <Source>PythonCAD/Interface/Qt/__init__.py</Source>
   </Sources>
   <Forms>
   </Forms>
@@ -387,7 +394,7 @@
   </Interfaces>
   <Others>
   </Others>
-  <MainScript>PythonCAD/pythoncad_wx.py</MainScript>
+  <MainScript>PythonCAD/pythoncad_qt.py</MainScript>
   <Vcs>
     <VcsType>None</VcsType>
   </Vcs>
