@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-4.6.dtd">
 <!-- eric4 project file for project PythonCad -->
-<!-- Saved: 2010-04-15, 08:54:51 -->
+<!-- Saved: 2010-04-16, 08:27:36 -->
 <!-- Copyright (C) 2010 Matteo Boscolo, matteo.boscolo@boscolini.eu -->
 <Project version="4.6">
   <Language>en</Language>
@@ -115,139 +115,12 @@
     <Source>buildapp.py</Source>
     <Source>gtkpycad.py</Source>
     <Source>prefs.py</Source>
-    <Source>PythonCAD/Generic/acline.py</Source>
-    <Source>PythonCAD/Generic/arc.py</Source>
-    <Source>PythonCAD/Generic/baseobject.py</Source>
-    <Source>PythonCAD/Generic/bindump.py</Source>
-    <Source>PythonCAD/Generic/ccircle.py</Source>
-    <Source>PythonCAD/Generic/circle.py</Source>
-    <Source>PythonCAD/Generic/cline.py</Source>
-    <Source>PythonCAD/Generic/color.py</Source>
-    <Source>PythonCAD/Generic/conobject.py</Source>
-    <Source>PythonCAD/Generic/delete.py</Source>
-    <Source>PythonCAD/Generic/dimension.py</Source>
-    <Source>PythonCAD/Generic/dimtrees.py</Source>
-    <Source>PythonCAD/Generic/dwg12.py</Source>
-    <Source>PythonCAD/Generic/dwg1314.py</Source>
-    <Source>PythonCAD/Generic/dwg15.py</Source>
-    <Source>PythonCAD/Generic/dwgbase.py</Source>
-    <Source>PythonCAD/Generic/dwgutil.py</Source>
-    <Source>PythonCAD/Generic/dxf.py</Source>
-    <Source>PythonCAD/Generic/ellipse.py</Source>
-    <Source>PythonCAD/Generic/entity.py</Source>
-    <Source>PythonCAD/Generic/error.py</Source>
-    <Source>PythonCAD/Generic/extFormat.py</Source>
-    <Source>PythonCAD/Generic/fileio.py</Source>
-    <Source>PythonCAD/Generic/globals.py</Source>
-    <Source>PythonCAD/Generic/graphicobject.py</Source>
-    <Source>PythonCAD/Generic/hatch.py</Source>
-    <Source>PythonCAD/Generic/hcline.py</Source>
-    <Source>PythonCAD/Generic/image.py</Source>
-    <Source>PythonCAD/Generic/imageio.py</Source>
-    <Source>PythonCAD/Generic/intersections.py</Source>
     <Source>PythonCAD/Generic/Kernel/Entity/baseobject.py</Source>
     <Source>PythonCAD/Generic/Kernel/Entity/point.py</Source>
     <Source>PythonCAD/Generic/Kernel/Entity/pycadobject.py</Source>
     <Source>PythonCAD/Generic/Kernel/Entity/segment.py</Source>
     <Source>PythonCAD/Generic/Kernel/Entity/__init__.py</Source>
     <Source>PythonCAD/Generic/Kernel/__init__.py</Source>
-    <Source>PythonCAD/Generic/keywords.py</Source>
-    <Source>PythonCAD/Generic/layer.py</Source>
-    <Source>PythonCAD/Generic/leader.py</Source>
-    <Source>PythonCAD/Generic/linetype.py</Source>
-    <Source>PythonCAD/Generic/logger.py</Source>
-    <Source>PythonCAD/Generic/maptree.py</Source>
-    <Source>PythonCAD/Generic/message.py</Source>
-    <Source>PythonCAD/Generic/mirror.py</Source>
-    <Source>PythonCAD/Generic/move.py</Source>
-    <Source>PythonCAD/Generic/nurbs.py</Source>
-    <Source>PythonCAD/Generic/options.py</Source>
-    <Source>PythonCAD/Generic/plotfile.py</Source>
-    <Source>PythonCAD/Generic/point.py</Source>
-    <Source>PythonCAD/Generic/polyline.py</Source>
-    <Source>PythonCAD/Generic/preferences.py</Source>
-    <Source>PythonCAD/Generic/printing.py</Source>
-    <Source>PythonCAD/Generic/prompt.py</Source>
-    <Source>PythonCAD/Generic/pyGeoLib.py</Source>
-    <Source>PythonCAD/Generic/quadtree.py</Source>
-    <Source>PythonCAD/Generic/rotate.py</Source>
-    <Source>PythonCAD/Generic/segjoint.py</Source>
-    <Source>PythonCAD/Generic/segment.py</Source>
-    <Source>PythonCAD/Generic/selections.py</Source>
-    <Source>PythonCAD/Generic/snap.py</Source>
-    <Source>PythonCAD/Generic/split.py</Source>
-    <Source>PythonCAD/Generic/strcircle.py</Source>
-    <Source>PythonCAD/Generic/style.py</Source>
-    <Source>PythonCAD/Generic/tangent.py</Source>
-    <Source>PythonCAD/Generic/text.py</Source>
-    <Source>PythonCAD/Generic/tolerance.py</Source>
-    <Source>PythonCAD/Generic/Tools/acline_tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/angular_dimension_tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/arc_tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/ccircle_tangent_line_tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/ccircle_tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/chamfer_tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/change_color_tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/change_linetype_tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/change_style_tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/change_thickness_tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/circle_tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/cline_tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/delete_tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/deselect_tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/dimension_tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/edit_dimension_tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/edit_dim_string_tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/fillet_tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/fillet_two_line_tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/graphic_object_tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/hatch_tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/hcline_tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/horizontal_dimension_tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/horizontal_move_tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/horizontal_stretch_tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/leader_tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/linear_dimension_tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/mirror_tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/move_tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/parallel_offset_tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/paste_tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/perpendicular_cline_tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/plot_tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/point_tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/polygon_tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/polyline_tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/radial_dimension_tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/rectangle_tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/region_tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/rotate_tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/segment_tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/select_tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/split_tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/stretch_tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/tangent_ccircle_tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/tangent_circle_tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/tangent_cline_tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/text_tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/tools.py</Source>
-    <Source>PythonCAD/Generic/Tools/transfer_tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/two_point_ccircle_tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/two_point_circle_tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/two_point_tangent_ccircle_tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/utils.py</Source>
-    <Source>PythonCAD/Generic/Tools/vcline_tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/vertical_dimension_tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/vertical_move_tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/vertical_stretch_tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/zoom_tool.py</Source>
-    <Source>PythonCAD/Generic/Tools/__init__.py</Source>
-    <Source>PythonCAD/Generic/transfer.py</Source>
-    <Source>PythonCAD/Generic/tree.py</Source>
-    <Source>PythonCAD/Generic/units.py</Source>
-    <Source>PythonCAD/Generic/util.py</Source>
-    <Source>PythonCAD/Generic/vcline.py</Source>
-    <Source>PythonCAD/Generic/__init__.py</Source>
     <Source>PythonCAD/Interface/Command/cmdACLine.py</Source>
     <Source>PythonCAD/Interface/Command/cmdAngularDimension.py</Source>
     <Source>PythonCAD/Interface/Command/cmdArc.py</Source>
@@ -360,7 +233,6 @@
     <Source>PythonCAD/Generic/Kernel/extformat.py</Source>
     <Source>PythonCAD/Generic/Kernel/undodb.py</Source>
     <Source>PythonCAD/Generic/Kernel/basedb.py</Source>
-    <Source>PythonCAD/Generic/Kernel/commands.py</Source>
     <Source>PythonCAD/Generic/Kernel/entity.py</Source>
     <Source>PythonCAD/Generic/Kernel/entdb.py</Source>
     <Source>PythonCAD/Generic/Kernel/layer.py</Source>
@@ -383,6 +255,142 @@
     <Source>PythonCAD/Interface/Qt/cadwindow_rc.py</Source>
     <Source>PythonCAD/Interface/Qt/segment.py</Source>
     <Source>PythonCAD/Interface/Qt/__init__.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/acline.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/arc.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/baseobject.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/bindump.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/ccircle.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/circle.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/cline.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/color.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/conobject.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/delete.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/dimension.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/dimtrees.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/dwg12.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/dwg1314.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/dwg15.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/dwgbase.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/dwgutil.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/dxf.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/ellipse.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/entity.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/error.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/extFormat.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/fileio.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/globals.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/graphicobject.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/hatch.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/hcline.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/image.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/imageio.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/keywords.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/layer.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/leader.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/linetype.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/logger.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/maptree.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/message.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/mirror.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/move.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/intersections.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/quadtree.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/nurbs.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/options.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/plotfile.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/point.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/polyline.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/preferences.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/printing.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/prompt.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/pyGeoLib.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/rotate.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/segjoint.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/segment.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/selections.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/snap.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/split.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/strcircle.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/style.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/tangent.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/text.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/tolerance.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/transfer.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/tree.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/units.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/util.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/vcline.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/__init__.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/acline_tool.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/angular_dimension_tool.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/arc_tool.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/ccircle_tangent_line_tool.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/ccircle_tool.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/chamfer_tool.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/change_color_tool.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/change_linetype_tool.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/change_style_tool.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/change_thickness_tool.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/circle_tool.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/cline_tool.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/delete_tool.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/deselect_tool.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/dimension_tool.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/edit_dimension_tool.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/fillet_tool.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/fillet_two_line_tool.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/graphic_object_tool.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/hatch_tool.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/hcline_tool.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/horizontal_dimension_tool.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/horizontal_move_tool.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/horizontal_stretch_tool.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/leader_tool.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/linear_dimension_tool.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/mirror_tool.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/move_tool.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/parallel_offset_tool.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/paste_tool.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/perpendicular_cline_tool.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/point_tool.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/polygon_tool.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/polyline_tool.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/radial_dimension_tool.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/rectangle_tool.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/region_tool.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/rotate_tool.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/segment_tool.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/select_tool.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/split_tool.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/stretch_tool.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/tangent_ccircle_tool.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/tangent_circle_tool.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/tangent_cline_tool.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/text_tool.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/tool.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/tools.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/transfer_tool.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/two_point_ccircle_tool.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/two_point_circle_tool.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/two_point_tangent_ccircle_tool.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/utils.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/vcline_tool.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/vertical_dimension_tool.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/vertical_move_tool.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/vertical_stretch_tool.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/zoom_tool.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/__init__.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/edit_dim_string_tool.py</Source>
+    <Source>PythonCAD/Generic/OldGeneric/Tools/plot_tool.py</Source>
+    <Source>PythonCAD/__init__.py</Source>
+    <Source>PythonCAD/Generic/__init__.py</Source>
+    <Source>PythonCAD/Generic/Kernel/Command/__init__.py</Source>
+    <Source>PythonCAD/Generic/Kernel/Command/segmentcommand.py</Source>
+    <Source>PythonCAD/Generic/Kernel/Command/pointcommand.py</Source>
+    <Source>PythonCAD/Generic/Kernel/Command/arccommand.py</Source>
+    <Source>PythonCAD/Generic/Kernel/Command/ellipsecommand.py</Source>
+    <Source>PythonCAD/Generic/Kernel/Command/polylinecommand.py</Source>
+    <Source>PythonCAD/Generic/Kernel/Command/basecommand.py</Source>
   </Sources>
   <Forms>
   </Forms>
