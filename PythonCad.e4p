@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-4.6.dtd">
 <!-- eric4 project file for project PythonCad -->
-<!-- Saved: 2010-04-22, 09:10:25 -->
+<!-- Saved: 2010-04-23, 08:25:36 -->
 <!-- Copyright (C) 2010 Matteo Boscolo, matteo.boscolo@boscolini.eu -->
 <Project version="4.6">
   <Language>en</Language>
@@ -400,6 +400,10 @@
     <Source>PythonCAD/Generic/Kernel/Entity/cline.py</Source>
     <Source>PythonCAD/Generic/Kernel/Entity/vcline.py</Source>
     <Source>PythonCAD/Generic/Kernel/Entity/hcline.py</Source>
+    <Source>PythonCAD/Generic/Kernel/Command/aclinecommand.py</Source>
+    <Source>PythonCAD/Generic/Kernel/Command/clinecommand.py</Source>
+    <Source>PythonCAD/Generic/Kernel/Command/vclinecommand.py</Source>
+    <Source>PythonCAD/Generic/Kernel/Command/hclinecommand.py</Source>
   </Sources>
   <Forms>
   </Forms>
@@ -411,7 +415,7 @@
   </Interfaces>
   <Others>
   </Others>
-  <MainScript>PythonCAD/pythoncad_qt.py</MainScript>
+  <MainScript>PythonCAD/test_kernel.py</MainScript>
   <Vcs>
     <VcsType>None</VcsType>
   </Vcs>
