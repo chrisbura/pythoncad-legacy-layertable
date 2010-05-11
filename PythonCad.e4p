@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-4.6.dtd">
 <!-- eric4 project file for project PythonCad -->
-<!-- Saved: 2010-05-11, 11:42:28 -->
+<!-- Saved: 2010-05-11, 20:12:34 -->
 <!-- Copyright (C) 2010 Matteo Boscolo, matteo.boscolo@boscolini.eu -->
 <Project version="4.6">
   <Language>en</Language>
@@ -410,6 +410,9 @@
     <Source>PythonCAD/Generic/Kernel/rotate.py</Source>
     <Source>PythonCAD/Generic/Kernel/Entity/segjoint.py</Source>
     <Source>PythonCAD/Interface/arc.py</Source>
+    <Source>PythonCAD/Generic/Kernel/Entity/dimension.py</Source>
+    <Source>PythonCAD/Generic/Kernel/Entity/text.py</Source>
+    <Source>PythonCAD/Generic/Kernel/Command/textcommand.py</Source>
   </Sources>
   <Forms>
   </Forms>
