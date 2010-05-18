@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-4.6.dtd">
 <!-- eric4 project file for project PythonCad -->
-<!-- Saved: 2010-05-12, 14:00:25 -->
+<!-- Saved: 2010-05-17, 18:48:57 -->
 <!-- Copyright (C) 2010 Matteo Boscolo, matteo.boscolo@boscolini.eu -->
 <Project version="4.6">
   <Language>en</Language>
   <ProgLanguage mixed="0">Python</ProgLanguage>
-  <ProjectType>Other</ProjectType>
+  <ProjectType>Qt4</ProjectType>
   <Description></Description>
   <Version>0.38.0</Version>
   <Author>Matteo Boscolo</Author>
@@ -129,7 +129,6 @@
     <Source>PythonCAD/Generic/Kernel/binarytree.py</Source>
     <Source>PythonCAD/Generic/Kernel/pycadtransaction.py</Source>
     <Source>PythonCAD/Generic/Kernel/Entity/util.py</Source>
-    <Source>PythonCAD/Generic/Kernel/Entity/pyGeoLib.py</Source>
     <Source>PythonCAD/Generic/Kernel/Entity/tolerance.py</Source>
     <Source>PythonCAD/Generic/Kernel/Entity/arc.py</Source>
     <Source>PythonCAD/Generic/Kernel/exception.py</Source>
@@ -405,7 +404,6 @@
     <Source>PythonCAD/Generic/Kernel/Command/hclinecommand.py</Source>
     <Source>PythonCAD/Generic/Kernel/Entity/ccircle.py</Source>
     <Source>PythonCAD/Generic/Kernel/Command/ccirclecommand.py</Source>
-    <Source>PythonCAD/Generic/Kernel/intersection.py</Source>
     <Source>PythonCAD/Generic/Kernel/tangent.py</Source>
     <Source>PythonCAD/Generic/Kernel/rotate.py</Source>
     <Source>PythonCAD/Generic/Kernel/Entity/segjoint.py</Source>
@@ -414,8 +412,17 @@
     <Source>PythonCAD/Generic/Kernel/Entity/text.py</Source>
     <Source>PythonCAD/Generic/Kernel/Command/textcommand.py</Source>
     <Source>PythonCAD/Interface/text.py</Source>
+    <Source>PythonCAD/Generic/Kernel/Entity/intersection.py</Source>
+    <Source>MATTEO_BOSCOLO_TODO.PY</Source>
+    <Source>PythonCAD/Generic/Kernel/Command/chamfercommand.py</Source>
+    <Source>PythonCAD/Generic/Kernel/Entity/pygeolib.py</Source>
+    <Source>PythonCAD/Generic/Kernel/composedentity.py</Source>
+    <Source>PythonCAD/TestWindow.ui</Source>
+    <Source>PythonCAD/Ui_TestWindow.py</Source>
+    <Source>PythonCAD/customevent.py</Source>
   </Sources>
   <Forms>
+    <Form>PythonCAD/TestWindow.ui</Form>
   </Forms>
   <Translations>
   </Translations>
@@ -424,15 +431,21 @@
   <Interfaces>
   </Interfaces>
   <Others>
+    <Other>MATTEO_BOSCOLO_TODO.TXT</Other>
   </Others>
-  <MainScript>PythonCAD/test_kernel.py</MainScript>
+  <MainScript>PythonCAD/pythoncad_qt.py</MainScript>
   <Vcs>
     <VcsType>None</VcsType>
   </Vcs>
   <FiletypeAssociations>
-    <FiletypeAssociation pattern="*.pyw" type="SOURCES" />
+    <FiletypeAssociation pattern="*.ui" type="FORMS" />
     <FiletypeAssociation pattern="*.idl" type="INTERFACES" />
-    <FiletypeAssociation pattern="*.py" type="SOURCES" />
+    <FiletypeAssociation pattern="*.qm" type="TRANSLATIONS" />
     <FiletypeAssociation pattern="*.ptl" type="SOURCES" />
+    <FiletypeAssociation pattern="*.pyw" type="SOURCES" />
+    <FiletypeAssociation pattern="*.ui.h" type="FORMS" />
+    <FiletypeAssociation pattern="*.ts" type="TRANSLATIONS" />
+    <FiletypeAssociation pattern="*.py" type="SOURCES" />
+    <FiletypeAssociation pattern="*.qrc" type="RESOURCES" />
   </FiletypeAssociations>
 </Project>
