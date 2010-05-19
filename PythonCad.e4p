@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-4.6.dtd">
 <!-- eric4 project file for project PythonCad -->
-<!-- Saved: 2010-05-12, 14:00:25 -->
+<!-- Saved: 2010-05-18, 10:30:19 -->
 <!-- Copyright (C) 2010 Matteo Boscolo, matteo.boscolo@boscolini.eu -->
 <Project version="4.6">
   <Language>en</Language>
   <ProgLanguage mixed="0">Python</ProgLanguage>
-  <ProjectType>Other</ProjectType>
+  <ProjectType>Qt4</ProjectType>
   <Description></Description>
   <Version>0.38.0</Version>
   <Author>Matteo Boscolo</Author>
@@ -129,7 +129,6 @@
     <Source>PythonCAD/Generic/Kernel/binarytree.py</Source>
     <Source>PythonCAD/Generic/Kernel/pycadtransaction.py</Source>
     <Source>PythonCAD/Generic/Kernel/Entity/util.py</Source>
-    <Source>PythonCAD/Generic/Kernel/Entity/pyGeoLib.py</Source>
     <Source>PythonCAD/Generic/Kernel/Entity/tolerance.py</Source>
     <Source>PythonCAD/Generic/Kernel/Entity/arc.py</Source>
     <Source>PythonCAD/Generic/Kernel/exception.py</Source>
@@ -293,108 +292,6 @@
     <Source>PythonCAD/Interface/cadview.py</Source>
     <Source>PythonCAD/Interface/cadscene.py</Source>
     <Source>PythonCAD/Interface/segment.py</Source>
-    <Source>PythonCAD/Interface/Commandline/cmdlinedock.py</Source>
-    <Source>PythonCAD/Interface/Commandline/__init__.py</Source>
-    <Source>PythonCAD/Interface/FunctionParser/functionhandler.py</Source>
-    <Source>PythonCAD/Interface/FunctionParser/__init__.py</Source>
-    <Source>PythonCAD/Interface/old/Command/cmdHatch.py</Source>
-    <Source>PythonCAD/Interface/old/Command/cmdACLine.py</Source>
-    <Source>PythonCAD/Interface/old/Command/cmdAngularDimension.py</Source>
-    <Source>PythonCAD/Interface/old/Command/cmdArc.py</Source>
-    <Source>PythonCAD/Interface/old/Command/cmdCCircle.py</Source>
-    <Source>PythonCAD/Interface/old/Command/cmdCCircleTP.py</Source>
-    <Source>PythonCAD/Interface/old/Command/cmdCCirclTangToCLine.py</Source>
-    <Source>PythonCAD/Interface/old/Command/cmdChamfers.py</Source>
-    <Source>PythonCAD/Interface/old/Command/cmdCircle.py</Source>
-    <Source>PythonCAD/Interface/old/Command/cmdCircleTwoPoint.py</Source>
-    <Source>PythonCAD/Interface/old/Command/cmdCLineBetTwoLines.py</Source>
-    <Source>PythonCAD/Interface/old/Command/cmdCommon.py</Source>
-    <Source>PythonCAD/Interface/old/Command/cmdCParaLine.py</Source>
-    <Source>PythonCAD/Interface/old/Command/cmdCPerpLine.py</Source>
-    <Source>PythonCAD/Interface/old/Command/cmdCTangLine.py</Source>
-    <Source>PythonCAD/Interface/old/Command/cmdCTangTwoCircle.py</Source>
-    <Source>PythonCAD/Interface/old/Command/cmdFillet.py</Source>
-    <Source>PythonCAD/Interface/old/Command/cmdFilletTwoLine.py</Source>
-    <Source>PythonCAD/Interface/old/Command/cmdHCLine.py</Source>
-    <Source>PythonCAD/Interface/old/Command/cmdLeaderLines.py</Source>
-    <Source>PythonCAD/Interface/old/Command/cmdLinearDimension.py</Source>
-    <Source>PythonCAD/Interface/old/Command/cmdPaste.py</Source>
-    <Source>PythonCAD/Interface/old/Command/cmdPoint.py</Source>
-    <Source>PythonCAD/Interface/old/Command/cmdPolygons.py</Source>
-    <Source>PythonCAD/Interface/old/Command/cmdPolylines.py</Source>
-    <Source>PythonCAD/Interface/old/Command/cmdRadialDimension.py</Source>
-    <Source>PythonCAD/Interface/old/Command/cmdRectangle.py</Source>
-    <Source>PythonCAD/Interface/old/Command/cmdSegment.py</Source>
-    <Source>PythonCAD/Interface/old/Command/cmdSelection.py</Source>
-    <Source>PythonCAD/Interface/old/Command/cmdSetAttributes.py</Source>
-    <Source>PythonCAD/Interface/old/Command/cmdStructure.py</Source>
-    <Source>PythonCAD/Interface/old/Command/cmdText.py</Source>
-    <Source>PythonCAD/Interface/old/Command/cmdTwPCLine.py</Source>
-    <Source>PythonCAD/Interface/old/Command/cmdVCLine.py</Source>
-    <Source>PythonCAD/Interface/old/Command/__init__.py</Source>
-    <Source>PythonCAD/Interface/old/Entities/ipoint.py</Source>
-    <Source>PythonCAD/Interface/old/Entities/isegment.py</Source>
-    <Source>PythonCAD/Interface/old/Entities/__init__.py</Source>
-    <Source>PythonCAD/Interface/old/Gtk/gtkactions.py</Source>
-    <Source>PythonCAD/Interface/old/Gtk/gtkdialog.py</Source>
-    <Source>PythonCAD/Interface/old/Gtk/gtkerror.py</Source>
-    <Source>PythonCAD/Interface/old/Gtk/gtkimage.py</Source>
-    <Source>PythonCAD/Interface/old/Gtk/gtkinit.py</Source>
-    <Source>PythonCAD/Interface/old/Gtk/gtkmirror.py</Source>
-    <Source>PythonCAD/Interface/old/Gtk/gtkmodify.py</Source>
-    <Source>PythonCAD/Interface/old/Gtk/gtkprinting.py</Source>
-    <Source>PythonCAD/Interface/old/Gtk/gtkshell.py</Source>
-    <Source>PythonCAD/Interface/old/Gtk/__init__.py</Source>
-    <Source>PythonCAD/Interface/old/Menu/basemenu.py</Source>
-    <Source>PythonCAD/Interface/old/Menu/debugmenu.py</Source>
-    <Source>PythonCAD/Interface/old/Menu/dimensionmenu.py</Source>
-    <Source>PythonCAD/Interface/old/Menu/drawmenu.py</Source>
-    <Source>PythonCAD/Interface/old/Menu/editmenu.py</Source>
-    <Source>PythonCAD/Interface/old/Menu/filemenu.py</Source>
-    <Source>PythonCAD/Interface/old/Menu/helpmenu.py</Source>
-    <Source>PythonCAD/Interface/old/Menu/menubar.py</Source>
-    <Source>PythonCAD/Interface/old/Menu/modifymenu.py</Source>
-    <Source>PythonCAD/Interface/old/Menu/snapmenu.py</Source>
-    <Source>PythonCAD/Interface/old/Menu/viewmenu.py</Source>
-    <Source>PythonCAD/Interface/old/Menu/__init__.py</Source>
-    <Source>PythonCAD/Interface/old/Preferences/gtkdimprefs.py</Source>
-    <Source>PythonCAD/Interface/old/Preferences/gtkprefs.py</Source>
-    <Source>PythonCAD/Interface/old/Preferences/gtkstyleprefs.py</Source>
-    <Source>PythonCAD/Interface/old/Preferences/gtktextprefs.py</Source>
-    <Source>PythonCAD/Interface/old/Preferences/__init__.py</Source>
-    <Source>PythonCAD/Interface/old/Viewport/aclinedraw.py</Source>
-    <Source>PythonCAD/Interface/old/Viewport/arcdraw.py</Source>
-    <Source>PythonCAD/Interface/old/Viewport/ccircledraw.py</Source>
-    <Source>PythonCAD/Interface/old/Viewport/chamferdraw.py</Source>
-    <Source>PythonCAD/Interface/old/Viewport/circledraw.py</Source>
-    <Source>PythonCAD/Interface/old/Viewport/clinedraw.py</Source>
-    <Source>PythonCAD/Interface/old/Viewport/dimdraw.py</Source>
-    <Source>PythonCAD/Interface/old/Viewport/filletdraw.py</Source>
-    <Source>PythonCAD/Interface/old/Viewport/hclinedraw.py</Source>
-    <Source>PythonCAD/Interface/old/Viewport/inputhandler.py</Source>
-    <Source>PythonCAD/Interface/old/Viewport/layerdraw.py</Source>
-    <Source>PythonCAD/Interface/old/Viewport/leaderdraw.py</Source>
-    <Source>PythonCAD/Interface/old/Viewport/pointdraw.py</Source>
-    <Source>PythonCAD/Interface/old/Viewport/polygondraw.py</Source>
-    <Source>PythonCAD/Interface/old/Viewport/polylinedraw.py</Source>
-    <Source>PythonCAD/Interface/old/Viewport/segmentdraw.py</Source>
-    <Source>PythonCAD/Interface/old/Viewport/textblockdraw.py</Source>
-    <Source>PythonCAD/Interface/old/Viewport/vclinedraw.py</Source>
-    <Source>PythonCAD/Interface/old/Viewport/viewport.py</Source>
-    <Source>PythonCAD/Interface/old/Viewport/viewstate.py</Source>
-    <Source>PythonCAD/Interface/old/Viewport/zoomtool.py</Source>
-    <Source>PythonCAD/Interface/old/Viewport/__init__.py</Source>
-    <Source>PythonCAD/Interface/old/Wx/cadwindow.py</Source>
-    <Source>PythonCAD/Interface/old/Wx/commandline.py</Source>
-    <Source>PythonCAD/Interface/old/Wx/displayobject.py</Source>
-    <Source>PythonCAD/Interface/old/Wx/displaypoint.py</Source>
-    <Source>PythonCAD/Interface/old/Wx/document.py</Source>
-    <Source>PythonCAD/Interface/old/Wx/layerdisplay.py</Source>
-    <Source>PythonCAD/Interface/old/Wx/menubar.py</Source>
-    <Source>PythonCAD/Interface/old/Wx/segmentdraw.py</Source>
-    <Source>PythonCAD/Interface/old/Wx/view.py</Source>
-    <Source>PythonCAD/Interface/old/Wx/viewport.py</Source>
-    <Source>PythonCAD/Interface/old/Wx/__init__.py</Source>
     <Source>PythonCAD/Generic/Kernel/Entity/acline.py</Source>
     <Source>PythonCAD/Generic/Kernel/Entity/cline.py</Source>
     <Source>PythonCAD/Generic/Kernel/Entity/vcline.py</Source>
@@ -405,7 +302,6 @@
     <Source>PythonCAD/Generic/Kernel/Command/hclinecommand.py</Source>
     <Source>PythonCAD/Generic/Kernel/Entity/ccircle.py</Source>
     <Source>PythonCAD/Generic/Kernel/Command/ccirclecommand.py</Source>
-    <Source>PythonCAD/Generic/Kernel/intersection.py</Source>
     <Source>PythonCAD/Generic/Kernel/tangent.py</Source>
     <Source>PythonCAD/Generic/Kernel/rotate.py</Source>
     <Source>PythonCAD/Generic/Kernel/Entity/segjoint.py</Source>
@@ -414,8 +310,23 @@
     <Source>PythonCAD/Generic/Kernel/Entity/text.py</Source>
     <Source>PythonCAD/Generic/Kernel/Command/textcommand.py</Source>
     <Source>PythonCAD/Interface/text.py</Source>
+    <Source>PythonCAD/Generic/Kernel/Entity/intersection.py</Source>
+    <Source>MATTEO_BOSCOLO_TODO.PY</Source>
+    <Source>PythonCAD/Generic/Kernel/Command/chamfercommand.py</Source>
+    <Source>PythonCAD/Generic/Kernel/Entity/pygeolib.py</Source>
+    <Source>PythonCAD/Generic/Kernel/composedentity.py</Source>
+    <Source>PythonCAD/TestWindow.ui</Source>
+    <Source>PythonCAD/Ui_TestWindow.py</Source>
+    <Source>PythonCAD/customevent.py</Source>
+    <Source>PythonCAD/Interface/CmdIntf/cmdaction.py</Source>
+    <Source>PythonCAD/Interface/CmdIntf/cmdcategory.py</Source>
+    <Source>PythonCAD/Interface/CmdIntf/cmdintf.py</Source>
+    <Source>PythonCAD/Interface/CmdIntf/cmdlinedock.py</Source>
+    <Source>PythonCAD/Interface/CmdIntf/functionhandler.py</Source>
+    <Source>PythonCAD/Interface/CmdIntf/__init__.py</Source>
   </Sources>
   <Forms>
+    <Form>PythonCAD/TestWindow.ui</Form>
   </Forms>
   <Translations>
   </Translations>
@@ -424,15 +335,21 @@
   <Interfaces>
   </Interfaces>
   <Others>
+    <Other>MATTEO_BOSCOLO_TODO.TXT</Other>
   </Others>
-  <MainScript>PythonCAD/test_kernel.py</MainScript>
+  <MainScript>PythonCAD/pythoncad_qt.py</MainScript>
   <Vcs>
     <VcsType>None</VcsType>
   </Vcs>
   <FiletypeAssociations>
-    <FiletypeAssociation pattern="*.pyw" type="SOURCES" />
+    <FiletypeAssociation pattern="*.ui" type="FORMS" />
     <FiletypeAssociation pattern="*.idl" type="INTERFACES" />
-    <FiletypeAssociation pattern="*.py" type="SOURCES" />
+    <FiletypeAssociation pattern="*.qm" type="TRANSLATIONS" />
     <FiletypeAssociation pattern="*.ptl" type="SOURCES" />
+    <FiletypeAssociation pattern="*.pyw" type="SOURCES" />
+    <FiletypeAssociation pattern="*.ui.h" type="FORMS" />
+    <FiletypeAssociation pattern="*.ts" type="TRANSLATIONS" />
+    <FiletypeAssociation pattern="*.py" type="SOURCES" />
+    <FiletypeAssociation pattern="*.qrc" type="RESOURCES" />
   </FiletypeAssociations>
 </Project>
