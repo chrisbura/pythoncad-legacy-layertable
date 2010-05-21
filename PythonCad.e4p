@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-4.6.dtd">
 <!-- eric4 project file for project PythonCad -->
-<!-- Saved: 2010-05-21, 17:40:10 -->
+<!-- Saved: 2010-05-21, 20:54:43 -->
 <!-- Copyright (C) 2010 Matteo Boscolo, matteo.boscolo@boscolini.eu -->
 <Project version="4.6">
   <Language>en</Language>
@@ -327,6 +327,7 @@
     <Source>PythonCAD/Interface/Entity/ellipse.py</Source>
     <Source>PythonCAD/Interface/cadinitsetting.py</Source>
     <Source>PythonCAD/Generic/Kernel/Command/rectanglecommand.py</Source>
+    <Source>PythonCAD/Generic/Kernel/Command/polygoncommand.py</Source>
   </Sources>
   <Forms>
     <Form>PythonCAD/TestWindow.ui</Form>
