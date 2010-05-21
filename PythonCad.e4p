@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-4.6.dtd">
 <!-- eric4 project file for project PythonCad -->
-<!-- Saved: 2010-05-21, 10:39:45 -->
+<!-- Saved: 2010-05-21, 17:40:10 -->
 <!-- Copyright (C) 2010 Matteo Boscolo, matteo.boscolo@boscolini.eu -->
 <Project version="4.6">
   <Language>en</Language>
@@ -125,7 +125,6 @@
     <Source>PythonCAD/pythoncad_wx.py</Source>
     <Source>setup.py</Source>
     <Source>__init__.py</Source>
-    <Source>PythonCAD/test_kernel.py</Source>
     <Source>PythonCAD/Generic/Kernel/binarytree.py</Source>
     <Source>PythonCAD/Generic/Kernel/pycadtransaction.py</Source>
     <Source>PythonCAD/Generic/Kernel/Entity/util.py</Source>
@@ -327,6 +326,7 @@
     <Source>PythonCAD/Interface/Entity/text.py</Source>
     <Source>PythonCAD/Interface/Entity/ellipse.py</Source>
     <Source>PythonCAD/Interface/cadinitsetting.py</Source>
+    <Source>PythonCAD/Generic/Kernel/Command/rectanglecommand.py</Source>
   </Sources>
   <Forms>
     <Form>PythonCAD/TestWindow.ui</Form>
