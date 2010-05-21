@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-4.6.dtd">
 <!-- eric4 project file for project PythonCad -->
-<!-- Saved: 2010-05-18, 10:30:19 -->
+<!-- Saved: 2010-05-21, 10:39:45 -->
 <!-- Copyright (C) 2010 Matteo Boscolo, matteo.boscolo@boscolini.eu -->
 <Project version="4.6">
   <Language>en</Language>
@@ -291,7 +291,6 @@
     <Source>PythonCAD/Interface/cadwindow.py</Source>
     <Source>PythonCAD/Interface/cadview.py</Source>
     <Source>PythonCAD/Interface/cadscene.py</Source>
-    <Source>PythonCAD/Interface/segment.py</Source>
     <Source>PythonCAD/Generic/Kernel/Entity/acline.py</Source>
     <Source>PythonCAD/Generic/Kernel/Entity/cline.py</Source>
     <Source>PythonCAD/Generic/Kernel/Entity/vcline.py</Source>
@@ -305,11 +304,9 @@
     <Source>PythonCAD/Generic/Kernel/tangent.py</Source>
     <Source>PythonCAD/Generic/Kernel/rotate.py</Source>
     <Source>PythonCAD/Generic/Kernel/Entity/segjoint.py</Source>
-    <Source>PythonCAD/Interface/arc.py</Source>
     <Source>PythonCAD/Generic/Kernel/Entity/dimension.py</Source>
     <Source>PythonCAD/Generic/Kernel/Entity/text.py</Source>
     <Source>PythonCAD/Generic/Kernel/Command/textcommand.py</Source>
-    <Source>PythonCAD/Interface/text.py</Source>
     <Source>PythonCAD/Generic/Kernel/Entity/intersection.py</Source>
     <Source>MATTEO_BOSCOLO_TODO.PY</Source>
     <Source>PythonCAD/Generic/Kernel/Command/chamfercommand.py</Source>
@@ -324,6 +321,12 @@
     <Source>PythonCAD/Interface/CmdIntf/cmdlinedock.py</Source>
     <Source>PythonCAD/Interface/CmdIntf/functionhandler.py</Source>
     <Source>PythonCAD/Interface/CmdIntf/__init__.py</Source>
+    <Source>PythonCAD/Interface/Entity/__init__.py</Source>
+    <Source>PythonCAD/Interface/Entity/arc.py</Source>
+    <Source>PythonCAD/Interface/Entity/segment.py</Source>
+    <Source>PythonCAD/Interface/Entity/text.py</Source>
+    <Source>PythonCAD/Interface/Entity/ellipse.py</Source>
+    <Source>PythonCAD/Interface/cadinitsetting.py</Source>
   </Sources>
   <Forms>
     <Form>PythonCAD/TestWindow.ui</Form>
