@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Tasks SYSTEM "Tasks-4.2.dtd">
 <!-- eric4 tasks file for project PythonCad -->
-<!-- Saved: 2010-05-24, 17:39:18 -->
+<!-- Saved: 2010-05-26, 14:44:24 -->
 <Tasks version="4.2">
   <Task priority="1" completed="False" bugfix="True">
     <Summary>FIXME: re-examine this once new text stuff is in place</Summary>
@@ -13,18 +13,54 @@
     </Resource>
   </Task>
   <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: to be tested</Summary>
+    <Description></Description>
+    <Created>2010-05-25, 18:57:50</Created>
+    <Resource>
+      <Filename>PythonCAD/Generic/Kernel/entdb.py</Filename>
+      <Linenumber>225</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
     <Summary>TODO: To be tested</Summary>
     <Description></Description>
-    <Created>2010-05-16, 08:02:49</Created>
+    <Created>2010-05-25, 19:19:22</Created>
     <Resource>
       <Filename>PythonCAD/Generic/Kernel/relation.py</Filename>
       <Linenumber>123</Linenumber>
     </Resource>
   </Task>
   <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: Improve the local directory for different os ..</Summary>
+    <Description></Description>
+    <Created>2010-05-26, 14:11:50</Created>
+    <Resource>
+      <Filename>PythonCAD/Generic/Kernel/application.py</Filename>
+      <Linenumber>43</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: to be tested</Summary>
+    <Description></Description>
+    <Created>2010-05-26, 14:17:35</Created>
+    <Resource>
+      <Filename>PythonCAD/Generic/Kernel/Db/entitydb.py</Filename>
+      <Linenumber>224</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: To be tested</Summary>
+    <Description></Description>
+    <Created>2010-05-26, 14:18:07</Created>
+    <Resource>
+      <Filename>PythonCAD/Generic/Kernel/Db/relationdb.py</Filename>
+      <Linenumber>123</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
     <Summary>TODO: printing</Summary>
     <Description></Description>
-    <Created>2010-05-21, 16:56:05</Created>
+    <Created>2010-05-26, 14:33:04</Created>
     <Resource>
       <Filename>PythonCAD/Interface/cadwindow.py</Filename>
       <Linenumber>130</Linenumber>
@@ -33,19 +69,19 @@
   <Task priority="1" completed="False" bugfix="False">
     <Summary>TODO: printing</Summary>
     <Description></Description>
-    <Created>2010-05-21, 16:56:05</Created>
+    <Created>2010-05-26, 14:33:04</Created>
     <Resource>
       <Filename>PythonCAD/Interface/cadwindow.py</Filename>
       <Linenumber>136</Linenumber>
     </Resource>
   </Task>
   <Task priority="1" completed="False" bugfix="False">
-    <Summary>TODO: to be tested</Summary>
+    <Summary>TODO: Improve the local directory for different os ..</Summary>
     <Description></Description>
-    <Created>2010-05-21, 17:15:59</Created>
+    <Created>2010-05-26, 14:38:10</Created>
     <Resource>
-      <Filename>PythonCAD/Generic/Kernel/entdb.py</Filename>
-      <Linenumber>225</Linenumber>
+      <Filename>PythonCAD/Generic/application.py</Filename>
+      <Linenumber>44</Linenumber>
     </Resource>
   </Task>
 </Tasks>

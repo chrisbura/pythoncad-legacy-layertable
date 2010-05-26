@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-4.6.dtd">
 <!-- eric4 project file for project PythonCad -->
-<!-- Saved: 2010-05-25, 09:35:14 -->
+<!-- Saved: 2010-05-26, 14:44:13 -->
 <!-- Copyright (C) 2010 Matteo Boscolo, matteo.boscolo@boscolini.eu -->
 <Project version="4.6">
   <Language>en</Language>
@@ -115,40 +115,19 @@
     <Source>buildapp.py</Source>
     <Source>gtkpycad.py</Source>
     <Source>prefs.py</Source>
-    <Source>PythonCAD/Generic/Kernel/Entity/baseobject.py</Source>
-    <Source>PythonCAD/Generic/Kernel/Entity/point.py</Source>
-    <Source>PythonCAD/Generic/Kernel/Entity/pycadobject.py</Source>
-    <Source>PythonCAD/Generic/Kernel/Entity/segment.py</Source>
-    <Source>PythonCAD/Generic/Kernel/Entity/__init__.py</Source>
     <Source>PythonCAD/Generic/Kernel/__init__.py</Source>
     <Source>PythonCAD/Interface/__init__.py</Source>
     <Source>PythonCAD/pythoncad_wx.py</Source>
     <Source>setup.py</Source>
     <Source>__init__.py</Source>
-    <Source>PythonCAD/Generic/Kernel/binarytree.py</Source>
     <Source>PythonCAD/Generic/Kernel/pycadtransaction.py</Source>
-    <Source>PythonCAD/Generic/Kernel/Entity/util.py</Source>
-    <Source>PythonCAD/Generic/Kernel/Entity/tolerance.py</Source>
-    <Source>PythonCAD/Generic/Kernel/Entity/arc.py</Source>
     <Source>PythonCAD/Generic/Kernel/exception.py</Source>
-    <Source>PythonCAD/Generic/Kernel/extformat.py</Source>
-    <Source>PythonCAD/Generic/Kernel/undodb.py</Source>
-    <Source>PythonCAD/Generic/Kernel/basedb.py</Source>
     <Source>PythonCAD/Generic/Kernel/entity.py</Source>
-    <Source>PythonCAD/Generic/Kernel/entdb.py</Source>
     <Source>PythonCAD/Generic/Kernel/layer.py</Source>
     <Source>PythonCAD/Generic/Kernel/settings.py</Source>
-    <Source>PythonCAD/Generic/Kernel/application.py</Source>
     <Source>PythonCAD/Generic/Kernel/document.py</Source>
-    <Source>PythonCAD/Generic/Kernel/relation.py</Source>
     <Source>PythonCAD/Generic/Kernel/initsetting.py</Source>
-    <Source>PythonCAD/Generic/Kernel/Entity/style.py</Source>
     <Source>PythonCAD/Generic/Kernel/layertree.py</Source>
-    <Source>PythonCAD/Generic/Kernel/Entity/ellipse.py</Source>
-    <Source>PythonCAD/Generic/Kernel/Entity/hatch.py</Source>
-    <Source>PythonCAD/Generic/Kernel/Entity/nurbs.py</Source>
-    <Source>PythonCAD/Generic/Kernel/Entity/polyline.py</Source>
-    <Source>PythonCAD/Generic/Kernel/Entity/geometricalentity.py</Source>
     <Source>PythonCAD/pythoncad_qt.py</Source>
     <Source>PythonCAD/Generic/OldGeneric/acline.py</Source>
     <Source>PythonCAD/Generic/OldGeneric/arc.py</Source>
@@ -290,21 +269,11 @@
     <Source>PythonCAD/Interface/cadwindow.py</Source>
     <Source>PythonCAD/Interface/cadview.py</Source>
     <Source>PythonCAD/Interface/cadscene.py</Source>
-    <Source>PythonCAD/Generic/Kernel/Entity/acline.py</Source>
     <Source>PythonCAD/Generic/Kernel/Command/aclinecommand.py</Source>
-    <Source>PythonCAD/Generic/Kernel/Entity/ccircle.py</Source>
     <Source>PythonCAD/Generic/Kernel/Command/ccirclecommand.py</Source>
-    <Source>PythonCAD/Generic/Kernel/tangent.py</Source>
-    <Source>PythonCAD/Generic/Kernel/rotate.py</Source>
-    <Source>PythonCAD/Generic/Kernel/Entity/segjoint.py</Source>
-    <Source>PythonCAD/Generic/Kernel/Entity/dimension.py</Source>
-    <Source>PythonCAD/Generic/Kernel/Entity/text.py</Source>
     <Source>PythonCAD/Generic/Kernel/Command/textcommand.py</Source>
-    <Source>PythonCAD/Generic/Kernel/Entity/intersection.py</Source>
     <Source>MATTEO_BOSCOLO_TODO.PY</Source>
     <Source>PythonCAD/Generic/Kernel/Command/chamfercommand.py</Source>
-    <Source>PythonCAD/Generic/Kernel/Entity/pygeolib.py</Source>
-    <Source>PythonCAD/Generic/Kernel/composedentity.py</Source>
     <Source>PythonCAD/TestWindow.ui</Source>
     <Source>PythonCAD/Ui_TestWindow.py</Source>
     <Source>PythonCAD/customevent.py</Source>
@@ -324,6 +293,41 @@
     <Source>PythonCAD/Generic/Kernel/Command/polygoncommand.py</Source>
     <Source>PythonCAD/Generic/Kernel/Command/movecommand.py</Source>
     <Source>PythonCAD/Interface/Entity/polyline.py</Source>
+    <Source>PythonCAD/Generic/Kernel/Db/__init__.py</Source>
+    <Source>PythonCAD/Generic/Kernel/GeoEntity/__init__.py</Source>
+    <Source>PythonCAD/Generic/Kernel/GeoUtil/__init__.py</Source>
+    <Source>PythonCAD/Generic/Kernel/GeoComposedEntity/__init__.py</Source>
+    <Source>PythonCAD/Generic/Kernel/ExternalFormat/__init__.py</Source>
+    <Source>PythonCAD/Generic/Kernel/ExternalFormat/Dxf/__init__.py</Source>
+    <Source>PythonCAD/Generic/Kernel/Db/basedb.py</Source>
+    <Source>PythonCAD/Generic/Kernel/Db/entitydb.py</Source>
+    <Source>PythonCAD/Generic/Kernel/Db/pycadobject.py</Source>
+    <Source>PythonCAD/Generic/Kernel/GeoUtil/geolib.py</Source>
+    <Source>PythonCAD/Generic/Kernel/GeoComposedEntity/objoint.py</Source>
+    <Source>PythonCAD/Generic/Kernel/GeoUtil/tangent.py</Source>
+    <Source>PythonCAD/Generic/Kernel/GeoUtil/intersection.py</Source>
+    <Source>PythonCAD/Generic/Kernel/GeoUtil/util.py</Source>
+    <Source>PythonCAD/Generic/Kernel/GeoEntity/acline.py</Source>
+    <Source>PythonCAD/Generic/Kernel/GeoEntity/arc.py</Source>
+    <Source>PythonCAD/Generic/Kernel/GeoEntity/ccircle.py</Source>
+    <Source>PythonCAD/Generic/Kernel/GeoEntity/dimension.py</Source>
+    <Source>PythonCAD/Generic/Kernel/GeoEntity/ellipse.py</Source>
+    <Source>PythonCAD/Generic/Kernel/GeoEntity/geometricalentity.py</Source>
+    <Source>PythonCAD/Generic/Kernel/GeoEntity/hatch.py</Source>
+    <Source>PythonCAD/Generic/Kernel/GeoEntity/nurbs.py</Source>
+    <Source>PythonCAD/Generic/Kernel/GeoEntity/point.py</Source>
+    <Source>PythonCAD/Generic/Kernel/GeoEntity/polyline.py</Source>
+    <Source>PythonCAD/Generic/Kernel/GeoEntity/segment.py</Source>
+    <Source>PythonCAD/Generic/Kernel/GeoEntity/style.py</Source>
+    <Source>PythonCAD/Generic/Kernel/GeoEntity/text.py</Source>
+    <Source>PythonCAD/Generic/Kernel/ExternalFormat/Dxf/dxf.py</Source>
+    <Source>PythonCAD/Generic/Kernel/Db/relationdb.py</Source>
+    <Source>PythonCAD/Generic/Kernel/GeoUtil/rotate.py</Source>
+    <Source>PythonCAD/Generic/Kernel/Db/undodb.py</Source>
+    <Source>PythonCAD/Generic/Kernel/composedentity.py</Source>
+    <Source>PythonCAD/Generic/Kernel/GeoUtil/tolerance.py</Source>
+    <Source>PythonCAD/Generic/Kernel/ExternalFormat/externalformat.py</Source>
+    <Source>PythonCAD/Generic/application.py</Source>
   </Sources>
   <Forms>
     <Form>PythonCAD/TestWindow.ui</Form>
