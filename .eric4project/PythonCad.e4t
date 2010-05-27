@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Tasks SYSTEM "Tasks-4.2.dtd">
 <!-- eric4 tasks file for project PythonCad -->
-<!-- Saved: 2010-05-11, 09:16:03 -->
+<!-- Saved: 2010-05-23, 11:56:44 -->
 <Tasks version="4.2">
   <Task priority="1" completed="False" bugfix="True">
     <Summary>FIXME: re-examine this once new text stuff is in place</Summary>
@@ -123,10 +123,10 @@
   <Task priority="1" completed="False" bugfix="False">
     <Summary>TODO: to be tested</Summary>
     <Description></Description>
-    <Created>2010-05-05, 06:57:48</Created>
+    <Created>2010-05-23, 09:20:21</Created>
     <Resource>
       <Filename>PythonCAD/Generic/Kernel/entdb.py</Filename>
-      <Linenumber>217</Linenumber>
+      <Linenumber>225</Linenumber>
     </Resource>
   </Task>
 </Tasks>
