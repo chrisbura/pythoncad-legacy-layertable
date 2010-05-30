@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-4.6.dtd">
 <!-- eric4 project file for project PythonCad -->
-<!-- Saved: 2010-05-28, 17:41:12 -->
+<!-- Saved: 2010-05-30, 09:17:23 -->
 <!-- Copyright (C) 2010 Matteo Boscolo, matteo.boscolo@boscolini.eu -->
 <Project version="4.6">
   <Language>en</Language>
@@ -330,6 +330,8 @@
     <Source>PythonCAD/Generic/application_test.py</Source>
     <Source>PythonCAD/Generic/Kernel/Command/clinecommand.py</Source>
     <Source>PythonCAD/Interface/Entity/point.py</Source>
+    <Source>PythonCAD/Generic/Kernel/GeoComposedEntity/chamfer.py</Source>
+    <Source>PythonCAD/Generic/Kernel/GeoComposedEntity/fillet.py</Source>
   </Sources>
   <Forms>
     <Form>PythonCAD/TestWindow.ui</Form>
