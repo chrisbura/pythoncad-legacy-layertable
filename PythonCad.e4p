@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-4.6.dtd">
 <!-- eric4 project file for project PythonCad -->
-<!-- Saved: 2010-05-26, 14:44:13 -->
+<!-- Saved: 2010-05-30, 09:17:23 -->
 <!-- Copyright (C) 2010 Matteo Boscolo, matteo.boscolo@boscolini.eu -->
 <Project version="4.6">
   <Language>en</Language>
@@ -269,7 +269,6 @@
     <Source>PythonCAD/Interface/cadwindow.py</Source>
     <Source>PythonCAD/Interface/cadview.py</Source>
     <Source>PythonCAD/Interface/cadscene.py</Source>
-    <Source>PythonCAD/Generic/Kernel/Command/aclinecommand.py</Source>
     <Source>PythonCAD/Generic/Kernel/Command/ccirclecommand.py</Source>
     <Source>PythonCAD/Generic/Kernel/Command/textcommand.py</Source>
     <Source>MATTEO_BOSCOLO_TODO.PY</Source>
@@ -307,7 +306,6 @@
     <Source>PythonCAD/Generic/Kernel/GeoUtil/tangent.py</Source>
     <Source>PythonCAD/Generic/Kernel/GeoUtil/intersection.py</Source>
     <Source>PythonCAD/Generic/Kernel/GeoUtil/util.py</Source>
-    <Source>PythonCAD/Generic/Kernel/GeoEntity/acline.py</Source>
     <Source>PythonCAD/Generic/Kernel/GeoEntity/arc.py</Source>
     <Source>PythonCAD/Generic/Kernel/GeoEntity/ccircle.py</Source>
     <Source>PythonCAD/Generic/Kernel/GeoEntity/dimension.py</Source>
@@ -328,6 +326,12 @@
     <Source>PythonCAD/Generic/Kernel/GeoUtil/tolerance.py</Source>
     <Source>PythonCAD/Generic/Kernel/ExternalFormat/externalformat.py</Source>
     <Source>PythonCAD/Generic/application.py</Source>
+    <Source>PythonCAD/Generic/Kernel/GeoEntity/cline.py</Source>
+    <Source>PythonCAD/Generic/application_test.py</Source>
+    <Source>PythonCAD/Generic/Kernel/Command/clinecommand.py</Source>
+    <Source>PythonCAD/Interface/Entity/point.py</Source>
+    <Source>PythonCAD/Generic/Kernel/GeoComposedEntity/chamfer.py</Source>
+    <Source>PythonCAD/Generic/Kernel/GeoComposedEntity/fillet.py</Source>
   </Sources>
   <Forms>
     <Form>PythonCAD/TestWindow.ui</Form>
