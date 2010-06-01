@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-4.6.dtd">
 <!-- eric4 project file for project PythonCad -->
-<!-- Saved: 2010-05-31, 20:33:58 -->
+<!-- Saved: 2010-06-01, 11:39:48 -->
 <!-- Copyright (C) 2010 Matteo Boscolo, matteo.boscolo@boscolini.eu -->
 <Project version="4.6">
   <Language>en</Language>
@@ -116,8 +116,6 @@
     <Source>gtkpycad.py</Source>
     <Source>prefs.py</Source>
     <Source>PythonCAD/Generic/Kernel/__init__.py</Source>
-    <Source>PythonCAD/Interface/__init__.py</Source>
-    <Source>PythonCAD/pythoncad_wx.py</Source>
     <Source>setup.py</Source>
     <Source>__init__.py</Source>
     <Source>PythonCAD/Generic/Kernel/pycadtransaction.py</Source>
@@ -265,10 +263,6 @@
     <Source>PythonCAD/Generic/Kernel/Command/ellipsecommand.py</Source>
     <Source>PythonCAD/Generic/Kernel/Command/polylinecommand.py</Source>
     <Source>PythonCAD/Generic/Kernel/Command/basecommand.py</Source>
-    <Source>PythonCAD/Interface/cadwindow_rc.py</Source>
-    <Source>PythonCAD/Interface/cadwindow.py</Source>
-    <Source>PythonCAD/Interface/cadview.py</Source>
-    <Source>PythonCAD/Interface/cadscene.py</Source>
     <Source>PythonCAD/Generic/Kernel/Command/ccirclecommand.py</Source>
     <Source>PythonCAD/Generic/Kernel/Command/textcommand.py</Source>
     <Source>MATTEO_BOSCOLO_TODO.PY</Source>
@@ -276,22 +270,9 @@
     <Source>PythonCAD/TestWindow.ui</Source>
     <Source>PythonCAD/Ui_TestWindow.py</Source>
     <Source>PythonCAD/customevent.py</Source>
-    <Source>PythonCAD/Interface/CmdIntf/cmdaction.py</Source>
-    <Source>PythonCAD/Interface/CmdIntf/cmdcategory.py</Source>
-    <Source>PythonCAD/Interface/CmdIntf/cmdintf.py</Source>
-    <Source>PythonCAD/Interface/CmdIntf/cmdlinedock.py</Source>
-    <Source>PythonCAD/Interface/CmdIntf/functionhandler.py</Source>
-    <Source>PythonCAD/Interface/CmdIntf/__init__.py</Source>
-    <Source>PythonCAD/Interface/Entity/__init__.py</Source>
-    <Source>PythonCAD/Interface/Entity/arc.py</Source>
-    <Source>PythonCAD/Interface/Entity/segment.py</Source>
-    <Source>PythonCAD/Interface/Entity/text.py</Source>
-    <Source>PythonCAD/Interface/Entity/ellipse.py</Source>
-    <Source>PythonCAD/Interface/cadinitsetting.py</Source>
     <Source>PythonCAD/Generic/Kernel/Command/rectanglecommand.py</Source>
     <Source>PythonCAD/Generic/Kernel/Command/polygoncommand.py</Source>
     <Source>PythonCAD/Generic/Kernel/Command/movecommand.py</Source>
-    <Source>PythonCAD/Interface/Entity/polyline.py</Source>
     <Source>PythonCAD/Generic/Kernel/Db/__init__.py</Source>
     <Source>PythonCAD/Generic/Kernel/GeoEntity/__init__.py</Source>
     <Source>PythonCAD/Generic/Kernel/GeoUtil/__init__.py</Source>
@@ -329,12 +310,35 @@
     <Source>PythonCAD/Generic/Kernel/GeoEntity/cline.py</Source>
     <Source>PythonCAD/Generic/application_test.py</Source>
     <Source>PythonCAD/Generic/Kernel/Command/clinecommand.py</Source>
-    <Source>PythonCAD/Interface/Entity/point.py</Source>
     <Source>PythonCAD/Generic/Kernel/GeoComposedEntity/chamfer.py</Source>
     <Source>PythonCAD/Generic/Kernel/GeoComposedEntity/fillet.py</Source>
     <Source>PythonCAD/Generic/Kernel/Command/filletcommand.py</Source>
     <Source>PythonCAD/Generic/Kernel/GeoComposedEntity/bisector.py</Source>
     <Source>PythonCAD/Generic/Kernel/Command/bisectorcommand.py</Source>
+    <Source>PythonCAD/Interface/__init__.py</Source>
+    <Source>PythonCAD/Interface/cadinitsetting.py</Source>
+    <Source>PythonCAD/Interface/cadscene.py</Source>
+    <Source>PythonCAD/Interface/cadview.py</Source>
+    <Source>PythonCAD/Interface/cadwindow.py</Source>
+    <Source>PythonCAD/Interface/cadwindow_rc.py</Source>
+    <Source>PythonCAD/Interface/pycadapp.py</Source>
+    <Source>PythonCAD/Interface/CmdIntf/cmdaction.py</Source>
+    <Source>PythonCAD/Interface/CmdIntf/cmdcategory.py</Source>
+    <Source>PythonCAD/Interface/CmdIntf/cmdintf.py</Source>
+    <Source>PythonCAD/Interface/CmdIntf/cmdlinedock.py</Source>
+    <Source>PythonCAD/Interface/CmdIntf/functionhandler.py</Source>
+    <Source>PythonCAD/Interface/CmdIntf/__init__.py</Source>
+    <Source>PythonCAD/Interface/Entity/__init__.py</Source>
+    <Source>PythonCAD/Interface/Entity/arc.py</Source>
+    <Source>PythonCAD/Interface/Entity/ellipse.py</Source>
+    <Source>PythonCAD/Interface/Entity/point.py</Source>
+    <Source>PythonCAD/Interface/Entity/polyline.py</Source>
+    <Source>PythonCAD/Interface/Entity/segment.py</Source>
+    <Source>PythonCAD/Interface/Entity/text.py</Source>
+    <Source>PythonCAD/Interface/LayerIntf/__init__.py</Source>
+    <Source>PythonCAD/Interface/LayerIntf/layerdock.py</Source>
+    <Source>PythonCAD/Interface/LayerIntf/layeritem.py</Source>
+    <Source>PythonCAD/Interface/LayerIntf/layermodel.py</Source>
   </Sources>
   <Forms>
     <Form>PythonCAD/TestWindow.ui</Form>
