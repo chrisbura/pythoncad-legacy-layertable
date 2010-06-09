@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Tasks SYSTEM "Tasks-4.2.dtd">
 <!-- eric4 tasks file for project PythonCad -->
-<!-- Saved: 2010-06-09, 19:45:26 -->
+<!-- Saved: 2010-06-09, 19:50:27 -->
 <Tasks version="4.2">
   <Task priority="1" completed="False" bugfix="False">
     <Summary>TODO: to be tested</Summary>
