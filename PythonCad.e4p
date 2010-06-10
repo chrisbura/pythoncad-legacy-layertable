@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-4.6.dtd">
 <!-- eric4 project file for project PythonCad -->
-<!-- Saved: 2010-06-09, 19:45:26 -->
+<!-- Saved: 2010-06-10, 09:09:04 -->
 <!-- Copyright (C) 2010 Matteo Boscolo, matteo.boscolo@boscolini.eu -->
 <Project version="4.6">
   <Language>en</Language>
@@ -13,105 +13,6 @@
   <Email>matteo.boscolo@boscolini.eu</Email>
   <Sources>
     <Source>PythonCad.py</Source>
-    <Source>build/lib/PythonCAD/Generic/acline.py</Source>
-    <Source>build/lib/PythonCAD/Generic/arc.py</Source>
-    <Source>build/lib/PythonCAD/Generic/baseobject.py</Source>
-    <Source>build/lib/PythonCAD/Generic/bindump.py</Source>
-    <Source>build/lib/PythonCAD/Generic/ccircle.py</Source>
-    <Source>build/lib/PythonCAD/Generic/circle.py</Source>
-    <Source>build/lib/PythonCAD/Generic/cline.py</Source>
-    <Source>build/lib/PythonCAD/Generic/color.py</Source>
-    <Source>build/lib/PythonCAD/Generic/conobject.py</Source>
-    <Source>build/lib/PythonCAD/Generic/delete.py</Source>
-    <Source>build/lib/PythonCAD/Generic/dimension.py</Source>
-    <Source>build/lib/PythonCAD/Generic/dimtrees.py</Source>
-    <Source>build/lib/PythonCAD/Generic/dwg12.py</Source>
-    <Source>build/lib/PythonCAD/Generic/dwg1314.py</Source>
-    <Source>build/lib/PythonCAD/Generic/dwg15.py</Source>
-    <Source>build/lib/PythonCAD/Generic/dwgbase.py</Source>
-    <Source>build/lib/PythonCAD/Generic/dwgutil.py</Source>
-    <Source>build/lib/PythonCAD/Generic/dxf.py</Source>
-    <Source>build/lib/PythonCAD/Generic/ellipse.py</Source>
-    <Source>build/lib/PythonCAD/Generic/entity.py</Source>
-    <Source>build/lib/PythonCAD/Generic/extFormat.py</Source>
-    <Source>build/lib/PythonCAD/Generic/fileio.py</Source>
-    <Source>build/lib/PythonCAD/Generic/globals.py</Source>
-    <Source>build/lib/PythonCAD/Generic/graphicobject.py</Source>
-    <Source>build/lib/PythonCAD/Generic/hatch.py</Source>
-    <Source>build/lib/PythonCAD/Generic/hcline.py</Source>
-    <Source>build/lib/PythonCAD/Generic/image.py</Source>
-    <Source>build/lib/PythonCAD/Generic/imageio.py</Source>
-    <Source>build/lib/PythonCAD/Generic/intersections.py</Source>
-    <Source>build/lib/PythonCAD/Generic/keywords.py</Source>
-    <Source>build/lib/PythonCAD/Generic/layer.py</Source>
-    <Source>build/lib/PythonCAD/Generic/leader.py</Source>
-    <Source>build/lib/PythonCAD/Generic/linetype.py</Source>
-    <Source>build/lib/PythonCAD/Generic/logger.py</Source>
-    <Source>build/lib/PythonCAD/Generic/maptree.py</Source>
-    <Source>build/lib/PythonCAD/Generic/message.py</Source>
-    <Source>build/lib/PythonCAD/Generic/mirror.py</Source>
-    <Source>build/lib/PythonCAD/Generic/move.py</Source>
-    <Source>build/lib/PythonCAD/Generic/nurbs.py</Source>
-    <Source>build/lib/PythonCAD/Generic/options.py</Source>
-    <Source>build/lib/PythonCAD/Generic/plotfile.py</Source>
-    <Source>build/lib/PythonCAD/Generic/point.py</Source>
-    <Source>build/lib/PythonCAD/Generic/polyline.py</Source>
-    <Source>build/lib/PythonCAD/Generic/preferences.py</Source>
-    <Source>build/lib/PythonCAD/Generic/printing.py</Source>
-    <Source>build/lib/PythonCAD/Generic/prompt.py</Source>
-    <Source>build/lib/PythonCAD/Generic/pyGeoLib.py</Source>
-    <Source>build/lib/PythonCAD/Generic/quadtree.py</Source>
-    <Source>build/lib/PythonCAD/Generic/rotate.py</Source>
-    <Source>build/lib/PythonCAD/Generic/segjoint.py</Source>
-    <Source>build/lib/PythonCAD/Generic/segment.py</Source>
-    <Source>build/lib/PythonCAD/Generic/selections.py</Source>
-    <Source>build/lib/PythonCAD/Generic/snap.py</Source>
-    <Source>build/lib/PythonCAD/Generic/split.py</Source>
-    <Source>build/lib/PythonCAD/Generic/style.py</Source>
-    <Source>build/lib/PythonCAD/Generic/tangent.py</Source>
-    <Source>build/lib/PythonCAD/Generic/text.py</Source>
-    <Source>build/lib/PythonCAD/Generic/tolerance.py</Source>
-    <Source>build/lib/PythonCAD/Generic/tools.py</Source>
-    <Source>build/lib/PythonCAD/Generic/transfer.py</Source>
-    <Source>build/lib/PythonCAD/Generic/tree.py</Source>
-    <Source>build/lib/PythonCAD/Generic/units.py</Source>
-    <Source>build/lib/PythonCAD/Generic/util.py</Source>
-    <Source>build/lib/PythonCAD/Generic/vcline.py</Source>
-    <Source>build/lib/PythonCAD/Generic/__init__.py</Source>
-    <Source>build/lib/PythonCAD/Interface/Cocoa/AppController.py</Source>
-    <Source>build/lib/PythonCAD/Interface/Cocoa/CADView.py</Source>
-    <Source>build/lib/PythonCAD/Interface/Cocoa/CocoaConobjs.py</Source>
-    <Source>build/lib/PythonCAD/Interface/Cocoa/CocoaDimensions.py</Source>
-    <Source>build/lib/PythonCAD/Interface/Cocoa/CocoaEntities.py</Source>
-    <Source>build/lib/PythonCAD/Interface/Cocoa/CocoaModify.py</Source>
-    <Source>build/lib/PythonCAD/Interface/Cocoa/CocoaPrompt.py</Source>
-    <Source>build/lib/PythonCAD/Interface/Cocoa/CocoaText.py</Source>
-    <Source>build/lib/PythonCAD/Interface/Cocoa/Globals.py</Source>
-    <Source>build/lib/PythonCAD/Interface/Cocoa/ImageDocument.py</Source>
-    <Source>build/lib/PythonCAD/Interface/Cocoa/ImageWindowController.py</Source>
-    <Source>build/lib/PythonCAD/Interface/Cocoa/LayerView.py</Source>
-    <Source>build/lib/PythonCAD/Interface/Cocoa/__init__.py</Source>
-    <Source>build/lib/PythonCAD/Interface/Gtk/gtkactions.py</Source>
-    <Source>build/lib/PythonCAD/Interface/Gtk/gtkconobjs.py</Source>
-    <Source>build/lib/PythonCAD/Interface/Gtk/gtkDialog.py</Source>
-    <Source>build/lib/PythonCAD/Interface/Gtk/gtkdimension.py</Source>
-    <Source>build/lib/PythonCAD/Interface/Gtk/gtkdimprefs.py</Source>
-    <Source>build/lib/PythonCAD/Interface/Gtk/gtkedit.py</Source>
-    <Source>build/lib/PythonCAD/Interface/Gtk/gtkentities.py</Source>
-    <Source>build/lib/PythonCAD/Interface/Gtk/gtkimage.py</Source>
-    <Source>build/lib/PythonCAD/Interface/Gtk/gtkinit.py</Source>
-    <Source>build/lib/PythonCAD/Interface/Gtk/gtkmenus.py</Source>
-    <Source>build/lib/PythonCAD/Interface/Gtk/gtkmirror.py</Source>
-    <Source>build/lib/PythonCAD/Interface/Gtk/gtkmodify.py</Source>
-    <Source>build/lib/PythonCAD/Interface/Gtk/gtkprefs.py</Source>
-    <Source>build/lib/PythonCAD/Interface/Gtk/gtkprinting.py</Source>
-    <Source>build/lib/PythonCAD/Interface/Gtk/gtkshell.py</Source>
-    <Source>build/lib/PythonCAD/Interface/Gtk/gtkstyleprefs.py</Source>
-    <Source>build/lib/PythonCAD/Interface/Gtk/gtktext.py</Source>
-    <Source>build/lib/PythonCAD/Interface/Gtk/gtktextprefs.py</Source>
-    <Source>build/lib/PythonCAD/Interface/Gtk/__init__.py</Source>
-    <Source>build/lib/PythonCAD/Interface/__init__.py</Source>
-    <Source>build/lib/PythonCAD/__init__.py</Source>
     <Source>buildapp.py</Source>
     <Source>gtkpycad.py</Source>
     <Source>prefs.py</Source>
