@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-4.6.dtd">
 <!-- eric4 project file for project PythonCad -->
-<!-- Saved: 2010-06-28, 18:46:09 -->
+<!-- Saved: 2010-06-30, 18:20:11 -->
 <!-- Copyright (C) 2010 Matteo Boscolo, matteo.boscolo@boscolini.eu -->
 <Project version="4.6">
   <Language>en</Language>
@@ -250,6 +250,11 @@
     <Source>PythonCAD/pythoncad_qt.py</Source>
     <Source>PythonCAD/Interface/evaluator.py</Source>
     <Source>PythonCAD/Interface/dinamicentryobject.py</Source>
+    <Source>PythonCAD/Interface/Preview/__init__.py</Source>
+    <Source>PythonCAD/Interface/Preview/segment.py</Source>
+    <Source>PythonCAD/Interface/Preview/basepreview.py</Source>
+    <Source>PythonCAD/Interface/Preview/factory.py</Source>
+    <Source>PythonCAD/Interface/Entity/arrowitem.py</Source>
   </Sources>
   <Forms>
     <Form>PythonCAD/TestWindow.ui</Form>
