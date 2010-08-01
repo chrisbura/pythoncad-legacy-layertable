@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-4.6.dtd">
 <!-- eric4 project file for project PythonCad -->
-<!-- Saved: 2010-07-15, 08:39:18 -->
+<!-- Saved: 2010-07-30, 20:19:08 -->
 <!-- Copyright (C) 2010 Matteo Boscolo, matteo.boscolo@boscolini.eu -->
 <Project version="4.6">
   <Language>en</Language>
@@ -128,12 +128,146 @@
     <Source>PythonCAD/Interface/Preview/ellipse.py</Source>
     <Source>PythonCAD/Interface/Preview/polygon.py</Source>
     <Source>PythonCAD/Interface/Preview/polyline.py</Source>
+    <Source>PythonCAD/Interface/Command/__init__.py</Source>
+    <Source>PythonCAD/Interface/Command/segment.py</Source>
+    <Source>Oldstuff/buildapp.py</Source>
+    <Source>Oldstuff/gtkpycad.py</Source>
+    <Source>Oldstuff/prefs.py</Source>
+    <Source>Oldstuff/__init__.py</Source>
+    <Source>Oldstuff/OldGeneric/acline.py</Source>
+    <Source>Oldstuff/OldGeneric/arc.py</Source>
+    <Source>Oldstuff/OldGeneric/baseobject.py</Source>
+    <Source>Oldstuff/OldGeneric/bindump.py</Source>
+    <Source>Oldstuff/OldGeneric/ccircle.py</Source>
+    <Source>Oldstuff/OldGeneric/circle.py</Source>
+    <Source>Oldstuff/OldGeneric/cline.py</Source>
+    <Source>Oldstuff/OldGeneric/color.py</Source>
+    <Source>Oldstuff/OldGeneric/conobject.py</Source>
+    <Source>Oldstuff/OldGeneric/delete.py</Source>
+    <Source>Oldstuff/OldGeneric/dimension.py</Source>
+    <Source>Oldstuff/OldGeneric/dimtrees.py</Source>
+    <Source>Oldstuff/OldGeneric/dwg12.py</Source>
+    <Source>Oldstuff/OldGeneric/dwg1314.py</Source>
+    <Source>Oldstuff/OldGeneric/dwg15.py</Source>
+    <Source>Oldstuff/OldGeneric/dwgbase.py</Source>
+    <Source>Oldstuff/OldGeneric/dwgutil.py</Source>
+    <Source>Oldstuff/OldGeneric/dxf.py</Source>
+    <Source>Oldstuff/OldGeneric/ellipse.py</Source>
+    <Source>Oldstuff/OldGeneric/entity.py</Source>
+    <Source>Oldstuff/OldGeneric/error.py</Source>
+    <Source>Oldstuff/OldGeneric/extFormat.py</Source>
+    <Source>Oldstuff/OldGeneric/fileio.py</Source>
+    <Source>Oldstuff/OldGeneric/globals.py</Source>
+    <Source>Oldstuff/OldGeneric/graphicobject.py</Source>
+    <Source>Oldstuff/OldGeneric/hatch.py</Source>
+    <Source>Oldstuff/OldGeneric/hcline.py</Source>
+    <Source>Oldstuff/OldGeneric/image.py</Source>
+    <Source>Oldstuff/OldGeneric/imageio.py</Source>
+    <Source>Oldstuff/OldGeneric/intersections.py</Source>
+    <Source>Oldstuff/OldGeneric/keywords.py</Source>
+    <Source>Oldstuff/OldGeneric/layer.py</Source>
+    <Source>Oldstuff/OldGeneric/leader.py</Source>
+    <Source>Oldstuff/OldGeneric/linetype.py</Source>
+    <Source>Oldstuff/OldGeneric/logger.py</Source>
+    <Source>Oldstuff/OldGeneric/maptree.py</Source>
+    <Source>Oldstuff/OldGeneric/message.py</Source>
+    <Source>Oldstuff/OldGeneric/mirror.py</Source>
+    <Source>Oldstuff/OldGeneric/move.py</Source>
+    <Source>Oldstuff/OldGeneric/nurbs.py</Source>
+    <Source>Oldstuff/OldGeneric/options.py</Source>
+    <Source>Oldstuff/OldGeneric/plotfile.py</Source>
+    <Source>Oldstuff/OldGeneric/point.py</Source>
+    <Source>Oldstuff/OldGeneric/polyline.py</Source>
+    <Source>Oldstuff/OldGeneric/preferences.py</Source>
+    <Source>Oldstuff/OldGeneric/printing.py</Source>
+    <Source>Oldstuff/OldGeneric/prompt.py</Source>
+    <Source>Oldstuff/OldGeneric/pyGeoLib.py</Source>
+    <Source>Oldstuff/OldGeneric/quadtree.py</Source>
+    <Source>Oldstuff/OldGeneric/rotate.py</Source>
+    <Source>Oldstuff/OldGeneric/segjoint.py</Source>
+    <Source>Oldstuff/OldGeneric/segment.py</Source>
+    <Source>Oldstuff/OldGeneric/selections.py</Source>
+    <Source>Oldstuff/OldGeneric/snap.py</Source>
+    <Source>Oldstuff/OldGeneric/split.py</Source>
+    <Source>Oldstuff/OldGeneric/strcircle.py</Source>
+    <Source>Oldstuff/OldGeneric/style.py</Source>
+    <Source>Oldstuff/OldGeneric/tangent.py</Source>
+    <Source>Oldstuff/OldGeneric/text.py</Source>
+    <Source>Oldstuff/OldGeneric/tolerance.py</Source>
+    <Source>Oldstuff/OldGeneric/transfer.py</Source>
+    <Source>Oldstuff/OldGeneric/tree.py</Source>
+    <Source>Oldstuff/OldGeneric/units.py</Source>
+    <Source>Oldstuff/OldGeneric/util.py</Source>
+    <Source>Oldstuff/OldGeneric/vcline.py</Source>
+    <Source>Oldstuff/OldGeneric/__init__.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/acline_tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/angular_dimension_tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/arc_tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/ccircle_tangent_line_tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/ccircle_tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/chamfer_tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/change_color_tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/change_linetype_tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/change_style_tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/change_thickness_tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/circle_tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/cline_tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/delete_tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/deselect_tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/dimension_tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/edit_dimension_tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/edit_dim_string_tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/fillet_tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/fillet_two_line_tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/graphic_object_tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/hatch_tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/hcline_tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/horizontal_dimension_tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/horizontal_move_tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/horizontal_stretch_tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/leader_tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/linear_dimension_tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/mirror_tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/move_tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/parallel_offset_tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/paste_tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/perpendicular_cline_tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/plot_tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/point_tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/polygon_tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/polyline_tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/radial_dimension_tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/rectangle_tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/region_tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/rotate_tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/segment_tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/select_tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/split_tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/stretch_tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/tangent_ccircle_tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/tangent_circle_tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/tangent_cline_tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/text_tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/tools.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/transfer_tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/two_point_ccircle_tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/two_point_circle_tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/two_point_tangent_ccircle_tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/utils.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/vcline_tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/vertical_dimension_tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/vertical_move_tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/vertical_stretch_tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/zoom_tool.py</Source>
+    <Source>Oldstuff/OldGeneric/Tools/__init__.py</Source>
   </Sources>
   <Forms>
   </Forms>
   <Translations>
   </Translations>
   <Resources>
+    <Resource>PythonCAD/Interface/cadwindow.qrc</Resource>
   </Resources>
   <Interfaces>
   </Interfaces>
