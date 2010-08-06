@@ -1,69 +1,213 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Tasks SYSTEM "Tasks-4.2.dtd">
 <!-- eric4 tasks file for project PythonCad -->
-<!-- Saved: 2010-07-30, 20:19:08 -->
+<!-- Saved: 2010-08-06, 09:31:14 -->
 <Tasks version="4.2">
-  <Task priority="1" completed="False" bugfix="False">
-    <Summary>TODO: to be tested</Summary>
-    <Description></Description>
-    <Created>2010-05-25, 18:57:50</Created>
-    <Resource>
-      <Filename>PythonCAD/Generic/Kernel/entdb.py</Filename>
-      <Linenumber>225</Linenumber>
-    </Resource>
-  </Task>
-  <Task priority="1" completed="False" bugfix="False">
-    <Summary>TODO: To be tested</Summary>
-    <Description></Description>
-    <Created>2010-05-25, 19:19:22</Created>
-    <Resource>
-      <Filename>PythonCAD/Generic/Kernel/relation.py</Filename>
-      <Linenumber>123</Linenumber>
-    </Resource>
-  </Task>
   <Task priority="1" completed="False" bugfix="False">
     <Summary>TODO: Improve the local directory for different os ..</Summary>
     <Description></Description>
-    <Created>2010-05-26, 14:11:50</Created>
+    <Created>2010-08-01, 10:55:19</Created>
     <Resource>
-      <Filename>PythonCAD/Generic/Kernel/application.py</Filename>
+      <Filename>PythonCAD/Generic/application.py</Filename>
       <Linenumber>43</Linenumber>
     </Resource>
   </Task>
   <Task priority="1" completed="False" bugfix="False">
-    <Summary>TODO: To be tested</Summary>
-    <Description></Description>
-    <Created>2010-05-26, 14:18:07</Created>
-    <Resource>
-      <Filename>PythonCAD/Generic/Kernel/Db/relationdb.py</Filename>
-      <Linenumber>123</Linenumber>
-    </Resource>
-  </Task>
-  <Task priority="1" completed="False" bugfix="True">
-    <Summary>FIXME: re-examine this once new text stuff is in place</Summary>
-    <Description></Description>
-    <Created>2010-05-28, 16:51:05</Created>
-    <Resource>
-      <Filename>PythonCAD/Generic/OldGeneric/image.py</Filename>
-      <Linenumber>1774</Linenumber>
-    </Resource>
-  </Task>
-  <Task priority="1" completed="False" bugfix="False">
     <Summary>TODO: to be tested</Summary>
     <Description></Description>
-    <Created>2010-07-28, 08:47:20</Created>
+    <Created>2010-08-01, 10:55:19</Created>
     <Resource>
       <Filename>PythonCAD/Generic/Kernel/Db/entitydb.py</Filename>
       <Linenumber>224</Linenumber>
     </Resource>
   </Task>
   <Task priority="1" completed="False" bugfix="False">
-    <Summary>TODO: Improve the local directory for different os ..</Summary>
+    <Summary>TODO: To be tested</Summary>
     <Description></Description>
-    <Created>2010-07-28, 09:32:47</Created>
+    <Created>2010-08-01, 10:55:19</Created>
     <Resource>
-      <Filename>PythonCAD/Generic/application.py</Filename>
-      <Linenumber>43</Linenumber>
+      <Filename>PythonCAD/Generic/Kernel/Db/relationdb.py</Filename>
+      <Linenumber>123</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: Look at using weak references ...</Summary>
+    <Description></Description>
+    <Created>2010-08-01, 10:55:21</Created>
+    <Resource>
+      <Filename>Oldstuff/OldGeneric/quadtree.py</Filename>
+      <Linenumber>23</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: getSnapOrtoPoint</Summary>
+    <Description></Description>
+    <Created>2010-08-01, 17:27:35</Created>
+    <Resource>
+      <Filename>PythonCAD/Interface/Command/segment.py</Filename>
+      <Linenumber>216</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: getSnapTangentPoint</Summary>
+    <Description></Description>
+    <Created>2010-08-01, 17:27:35</Created>
+    <Resource>
+      <Filename>PythonCAD/Interface/Command/segment.py</Filename>
+      <Linenumber>226</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: getTangentOrtoSnap</Summary>
+    <Description></Description>
+    <Created>2010-08-01, 17:27:35</Created>
+    <Resource>
+      <Filename>PythonCAD/Interface/Command/segment.py</Filename>
+      <Linenumber>259</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: getPointOrtoSnap</Summary>
+    <Description></Description>
+    <Created>2010-08-01, 17:27:35</Created>
+    <Resource>
+      <Filename>PythonCAD/Interface/Command/segment.py</Filename>
+      <Linenumber>270</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: getSnapCenterPoint</Summary>
+    <Description></Description>
+    <Created>2010-08-01, 17:27:35</Created>
+    <Resource>
+      <Filename>PythonCAD/Interface/Command/segment.py</Filename>
+      <Linenumber>280</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: getSnapQuadrantPoint</Summary>
+    <Description></Description>
+    <Created>2010-08-01, 17:27:35</Created>
+    <Resource>
+      <Filename>PythonCAD/Interface/Command/segment.py</Filename>
+      <Linenumber>290</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: getSnapOrtoPoint</Summary>
+    <Description></Description>
+    <Created>2010-08-06, 08:32:27</Created>
+    <Resource>
+      <Filename>PythonCAD/Interface/Command/ICommand.py</Filename>
+      <Linenumber>218</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: getSnapTangentPoint</Summary>
+    <Description></Description>
+    <Created>2010-08-06, 08:32:27</Created>
+    <Resource>
+      <Filename>PythonCAD/Interface/Command/ICommand.py</Filename>
+      <Linenumber>228</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: getTangentOrtoSnap</Summary>
+    <Description></Description>
+    <Created>2010-08-06, 08:32:27</Created>
+    <Resource>
+      <Filename>PythonCAD/Interface/Command/ICommand.py</Filename>
+      <Linenumber>261</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: getPointOrtoSnap</Summary>
+    <Description></Description>
+    <Created>2010-08-06, 08:32:27</Created>
+    <Resource>
+      <Filename>PythonCAD/Interface/Command/ICommand.py</Filename>
+      <Linenumber>272</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: getSnapCenterPoint</Summary>
+    <Description></Description>
+    <Created>2010-08-06, 08:32:27</Created>
+    <Resource>
+      <Filename>PythonCAD/Interface/Command/ICommand.py</Filename>
+      <Linenumber>282</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: getSnapQuadrantPoint</Summary>
+    <Description></Description>
+    <Created>2010-08-06, 08:32:27</Created>
+    <Resource>
+      <Filename>PythonCAD/Interface/Command/ICommand.py</Filename>
+      <Linenumber>292</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: make here the logic for the command go on</Summary>
+    <Description></Description>
+    <Created>2010-08-06, 09:31:10</Created>
+    <Resource>
+      <Filename>PythonCAD/Interface/Command/icommand.py</Filename>
+      <Linenumber>47</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: getSnapOrtoPoint</Summary>
+    <Description></Description>
+    <Created>2010-08-06, 09:31:10</Created>
+    <Resource>
+      <Filename>PythonCAD/Interface/Command/icommand.py</Filename>
+      <Linenumber>246</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: getSnapTangentPoint</Summary>
+    <Description></Description>
+    <Created>2010-08-06, 09:31:10</Created>
+    <Resource>
+      <Filename>PythonCAD/Interface/Command/icommand.py</Filename>
+      <Linenumber>256</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: getTangentOrtoSnap</Summary>
+    <Description></Description>
+    <Created>2010-08-06, 09:31:10</Created>
+    <Resource>
+      <Filename>PythonCAD/Interface/Command/icommand.py</Filename>
+      <Linenumber>289</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: getPointOrtoSnap</Summary>
+    <Description></Description>
+    <Created>2010-08-06, 09:31:10</Created>
+    <Resource>
+      <Filename>PythonCAD/Interface/Command/icommand.py</Filename>
+      <Linenumber>300</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: getSnapCenterPoint</Summary>
+    <Description></Description>
+    <Created>2010-08-06, 09:31:10</Created>
+    <Resource>
+      <Filename>PythonCAD/Interface/Command/icommand.py</Filename>
+      <Linenumber>310</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: getSnapQuadrantPoint</Summary>
+    <Description></Description>
+    <Created>2010-08-06, 09:31:10</Created>
+    <Resource>
+      <Filename>PythonCAD/Interface/Command/icommand.py</Filename>
+      <Linenumber>320</Linenumber>
     </Resource>
   </Task>
 </Tasks>

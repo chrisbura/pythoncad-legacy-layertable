@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-4.6.dtd">
 <!-- eric4 project file for project PythonCad -->
-<!-- Saved: 2010-07-30, 20:19:08 -->
+<!-- Saved: 2010-08-06, 09:31:13 -->
 <!-- Copyright (C) 2010 Matteo Boscolo, matteo.boscolo@boscolini.eu -->
 <Project version="4.6">
   <Language>en</Language>
@@ -98,7 +98,6 @@
     <Source>PythonCAD/Interface/evaluator.py</Source>
     <Source>PythonCAD/Interface/idocument.py</Source>
     <Source>PythonCAD/Interface/pycadapp.py</Source>
-    <Source>PythonCAD/Interface/unitparser.py</Source>
     <Source>PythonCAD/Interface/__init__.py</Source>
     <Source>PythonCAD/Interface/CmdIntf/cmdaction.py</Source>
     <Source>PythonCAD/Interface/CmdIntf/cmdcategory.py</Source>
@@ -129,7 +128,6 @@
     <Source>PythonCAD/Interface/Preview/polygon.py</Source>
     <Source>PythonCAD/Interface/Preview/polyline.py</Source>
     <Source>PythonCAD/Interface/Command/__init__.py</Source>
-    <Source>PythonCAD/Interface/Command/segment.py</Source>
     <Source>Oldstuff/buildapp.py</Source>
     <Source>Oldstuff/gtkpycad.py</Source>
     <Source>Oldstuff/prefs.py</Source>
@@ -261,6 +259,9 @@
     <Source>Oldstuff/OldGeneric/Tools/vertical_stretch_tool.py</Source>
     <Source>Oldstuff/OldGeneric/Tools/zoom_tool.py</Source>
     <Source>Oldstuff/OldGeneric/Tools/__init__.py</Source>
+    <Source>PythonCAD/Interface/Command/isegment.py</Source>
+    <Source>PythonCAD/Interface/Command/icommand.py</Source>
+    <Source>PythonCAD/Generic/Kernel/unitparser.py</Source>
   </Sources>
   <Forms>
   </Forms>
