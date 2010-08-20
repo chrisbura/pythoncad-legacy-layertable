@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Tasks SYSTEM "Tasks-4.2.dtd">
 <!-- eric4 tasks file for project PythonCad -->
-<!-- Saved: 2010-08-16, 17:52:24 -->
+<!-- Saved: 2010-08-20, 16:54:47 -->
 <Tasks version="4.2">
   <Task priority="1" completed="False" bugfix="False">
     <Summary>TODO: Improve the local directory for different os ..</Summary>
