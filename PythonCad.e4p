@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-4.6.dtd">
 <!-- eric4 project file for project PythonCad -->
-<!-- Saved: 2010-09-05, 09:27:13 -->
+<!-- Saved: 2010-09-09, 14:18:43 -->
 <!-- Copyright (C) 2010 Matteo Boscolo, matteo.boscolo@boscolini.eu -->
 <Project version="4.6">
   <Language>en</Language>
@@ -262,6 +262,8 @@
     <Source>PythonCAD/Interface/Command/icommand.py</Source>
     <Source>PythonCAD/Generic/Kernel/unitparser.py</Source>
     <Source>PythonCAD/Interface/Command/distance2point.py</Source>
+    <Source>PythonCAD/Generic/Kernel/GeoEntity/entityutil.py</Source>
+    <Source>PythonCAD/test_sympy.py</Source>
   </Sources>
   <Forms>
   </Forms>
