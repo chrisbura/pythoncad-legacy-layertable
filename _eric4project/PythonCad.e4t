@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Tasks SYSTEM "Tasks-4.2.dtd">
 <!-- eric4 tasks file for project PythonCad -->
-<!-- Saved: 2010-09-10, 11:06:35 -->
+<!-- Saved: 2010-09-11, 06:58:09 -->
 <Tasks version="4.2">
   <Task priority="1" completed="False" bugfix="False">
     <Summary>TODO: To be tested</Summary>
@@ -19,15 +19,6 @@
     <Resource>
       <Filename>PythonCAD/Generic/Kernel/Db/entitydb.py</Filename>
       <Linenumber>224</Linenumber>
-    </Resource>
-  </Task>
-  <Task priority="1" completed="False" bugfix="False">
-    <Summary>TODO: if the item is in the border the centerOn will not work propely</Summary>
-    <Description></Description>
-    <Created>2010-09-06, 14:33:10</Created>
-    <Resource>
-      <Filename>PythonCAD/Interface/cadview.py</Filename>
-      <Linenumber>53</Linenumber>
     </Resource>
   </Task>
   <Task priority="1" completed="False" bugfix="False">
@@ -109,6 +100,15 @@
     <Resource>
       <Filename>PythonCAD/Interface/cadwindow.py</Filename>
       <Linenumber>348</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: if the item is in the border the centerOn will not work propely</Summary>
+    <Description></Description>
+    <Created>2010-09-10, 14:30:03</Created>
+    <Resource>
+      <Filename>PythonCAD/Interface/cadview.py</Filename>
+      <Linenumber>53</Linenumber>
     </Resource>
   </Task>
 </Tasks>
