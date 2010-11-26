@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Tasks SYSTEM "Tasks-4.2.dtd">
 <!-- eric4 tasks file for project PythonCad -->
-<!-- Saved: 2010-10-30, 21:08:47 -->
+<!-- Saved: 2010-11-19, 14:02:08 -->
 <Tasks version="4.2">
   <Task priority="1" completed="False" bugfix="False">
     <Summary>TODO: To be tested</Summary>
@@ -22,69 +22,6 @@
     </Resource>
   </Task>
   <Task priority="1" completed="False" bugfix="False">
-    <Summary>TODO: here it will be nice to have a sort of control for chosing one entity</Summary>
-    <Description></Description>
-    <Created>2010-10-25, 06:48:57</Created>
-    <Resource>
-      <Filename>PythonCAD/Interface/Command/icommand.py</Filename>
-      <Linenumber>170</Linenumber>
-    </Resource>
-  </Task>
-  <Task priority="1" completed="False" bugfix="False">
-    <Summary>TODO: perform a back operatio to the command</Summary>
-    <Description></Description>
-    <Created>2010-10-25, 06:48:57</Created>
-    <Resource>
-      <Filename>PythonCAD/Interface/Command/icommand.py</Filename>
-      <Linenumber>200</Linenumber>
-    </Resource>
-  </Task>
-  <Task priority="1" completed="False" bugfix="False">
-    <Summary>TODO: perform a forward operatio to the command</Summary>
-    <Description></Description>
-    <Created>2010-10-25, 06:48:57</Created>
-    <Resource>
-      <Filename>PythonCAD/Interface/Command/icommand.py</Filename>
-      <Linenumber>203</Linenumber>
-    </Resource>
-  </Task>
-  <Task priority="1" completed="False" bugfix="False">
-    <Summary>TODO: getSnapOrtoPoint</Summary>
-    <Description></Description>
-    <Created>2010-10-25, 06:48:57</Created>
-    <Resource>
-      <Filename>PythonCAD/Interface/Command/icommand.py</Filename>
-      <Linenumber>482</Linenumber>
-    </Resource>
-  </Task>
-  <Task priority="1" completed="False" bugfix="False">
-    <Summary>TODO: getSnapTangentPoint</Summary>
-    <Description></Description>
-    <Created>2010-10-25, 06:48:57</Created>
-    <Resource>
-      <Filename>PythonCAD/Interface/Command/icommand.py</Filename>
-      <Linenumber>492</Linenumber>
-    </Resource>
-  </Task>
-  <Task priority="1" completed="False" bugfix="False">
-    <Summary>TODO: getTangentOrtoSnap</Summary>
-    <Description></Description>
-    <Created>2010-10-25, 06:48:57</Created>
-    <Resource>
-      <Filename>PythonCAD/Interface/Command/icommand.py</Filename>
-      <Linenumber>531</Linenumber>
-    </Resource>
-  </Task>
-  <Task priority="1" completed="False" bugfix="False">
-    <Summary>TODO: getPointOrtoSnap</Summary>
-    <Description></Description>
-    <Created>2010-10-25, 06:48:57</Created>
-    <Resource>
-      <Filename>PythonCAD/Interface/Command/icommand.py</Filename>
-      <Linenumber>542</Linenumber>
-    </Resource>
-  </Task>
-  <Task priority="1" completed="False" bugfix="False">
     <Summary>TODO: if the item is in the border the centerOn will not work propely</Summary>
     <Description></Description>
     <Created>2010-10-26, 07:57:41</Created>
@@ -93,13 +30,76 @@
       <Linenumber>92</Linenumber>
     </Resource>
   </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: here it will be nice to have a sort of control for chosing one entity</Summary>
+    <Description></Description>
+    <Created>2010-11-07, 16:03:19</Created>
+    <Resource>
+      <Filename>PythonCAD/Interface/Command/icommand.py</Filename>
+      <Linenumber>171</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: perform a back operatio to the command</Summary>
+    <Description></Description>
+    <Created>2010-11-07, 16:03:19</Created>
+    <Resource>
+      <Filename>PythonCAD/Interface/Command/icommand.py</Filename>
+      <Linenumber>201</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: perform a forward operatio to the command</Summary>
+    <Description></Description>
+    <Created>2010-11-07, 16:03:19</Created>
+    <Resource>
+      <Filename>PythonCAD/Interface/Command/icommand.py</Filename>
+      <Linenumber>204</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: getSnapOrtoPoint</Summary>
+    <Description></Description>
+    <Created>2010-11-07, 16:03:19</Created>
+    <Resource>
+      <Filename>PythonCAD/Interface/Command/icommand.py</Filename>
+      <Linenumber>486</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: getSnapTangentPoint</Summary>
+    <Description></Description>
+    <Created>2010-11-07, 16:03:19</Created>
+    <Resource>
+      <Filename>PythonCAD/Interface/Command/icommand.py</Filename>
+      <Linenumber>496</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: getTangentOrtoSnap</Summary>
+    <Description></Description>
+    <Created>2010-11-07, 16:03:19</Created>
+    <Resource>
+      <Filename>PythonCAD/Interface/Command/icommand.py</Filename>
+      <Linenumber>535</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: getPointOrtoSnap</Summary>
+    <Description></Description>
+    <Created>2010-11-07, 16:03:19</Created>
+    <Resource>
+      <Filename>PythonCAD/Interface/Command/icommand.py</Filename>
+      <Linenumber>546</Linenumber>
+    </Resource>
+  </Task>
   <Task priority="1" completed="False" bugfix="True">
     <Summary>FIXME: if in the command line we insert file_1 or file_2</Summary>
     <Description></Description>
-    <Created>2010-10-30, 07:31:06</Created>
+    <Created>2010-11-07, 16:08:44</Created>
     <Resource>
       <Filename>PythonCAD/Interface/cadwindow.py</Filename>
-      <Linenumber>363</Linenumber>
+      <Linenumber>419</Linenumber>
     </Resource>
   </Task>
 </Tasks>
