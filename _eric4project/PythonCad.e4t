@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Tasks SYSTEM "Tasks-4.2.dtd">
 <!-- eric4 tasks file for project PythonCad -->
-<!-- Saved: 2010-12-16, 13:46:07 -->
+<!-- Saved: 2010-12-16, 21:52:06 -->
 <Tasks version="4.2">
   <Task priority="1" completed="False" bugfix="False">
     <Summary>TODO: To be tested</Summary>
@@ -105,10 +105,10 @@
   <Task priority="1" completed="False" bugfix="True">
     <Summary>FIXME: if in the command line we insert file_1 or file_2</Summary>
     <Description></Description>
-    <Created>2010-12-16, 11:23:35</Created>
+    <Created>2010-12-16, 17:21:25</Created>
     <Resource>
       <Filename>PythonCAD/Interface/cadwindow.py</Filename>
-      <Linenumber>441</Linenumber>
+      <Linenumber>445</Linenumber>
     </Resource>
   </Task>
 </Tasks>
