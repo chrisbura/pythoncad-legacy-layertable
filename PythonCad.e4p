@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-4.6.dtd">
 <!-- eric4 project file for project PythonCad -->
-<!-- Saved: 2010-12-16, 12:13:17 -->
+<!-- Saved: 2010-12-19, 14:03:25 -->
 <!-- Copyright (C) 2010 Matteo Boscolo, matteo.boscolo@boscolini.eu -->
 <Project version="4.6">
   <Language>en</Language>
@@ -115,8 +115,6 @@
     <Source>PythonCAD/Interface/Entity/text.py</Source>
     <Source>PythonCAD/Interface/Entity/__init__.py</Source>
     <Source>PythonCAD/Interface/LayerIntf/layerdock.py</Source>
-    <Source>PythonCAD/Interface/LayerIntf/layeritem.py</Source>
-    <Source>PythonCAD/Interface/LayerIntf/layermodel.py</Source>
     <Source>PythonCAD/Interface/LayerIntf/__init__.py</Source>
     <Source>PythonCAD/Interface/Preview/arc.py</Source>
     <Source>PythonCAD/Interface/Preview/base.py</Source>
