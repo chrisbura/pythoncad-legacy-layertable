@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-4.6.dtd">
 <!-- eric4 project file for project PythonCad -->
-<!-- Saved: 2010-12-24, 15:45:20 -->
-<!-- Copyright (C) 2010 Matteo Boscolo, matteo.boscolo@boscolini.eu -->
+<!-- Saved: 2011-02-01, 21:11:41 -->
+<!-- Copyright (C) 2011 Matteo Boscolo, matteo.boscolo@boscolini.eu -->
 <Project version="4.6">
   <Language>en</Language>
   <ProgLanguage mixed="0">Python</ProgLanguage>
@@ -264,14 +264,20 @@
     <Source>PythonCAD/test_sympy.py</Source>
     <Source>PythonCAD/Generic/Kernel/Command/copycommand.py</Source>
     <Source>PythonCAD/Interface/Entity/actionhandler.py</Source>
-    <Source>PythonCAD/Interface/caddialogs.py</Source>
     <Source>PythonCAD/Interface/snap.py</Source>
     <Source>PythonCAD/Generic/Kernel/Command/dimensioncommand.py</Source>
     <Source>PythonCAD/Interface/Entity/dimension.py</Source>
     <Source>PythonCAD/Interface/LayerIntf/layertreeobject.py</Source>
     <Source>PythonCAD/Interface/polarguides.py</Source>
+    <Source>PythonCAD/Generic/Kernel/Command/propertycommand.py</Source>
+    <Source>PythonCAD/Interface/Dialogs/Widget/widgets.py</Source>
+    <Source>PythonCAD/Interface/Dialogs/Widget/__init__.py</Source>
+    <Source>PythonCAD/Interface/Dialogs/__init__.py</Source>
+    <Source>PythonCAD/Interface/Dialogs/property.py</Source>
+    <Source>PythonCAD/Interface/Dialogs/Ui_property.py</Source>
   </Sources>
   <Forms>
+    <Form>PythonCAD/Interface/Dialogs/property.ui</Form>
   </Forms>
   <Translations>
   </Translations>

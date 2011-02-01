@@ -1,17 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Tasks SYSTEM "Tasks-4.2.dtd">
 <!-- eric4 tasks file for project PythonCad -->
-<!-- Saved: 2011-01-17, 08:17:49 -->
+<!-- Saved: 2011-02-01, 22:57:57 -->
 <Tasks version="4.2">
-  <Task priority="1" completed="False" bugfix="False">
-    <Summary>TODO: MAKE A GLOBAL VARIABLE TO SET THIS VALUE</Summary>
-    <Description></Description>
-    <Created>2010-12-08, 08:45:09</Created>
-    <Resource>
-      <Filename>PythonCAD/Generic/Kernel/Command/trimcommand.py</Filename>
-      <Linenumber>108</Linenumber>
-    </Resource>
-  </Task>
   <Task priority="1" completed="False" bugfix="False">
     <Summary>TODO: getSnapOrtoPoint</Summary>
     <Description></Description>
@@ -49,42 +40,6 @@
     </Resource>
   </Task>
   <Task priority="1" completed="False" bugfix="False">
-    <Summary>TODO: here it will be nice to have a sort of control for chosing one entity</Summary>
-    <Description></Description>
-    <Created>2010-12-22, 08:20:16</Created>
-    <Resource>
-      <Filename>PythonCAD/Interface/Command/icommand.py</Filename>
-      <Linenumber>197</Linenumber>
-    </Resource>
-  </Task>
-  <Task priority="1" completed="False" bugfix="False">
-    <Summary>TODO: perform a back operatio to the command</Summary>
-    <Description></Description>
-    <Created>2010-12-22, 08:20:16</Created>
-    <Resource>
-      <Filename>PythonCAD/Interface/Command/icommand.py</Filename>
-      <Linenumber>228</Linenumber>
-    </Resource>
-  </Task>
-  <Task priority="1" completed="False" bugfix="False">
-    <Summary>TODO: perform a forward operatio to the command</Summary>
-    <Description></Description>
-    <Created>2010-12-22, 08:20:16</Created>
-    <Resource>
-      <Filename>PythonCAD/Interface/Command/icommand.py</Filename>
-      <Linenumber>231</Linenumber>
-    </Resource>
-  </Task>
-  <Task priority="1" completed="False" bugfix="True">
-    <Summary>FIXME: if in the command line we insert file_1 or file_2</Summary>
-    <Description></Description>
-    <Created>2011-01-02, 09:02:38</Created>
-    <Resource>
-      <Filename>PythonCAD/Interface/cadwindow.py</Filename>
-      <Linenumber>454</Linenumber>
-    </Resource>
-  </Task>
-  <Task priority="1" completed="False" bugfix="False">
     <Summary>TODO: if the item is in the border the centerOn will not work propely</Summary>
     <Description></Description>
     <Created>2011-01-02, 09:05:42</Created>
@@ -94,18 +49,9 @@
     </Resource>
   </Task>
   <Task priority="1" completed="False" bugfix="False">
-    <Summary>TODO: to be tested</Summary>
-    <Description></Description>
-    <Created>2011-01-10, 07:38:52</Created>
-    <Resource>
-      <Filename>PythonCAD/Generic/Kernel/Db/entitydb.py</Filename>
-      <Linenumber>224</Linenumber>
-    </Resource>
-  </Task>
-  <Task priority="1" completed="False" bugfix="False">
     <Summary>TODO: To be tested</Summary>
     <Description></Description>
-    <Created>2011-01-10, 07:50:25</Created>
+    <Created>2011-02-01, 18:37:12</Created>
     <Resource>
       <Filename>PythonCAD/Generic/Kernel/Db/relationdb.py</Filename>
       <Linenumber>130</Linenumber>
@@ -114,7 +60,7 @@
   <Task priority="1" completed="False" bugfix="False">
     <Summary>TODO: manage logger self.__logger.debug('getEntLayerDb')</Summary>
     <Description></Description>
-    <Created>2011-01-13, 09:04:01</Created>
+    <Created>2011-02-01, 18:45:48</Created>
     <Resource>
       <Filename>PythonCAD/Generic/Kernel/layertree.py</Filename>
       <Linenumber>120</Linenumber>
@@ -123,19 +69,91 @@
   <Task priority="1" completed="False" bugfix="False">
     <Summary>TODO: Optimaze this loop with the build in type [...] if possible</Summary>
     <Description></Description>
-    <Created>2011-01-13, 09:04:01</Created>
+    <Created>2011-02-01, 18:45:48</Created>
     <Resource>
       <Filename>PythonCAD/Generic/Kernel/layertree.py</Filename>
       <Linenumber>122</Linenumber>
     </Resource>
   </Task>
   <Task priority="1" completed="False" bugfix="False">
-    <Summary>TODO: I do not like this way ...</Summary>
+    <Summary>TODO: to be tested</Summary>
     <Description></Description>
-    <Created>2011-01-17, 07:47:31</Created>
+    <Created>2011-02-01, 19:04:09</Created>
     <Resource>
-      <Filename>PythonCAD/Interface/LayerIntf/layertreeobject.py</Filename>
-      <Linenumber>50</Linenumber>
+      <Filename>PythonCAD/Generic/Kernel/Db/entitydb.py</Filename>
+      <Linenumber>224</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: MAKE A GLOBAL VARIABLE TO SET THIS VALUE</Summary>
+    <Description></Description>
+    <Created>2011-02-01, 19:16:29</Created>
+    <Resource>
+      <Filename>PythonCAD/Generic/Kernel/Command/trimcommand.py</Filename>
+      <Linenumber>108</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2011-02-01, 21:49:26</Created>
+    <Resource>
+      <Filename>PythonCAD/Interface/Dialogs/property.py</Filename>
+      <Linenumber>56</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="True">
+    <Summary>FIXME: if in the command line we insert file_1 or file_2</Summary>
+    <Description></Description>
+    <Created>2011-02-01, 21:59:25</Created>
+    <Resource>
+      <Filename>PythonCAD/Interface/cadwindow.py</Filename>
+      <Linenumber>460</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: Mettere a primo argomento l'applicazione ..</Summary>
+    <Description></Description>
+    <Created>2011-02-01, 22:44:48</Created>
+    <Resource>
+      <Filename>PythonCAD/Interface/Command/icommand.py</Filename>
+      <Linenumber>165</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: mettere il reset del comando</Summary>
+    <Description></Description>
+    <Created>2011-02-01, 22:44:48</Created>
+    <Resource>
+      <Filename>PythonCAD/Interface/Command/icommand.py</Filename>
+      <Linenumber>172</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: here it will be nice to have a sort of control for chosing one entity</Summary>
+    <Description></Description>
+    <Created>2011-02-01, 22:44:48</Created>
+    <Resource>
+      <Filename>PythonCAD/Interface/Command/icommand.py</Filename>
+      <Linenumber>209</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: perform a back operatio to the command</Summary>
+    <Description></Description>
+    <Created>2011-02-01, 22:44:48</Created>
+    <Resource>
+      <Filename>PythonCAD/Interface/Command/icommand.py</Filename>
+      <Linenumber>240</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: perform a forward operatio to the command</Summary>
+    <Description></Description>
+    <Created>2011-02-01, 22:44:48</Created>
+    <Resource>
+      <Filename>PythonCAD/Interface/Command/icommand.py</Filename>
+      <Linenumber>243</Linenumber>
     </Resource>
   </Task>
 </Tasks>
