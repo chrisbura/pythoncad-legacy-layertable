@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Tasks SYSTEM "Tasks-4.2.dtd">
 <!-- eric4 tasks file for project PythonCad -->
-<!-- Saved: 2011-02-01, 22:57:57 -->
+<!-- Saved: 2011-02-05, 00:21:21 -->
 <Tasks version="4.2">
   <Task priority="1" completed="False" bugfix="False">
     <Summary>TODO: getSnapOrtoPoint</Summary>
@@ -76,15 +76,6 @@
     </Resource>
   </Task>
   <Task priority="1" completed="False" bugfix="False">
-    <Summary>TODO: to be tested</Summary>
-    <Description></Description>
-    <Created>2011-02-01, 19:04:09</Created>
-    <Resource>
-      <Filename>PythonCAD/Generic/Kernel/Db/entitydb.py</Filename>
-      <Linenumber>224</Linenumber>
-    </Resource>
-  </Task>
-  <Task priority="1" completed="False" bugfix="False">
     <Summary>TODO: MAKE A GLOBAL VARIABLE TO SET THIS VALUE</Summary>
     <Description></Description>
     <Created>2011-02-01, 19:16:29</Created>
@@ -94,66 +85,57 @@
     </Resource>
   </Task>
   <Task priority="1" completed="False" bugfix="False">
-    <Summary>TODO: not implemented yet</Summary>
-    <Description></Description>
-    <Created>2011-02-01, 21:49:26</Created>
-    <Resource>
-      <Filename>PythonCAD/Interface/Dialogs/property.py</Filename>
-      <Linenumber>56</Linenumber>
-    </Resource>
-  </Task>
-  <Task priority="1" completed="False" bugfix="True">
-    <Summary>FIXME: if in the command line we insert file_1 or file_2</Summary>
-    <Description></Description>
-    <Created>2011-02-01, 21:59:25</Created>
-    <Resource>
-      <Filename>PythonCAD/Interface/cadwindow.py</Filename>
-      <Linenumber>460</Linenumber>
-    </Resource>
-  </Task>
-  <Task priority="1" completed="False" bugfix="False">
     <Summary>TODO: Mettere a primo argomento l'applicazione ..</Summary>
     <Description></Description>
-    <Created>2011-02-01, 22:44:48</Created>
+    <Created>2011-02-02, 20:39:04</Created>
     <Resource>
       <Filename>PythonCAD/Interface/Command/icommand.py</Filename>
       <Linenumber>165</Linenumber>
     </Resource>
   </Task>
   <Task priority="1" completed="False" bugfix="False">
-    <Summary>TODO: mettere il reset del comando</Summary>
-    <Description></Description>
-    <Created>2011-02-01, 22:44:48</Created>
-    <Resource>
-      <Filename>PythonCAD/Interface/Command/icommand.py</Filename>
-      <Linenumber>172</Linenumber>
-    </Resource>
-  </Task>
-  <Task priority="1" completed="False" bugfix="False">
     <Summary>TODO: here it will be nice to have a sort of control for chosing one entity</Summary>
     <Description></Description>
-    <Created>2011-02-01, 22:44:48</Created>
+    <Created>2011-02-02, 20:39:04</Created>
     <Resource>
       <Filename>PythonCAD/Interface/Command/icommand.py</Filename>
-      <Linenumber>209</Linenumber>
+      <Linenumber>208</Linenumber>
     </Resource>
   </Task>
   <Task priority="1" completed="False" bugfix="False">
     <Summary>TODO: perform a back operatio to the command</Summary>
     <Description></Description>
-    <Created>2011-02-01, 22:44:48</Created>
+    <Created>2011-02-02, 20:39:04</Created>
     <Resource>
       <Filename>PythonCAD/Interface/Command/icommand.py</Filename>
-      <Linenumber>240</Linenumber>
+      <Linenumber>239</Linenumber>
     </Resource>
   </Task>
   <Task priority="1" completed="False" bugfix="False">
     <Summary>TODO: perform a forward operatio to the command</Summary>
     <Description></Description>
-    <Created>2011-02-01, 22:44:48</Created>
+    <Created>2011-02-02, 20:39:04</Created>
     <Resource>
       <Filename>PythonCAD/Interface/Command/icommand.py</Filename>
-      <Linenumber>243</Linenumber>
+      <Linenumber>242</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: to be tested</Summary>
+    <Description></Description>
+    <Created>2011-02-04, 22:55:14</Created>
+    <Resource>
+      <Filename>PythonCAD/Generic/Kernel/Db/entitydb.py</Filename>
+      <Linenumber>224</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="True">
+    <Summary>FIXME: if in the command line we insert file_1 or file_2</Summary>
+    <Description></Description>
+    <Created>2011-02-04, 23:56:05</Created>
+    <Resource>
+      <Filename>PythonCAD/Interface/cadwindow.py</Filename>
+      <Linenumber>463</Linenumber>
     </Resource>
   </Task>
 </Tasks>
