@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-4.6.dtd">
 <!-- eric4 project file for project PythonCad -->
-<!-- Saved: 2011-02-01, 21:11:41 -->
+<!-- Saved: 2011-03-28, 09:14:24 -->
 <!-- Copyright (C) 2011 Matteo Boscolo, matteo.boscolo@boscolini.eu -->
 <Project version="4.6">
   <Language>en</Language>
@@ -94,8 +94,6 @@
     <Source>PythonCAD/Interface/cadview.py</Source>
     <Source>PythonCAD/Interface/cadwindow.py</Source>
     <Source>PythonCAD/Interface/cadwindow_rc.py</Source>
-    <Source>PythonCAD/Interface/dinamicentryobject.py</Source>
-    <Source>PythonCAD/Interface/evaluator.py</Source>
     <Source>PythonCAD/Interface/idocument.py</Source>
     <Source>PythonCAD/Interface/pycadapp.py</Source>
     <Source>PythonCAD/Interface/__init__.py</Source>
@@ -264,17 +262,20 @@
     <Source>PythonCAD/test_sympy.py</Source>
     <Source>PythonCAD/Generic/Kernel/Command/copycommand.py</Source>
     <Source>PythonCAD/Interface/Entity/actionhandler.py</Source>
-    <Source>PythonCAD/Interface/snap.py</Source>
     <Source>PythonCAD/Generic/Kernel/Command/dimensioncommand.py</Source>
     <Source>PythonCAD/Interface/Entity/dimension.py</Source>
     <Source>PythonCAD/Interface/LayerIntf/layertreeobject.py</Source>
-    <Source>PythonCAD/Interface/polarguides.py</Source>
     <Source>PythonCAD/Generic/Kernel/Command/propertycommand.py</Source>
     <Source>PythonCAD/Interface/Dialogs/Widget/widgets.py</Source>
     <Source>PythonCAD/Interface/Dialogs/Widget/__init__.py</Source>
     <Source>PythonCAD/Interface/Dialogs/__init__.py</Source>
     <Source>PythonCAD/Interface/Dialogs/property.py</Source>
     <Source>PythonCAD/Interface/Dialogs/Ui_property.py</Source>
+    <Source>PythonCAD/Interface/Entity/dinamicentryobject.py</Source>
+    <Source>PythonCAD/Interface/DrawingHelper/__init__.py</Source>
+    <Source>PythonCAD/Interface/DrawingHelper/snap.py</Source>
+    <Source>PythonCAD/Interface/DrawingHelper/polarguides.py</Source>
+    <Source>PythonCAD/Interface/DrawingHelper/evaluator.py</Source>
   </Sources>
   <Forms>
     <Form>PythonCAD/Interface/Dialogs/property.ui</Form>
