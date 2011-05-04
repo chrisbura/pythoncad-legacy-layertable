@@ -1,35 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Tasks SYSTEM "Tasks-4.2.dtd">
 <!-- eric4 tasks file for project PythonCad -->
-<!-- Saved: 2011-04-25, 09:42:38 -->
+<!-- Saved: 2011-05-04, 12:07:08 -->
 <Tasks version="4.2">
-  <Task priority="1" completed="False" bugfix="False">
-    <Summary>TODO: To be tested</Summary>
-    <Description></Description>
-    <Created>2011-02-01, 18:37:12</Created>
-    <Resource>
-      <Filename>PythonCAD/Generic/Kernel/Db/relationdb.py</Filename>
-      <Linenumber>130</Linenumber>
-    </Resource>
-  </Task>
-  <Task priority="1" completed="False" bugfix="False">
-    <Summary>TODO: manage logger self.__logger.debug('getEntLayerDb')</Summary>
-    <Description></Description>
-    <Created>2011-02-01, 18:45:48</Created>
-    <Resource>
-      <Filename>PythonCAD/Generic/Kernel/layertree.py</Filename>
-      <Linenumber>120</Linenumber>
-    </Resource>
-  </Task>
-  <Task priority="1" completed="False" bugfix="False">
-    <Summary>TODO: Optimaze this loop with the build in type [...] if possible</Summary>
-    <Description></Description>
-    <Created>2011-02-01, 18:45:48</Created>
-    <Resource>
-      <Filename>PythonCAD/Generic/Kernel/layertree.py</Filename>
-      <Linenumber>122</Linenumber>
-    </Resource>
-  </Task>
   <Task priority="1" completed="False" bugfix="False">
     <Summary>TODO: MAKE A GLOBAL VARIABLE TO SET THIS VALUE</Summary>
     <Description></Description>
@@ -55,15 +28,6 @@
     <Resource>
       <Filename>PythonCAD/Interface/snap.py</Filename>
       <Linenumber>134</Linenumber>
-    </Resource>
-  </Task>
-  <Task priority="1" completed="False" bugfix="True">
-    <Summary>FIXME: if in the command line we insert file_1 or file_2</Summary>
-    <Description></Description>
-    <Created>2011-04-12, 10:25:41</Created>
-    <Resource>
-      <Filename>PythonCAD/Interface/cadwindow.py</Filename>
-      <Linenumber>462</Linenumber>
     </Resource>
   </Task>
   <Task priority="1" completed="False" bugfix="False">
@@ -103,12 +67,48 @@
     </Resource>
   </Task>
   <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: manage logger self.__logger.debug('getEntLayerDb')</Summary>
+    <Description></Description>
+    <Created>2011-05-01, 10:01:16</Created>
+    <Resource>
+      <Filename>PythonCAD/Generic/Kernel/layertree.py</Filename>
+      <Linenumber>120</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: Optimaze this loop with the build in type [...] if possible</Summary>
+    <Description></Description>
+    <Created>2011-05-01, 10:01:16</Created>
+    <Resource>
+      <Filename>PythonCAD/Generic/Kernel/layertree.py</Filename>
+      <Linenumber>122</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="True">
+    <Summary>FIXME: if in the command line we insert file_1 or file_2</Summary>
+    <Description></Description>
+    <Created>2011-05-03, 14:58:02</Created>
+    <Resource>
+      <Filename>PythonCAD/Interface/cadwindow.py</Filename>
+      <Linenumber>462</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
     <Summary>TODO: to be tested</Summary>
     <Description></Description>
-    <Created>2011-04-25, 08:40:37</Created>
+    <Created>2011-05-04, 11:00:04</Created>
     <Resource>
       <Filename>PythonCAD/Generic/Kernel/Db/entitydb.py</Filename>
       <Linenumber>224</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" bugfix="False">
+    <Summary>TODO: To be tested</Summary>
+    <Description></Description>
+    <Created>2011-05-04, 11:00:09</Created>
+    <Resource>
+      <Filename>PythonCAD/Generic/Kernel/Db/relationdb.py</Filename>
+      <Linenumber>130</Linenumber>
     </Resource>
   </Task>
 </Tasks>
