@@ -474,15 +474,15 @@ This method is private to the Layer.
             raise TypeError, "Unexpected type: " + `type(obj)`
         return (_split, _objs)
 
-    def setAutosplit(self, as):
+    def setAutosplit(self, asa):
         """Set the autosplit state of the Layer.
         
-setAutosplit(as)
+setAutosplit(asa)
 
 Argument 'as' must be a Boolean.
         """
-        util.test_boolean(as)
-        self.__asplit = as
+        util.test_boolean(asa)
+        self.__asplit = asa
 
     def getAutosplit(self):
         """Retrieve the autosplit state of the Layer.
