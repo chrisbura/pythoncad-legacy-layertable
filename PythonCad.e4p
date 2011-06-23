@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-4.6.dtd">
 <!-- eric4 project file for project PythonCad -->
-<!-- Saved: 2011-06-14, 16:13:38 -->
+<!-- Saved: 2011-06-21, 19:54:02 -->
 <!-- Copyright (C) 2011 Matteo Boscolo, matteo.boscolo@boscolini.eu -->
 <Project version="4.6">
   <Language>en</Language>
@@ -148,6 +148,7 @@
   </Sources>
   <Forms>
     <Form>PythonCAD/Interface/Dialogs/property.ui</Form>
+    <Form>PythonCAD/aaaa.ui</Form>
   </Forms>
   <Translations>
   </Translations>
