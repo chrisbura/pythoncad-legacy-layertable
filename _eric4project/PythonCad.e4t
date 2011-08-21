@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Tasks SYSTEM "Tasks-4.2.dtd">
 <!-- eric4 tasks file for project PythonCad -->
-<!-- Saved: 2011-07-11, 17:39:21 -->
+<!-- Saved: 2011-08-21, 08:56:51 -->
 <Tasks version="4.2">
   <Task priority="1" completed="False" bugfix="False">
     <Summary>TODO: manage logger self.__logger.debug('getEntLayerDb')</Summary>
