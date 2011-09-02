@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-4.6.dtd">
 <!-- eric4 project file for project PythonCad -->
-<!-- Saved: 2011-06-21, 19:54:02 -->
+<!-- Saved: 2011-09-02, 15:52:37 -->
 <!-- Copyright (C) 2011 Matteo Boscolo, matteo.boscolo@boscolini.eu -->
 <Project version="4.6">
   <Language>en</Language>
@@ -145,6 +145,7 @@
     <Source>PythonCAD/Interface/DrawingHelper/snap.py</Source>
     <Source>PythonCAD/Interface/DrawingHelper/polarguides.py</Source>
     <Source>PythonCAD/Interface/DrawingHelper/evaluator.py</Source>
+    <Source>PythonCAD/Interface/Preview/point.py</Source>
   </Sources>
   <Forms>
     <Form>PythonCAD/Interface/Dialogs/property.ui</Form>
