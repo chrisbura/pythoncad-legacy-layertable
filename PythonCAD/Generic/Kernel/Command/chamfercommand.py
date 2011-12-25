@@ -29,7 +29,7 @@ from Kernel.GeoUtil.util                    import getIdPoint
 
 class ChamferCommand(BaseCommand):
     """
-        this class rappresent the champfer command
+        this class represents the chamfer command
     """
     def __init__(self, document):
         BaseCommand.__init__(self, document)
@@ -88,10 +88,10 @@ class ChamferCommand(BaseCommand):
         
     def applyCommand(self):
         """
-            apply the champfer command
+            apply the chamfer command
         """
         if len(self.value)!=5:
-            raise PyCadWrongImputData("Wrong number of imput parameter")
+            raise PyCadWrongInputData("Wrong number of input parameter")
         
         try:
             self.document.startMassiveCreation()

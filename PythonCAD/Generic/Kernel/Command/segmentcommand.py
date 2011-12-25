@@ -27,7 +27,7 @@ from Kernel.GeoEntity.point         import Point
 
 class SegmentCommand(BaseCommand):
     """
-        this class rappresent the segment command
+        this class represent the segment command
     """
     def __init__(self, document):
         BaseCommand.__init__(self, document)
@@ -37,7 +37,7 @@ class SegmentCommand(BaseCommand):
         
     def applyCommand(self):
         if len(self.value)!=2:
-            raise PyCadWrongImputData("Wrong number of imput parameter")
+            raise PyCadWrongInputData("Wrong number of input parameter")
         segArg={"SEGMENT_0":self.value[0], "SEGMENT_1":self.value[1]}
         seg=Segment(segArg)
         self.document.saveEntity(seg)

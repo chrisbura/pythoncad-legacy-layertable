@@ -26,7 +26,7 @@ from Kernel.GeoEntity.arc           import Arc
 
 class MoveCommand(BaseCommand):
     """
-        this class rappresent the Move command
+        this class represent the Move command
     """
     def __init__(self, document):
         BaseCommand.__init__(self, document)
@@ -55,7 +55,7 @@ class MoveCommand(BaseCommand):
             apply the champfer command
         """
         if len(self.value)!=3:
-            raise PyCadWrongImputData("Wrong number of imput parameter")
+            raise PyCadWrongInputData("Wrong number of input parameter")
         try:
             self.document.startMassiveCreation()
             for _ent in self.getEntsToSave():

@@ -146,11 +146,11 @@ class CmdIntf(object):
         '''
         self.__edit_ctrl.FunctionHandler.evaluateInnerCommand(kernelCommand, selectedItems)
      
-    def evaluateMouseImput(self,view,event):
+    def evaluateMouseInput(self,view,event):
         '''
             get imput from viewport
         '''
-        self.__edit_ctrl.FunctionHandler.evaluateMouseImput(event)
+        self.__edit_ctrl.FunctionHandler.evaluateMouseInput(event)
         
     def resetCommand(self):
         """

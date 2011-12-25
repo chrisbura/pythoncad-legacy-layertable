@@ -27,7 +27,7 @@ from Kernel.GeoEntity.dimension     import Dimension
 
 class DimensionCommand(BaseCommand):
     """
-        This class rappresent the segment command
+        This class represent the dimension command
     """
     def __init__(self, document):
         BaseCommand.__init__(self, document)
@@ -35,7 +35,7 @@ class DimensionCommand(BaseCommand):
         self.defaultValue=[None, None, None, 0]
         self.message=["Give Me The First Point: ",
                         "Give Me The Second Point: ",
-                        "Give Me Dimesion Position: ", 
+                        "Give Me Dimension Position: ", 
                         "Give Me The Orientation Angle"]   # what does it mean???
     @property
     def getAngle(self):
@@ -49,7 +49,7 @@ class DimensionCommand(BaseCommand):
         if len(self.value)==3: #assing the angle
             self.value.append(self.getAngle)
         if len(self.value)!=4:
-            raise PyCadWrongImputData("Wrong number of imput parameter")
+            raise PyCadWrongInputData("Wrong number of input parameter")
         dimArgs={"DIMENSION_1":self.value[0], 
                     "DIMENSION_2":self.value[1], 
                     "DIMENSION_3":self.value[2], 

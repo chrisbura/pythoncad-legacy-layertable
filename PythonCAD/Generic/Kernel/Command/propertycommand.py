@@ -51,7 +51,7 @@ class PropertyCommand(BaseCommand):
 
     def applyCommand(self):
         if len(self.value)!=2:
-            raise PyCadWrongImputData("Wrong number of input parameter")
+            raise PyCadWrongInputData("Wrong number of input parameter")
         try:
             self.document.startMassiveCreation()
             

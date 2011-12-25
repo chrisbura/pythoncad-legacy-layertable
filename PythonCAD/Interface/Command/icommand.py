@@ -254,7 +254,7 @@ class ICommand(object):
             try:
                 tValue=self.decodeText(value)
                 self.addMauseEvent(tValue[0], tValue[1], tValue[2], tValue[3], tValue[4], correct=None)
-            except PyCadWrongImputData, msg:
+            except PyCadWrongInputData, msg:
                 print "Problem on ICommand.addTextEvent"
                 self.updateInput(msg)
                 self.updateInput(self.kernelCommand.activeMessage)
@@ -346,7 +346,7 @@ class ICommand(object):
             except(ExcText):
                 text=value
         except:
-            raise PyCadWrongImputData("BaseCommand : Wrong imput parameter for the command")
+            raise PyCadWrongInputData("BaseCommand : Wrong input parameter for the command")
         return (point,entitys, distance,angle, text)
 
     def getIdsString(self, value):

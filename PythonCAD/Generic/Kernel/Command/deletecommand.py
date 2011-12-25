@@ -28,7 +28,7 @@ from Kernel.GeoUtil.util            import *
 
 class DeleteCommand(BaseCommand):
     """
-        this class rappresent the Trim command
+        this class represent the Trim command
     """
     def __init__(self, document):
         BaseCommand.__init__(self, document)
@@ -46,7 +46,7 @@ class DeleteCommand(BaseCommand):
             apply the champfer command
         """
         if len(self.value)!=1:
-            raise PyCadWrongImputData("Wrong number of imput parameter")
+            raise PyCadWrongInputData("Wrong number of input parameter")
         try:
             self.document.startMassiveCreation()
             for id in str(self.value[0]).split(','):

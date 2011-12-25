@@ -84,7 +84,7 @@ PYTHONCAD_STYLE_WIDGET={'entity_color':PyCadQColor,
                         }
 PYTHONCAD_STYLE_DESCRIPTION={'entity_color':'Color', 
                         'entity_linetype':'Line Type',
-                        'entity_thickness':'Line Ticness', 
+                        'entity_thickness':'Line Thickness', 
                         'text_font':'Font', 
                         'text_height':'Text Height', 
                         }

@@ -29,7 +29,7 @@ from Kernel.GeoUtil.util                   import getIdPoint
 
 class FilletCommand(BaseCommand):
     """
-        this class rappresent the champfer command
+        this class represent the fillet command
     """
     def __init__(self, document):
         BaseCommand.__init__(self, document)
@@ -86,10 +86,10 @@ class FilletCommand(BaseCommand):
         
     def applyCommand(self):
         """
-            apply the champfer command
+            apply the fillet command
         """
         if len(self.value)!=4:
-            raise PyCadWrongImputData("Wrong number of imput parameter")
+            raise PyCadWrongInputData("Wrong number of input parameter")
         try:
             self.document.startMassiveCreation()
             for _ent in self.getEntsToSave():

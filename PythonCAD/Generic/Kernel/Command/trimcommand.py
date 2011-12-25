@@ -103,7 +103,7 @@ class TrimCommand(BaseCommand):
             apply the trim command
         """
         if len(self.value)<2:
-            raise PyCadWrongImputData("Wrong number of imput parameter")
+            raise PyCadWrongInputData("Wrong number of input parameter")
         if len(self.value)==2:
             self.value.append("BOTH")   # TODO: MAKE A GLOBAL VARIABLE TO SET THIS VALUE
                                         # AS A SETTING VALUE

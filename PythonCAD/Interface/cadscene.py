@@ -186,7 +186,6 @@ class CadScene(QtGui.QGraphicsScene):
                 qtItem.setSelected(True)
                 self.updateSelected()
                 if event.button()==QtCore.Qt.RightButton:
-                    print "qtItems", qtItem
                     self.showContextMenu(qtItem, event)
 
             #else:
@@ -205,7 +204,7 @@ class CadScene(QtGui.QGraphicsScene):
                 if event.button()==QtCore.Qt.RightButton:
                     try:
                         self.activeICommand.applyDefault()
-                    except PyCadWrongImputData:
+                    except PyCadWrongInputData:
                         self.fireWarning("Wrong input value")
                     super(CadScene, self).mouseReleaseEvent(event)
                     return

@@ -48,7 +48,7 @@ class testCmdLine(object):
         
     def imputCommand(self):
         """
-            imput dialog
+            Input dialog
         """
         text=self.dialog.ImputCmd.text()
         self.outputMsg(">>> "+str(text))
@@ -60,7 +60,7 @@ class testCmdLine(object):
                 else:
                     self.outputMsg(self.activeCommand.getActiveMessage())
             except:
-                self.outputMsg("Unable to perfor the command")
+                self.outputMsg("Unable to perform the command")
                 self.activeCommand=None
         else:
             cmdObject=None
@@ -69,7 +69,7 @@ class testCmdLine(object):
                 cmdObject.reset()
                 self.outputMsg(cmdObject.getActiveMessage())
             else:
-                self.outputMsg('Command not avaiable write ? for command list')
+                self.outputMsg('Command not available write ? for command list')
             self.activeCommand=cmdObject
         self.dialog.ImputCmd.setText("")
     
@@ -99,7 +99,7 @@ class testCmdLine(object):
                 cObject[iv]=self.convertToInt(text)
                 return cObject
             except:
-                msg="Error on command imput"
+                msg="Error on command input"
                 self.outputMsg(msg)
                 raise CommandException, msg
             
@@ -136,7 +136,7 @@ class testCmdLine(object):
         
     def convertToPoint(self, msg):
         """
-            ask at the user to imput a point 
+            ask at the user to input a point 
         """
         if msg:
             coords=msg.split(',')
@@ -175,7 +175,7 @@ class GetEnts(BaseCommand):
         self.message=["Give Me the Document Type Enter for All"]
     def applyCommand(self):
         if len(self.value)!=1:
-            raise PyCadWrongImputData("Wrong number of imput parameter")
+            raise PyCadWrongInputData("Wrong number of input parameter")
         docName=self.value[0]
         startTime=time.clock()
         if not docName:
@@ -197,7 +197,7 @@ class UnDo(BaseCommand):
         self.outputMsg=msgFunction
     def applyCommand(self):
         if len(self.value)!=0:
-            raise PyCadWrongImputData("Wrong number of imput parameter")
+            raise PyCadWrongInputData("Wrong number of input parameter")
         doc=self.__application.ActiveDocument
         doc.unDo()
 
@@ -211,7 +211,7 @@ class ReDo(BaseCommand):
         self.outputMsg=msgFunction
     def applyCommand(self):
         if len(self.value)!=0:
-            raise PyCadWrongImputData("Wrong number of imput parameter")
+            raise PyCadWrongInputData("Wrong number of input parameter")
         doc=self.__application.ActiveDocument
         doc.reDo()
 
@@ -225,7 +225,7 @@ class GetActiveDoc(BaseCommand):
         self.outputMsg=msgFunction
     def applyCommand(self):
         if len(self.value)!=0:
-            raise PyCadWrongImputData("Wrong number of imput parameter")
+            raise PyCadWrongInputData("Wrong number of input parameter")
         docName=self.value[0]
         self.__application.ActiveDocument=docName
         doc=self.__application.ActiveDocument
@@ -240,7 +240,7 @@ class SetActiveDoc(BaseCommand):
         self.message=["Give Me the Document Name"]
     def applyCommand(self):
         if len(self.value)!=1:
-            raise PyCadWrongImputData("Wrong number of imput parameter")
+            raise PyCadWrongInputData("Wrong number of input parameter")
         docName=self.value[0]
         self.__application.ActiveDocument=docName
         
@@ -254,7 +254,7 @@ class GetDocuments(BaseCommand):
         self.outputMsg=msgFunction
     def applyCommand(self):
         if len(self.value)!=0:
-            raise PyCadWrongImputData("Wrong number of imput parameter")
+            raise PyCadWrongInputData("Wrong number of input parameter")
         self.showDocuments()
         
     def showDocuments(self):
@@ -279,7 +279,7 @@ class CreateStyle(BaseCommand):
         self.message=["Give Me the Style Name"]
     def applyCommand(self):
         if len(self.value)!=1:
-            raise PyCadWrongImputData("Wrong number of imput parameter")
+            raise PyCadWrongInputData("Wrong number of input parameter")
         styleName=self.value[0]
         #self.inputMsg("Write style name")
         stl=Style(styleName)
@@ -294,7 +294,7 @@ class EntityExsist(BaseCommand):
         self.message=["Give me the entity id"]
     def applyCommand(self):
         if len(self.value)!=1:
-            raise PyCadWrongImputData("Wrong number of imput parameter")
+            raise PyCadWrongInputData("Wrong number of input parameter")
         entId=self.value[0]
         #self.inputMsg("Write style name")
         if self.document.entityExsist(entId):
@@ -311,7 +311,7 @@ class DeleteEntity(BaseCommand):
         self.message=["Give me the entity id"]
     def applyCommand(self):
         if len(self.value)!=1:
-            raise PyCadWrongImputData("Wrong number of imput parameter")
+            raise PyCadWrongInputData("Wrong number of input parameter")
         entId=self.value[0]
         #self.inputMsg("Write style name")
         if self.document.entityExsist(entId):
@@ -325,7 +325,7 @@ class EntityInfo(BaseCommand):
         self.message=["Give me the entity id"]
     def applyCommand(self):
         if len(self.value)!=1:
-            raise PyCadWrongImputData("Wrong number of imput parameter")
+            raise PyCadWrongInputData("Wrong number of input parameter")
         entId=self.value[0]
         if self.document.entityExsist(entId):
             ent=self.document.getEntity(entId)
@@ -495,7 +495,7 @@ class TestKernel(BaseCommand):
 
     def performCommandRandomly(self, commandName, andLoop=10):
         """
-            set some random Value at the command imput
+            set some random Value at the command input
         """
         self.outputMsg("Start Command %s"%str(commandName))
         i=0

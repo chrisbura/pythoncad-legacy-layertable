@@ -74,7 +74,7 @@ class BisectorCommand(BaseCommand):
             apply the champfer command
         """
         if len(self.value)!=3:
-            raise PyCadWrongImputData("Wrong number of input parameters")
+            raise PyCadWrongInputData("Wrong number of input parameters")
         for _ent in self.getEntsToSave():
             self.document.saveEntity(_ent)
        

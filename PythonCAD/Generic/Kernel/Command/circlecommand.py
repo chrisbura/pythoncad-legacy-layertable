@@ -28,7 +28,7 @@ from Kernel.GeoEntity.arc              import Arc
 
 class CircleCommand(BaseCommand):
     """
-        this class rappresent the arc command
+        this class represent the arc command
     """
     def __init__(self, document):
         BaseCommand.__init__(self, document)
@@ -39,7 +39,7 @@ class CircleCommand(BaseCommand):
         
     def applyCommand(self):
         if len(self.value)<2:
-            raise PyCadWrongImputData("Wrong number of imput parameter")
+            raise PyCadWrongInputData("Wrong number of input parameter")
         self.applyDefault()
         arg={"ARC_0":self.value[0], 
                 "ARC_1":self.value[1], 

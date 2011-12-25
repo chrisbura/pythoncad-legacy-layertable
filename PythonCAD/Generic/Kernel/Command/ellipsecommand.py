@@ -26,7 +26,7 @@ from Kernel.GeoEntity.ellipse          import Ellipse
 
 class EllipseCommand(BaseCommand):
     """
-        this class rappresent the ellips command
+        this class represent the ellipse command
     """
     def __init__(self, document):
         BaseCommand.__init__(self, document)
@@ -36,7 +36,7 @@ class EllipseCommand(BaseCommand):
         
     def applyCommand(self):
         if len(self.value)>3:
-            raise PyCadWrongImputData("Wrong number of imput parameter")
+            raise PyCadWrongInputData("Wrong number of input parameter")
         arg={"ELLIPSE_0":self.value[0], "ELLIPSE_1":self.value[1], "ELLIPSE_2":self.value[2]}
         ellipse=Ellipse(arg)
         self.document.saveEntity(ellipse)

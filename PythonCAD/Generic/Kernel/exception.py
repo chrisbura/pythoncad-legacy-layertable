@@ -152,7 +152,7 @@ class PyCadWrongCommand(Exception):
     def __str__(self):
         return repr(self.value)
 
-class PyCadWrongImputData(Exception):
+class PyCadWrongInputData(Exception):
     """
         Wrong command for the PyCadApplication
     """

@@ -27,7 +27,7 @@ from Kernel.GeoEntity.point            import Point
 
 class MirrorCommand(BaseCommand):
     """
-        This class rappresent the mirror command
+        This class represent the mirror command
     """
     def __init__(self, document):
         BaseCommand.__init__(self, document)
@@ -66,7 +66,7 @@ class MirrorCommand(BaseCommand):
             perform the write of the entity
         """
         if len(self.value)!=3:
-            raise PyCadWrongImputData("Wrong number of imput parameter")
+            raise PyCadWrongInputData("Wrong number of input parameter")
         try:
             self.document.startMassiveCreation()
             for _ent in self.performMirror():
