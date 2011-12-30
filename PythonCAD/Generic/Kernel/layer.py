@@ -38,20 +38,18 @@ class Layer(object):
             Get/Set The layer name
         """
         return self.__name
+
     @name.setter
     def name(self, value):
         self.__name=value
-            
+
     @property
-    def Visible(self):
+    def visible(self):
         """
             manage layer visibility 
         """
         return self.__visible
-    @Visible.setter
-    def Visible(self, value):
+
+    @visible.setter
+    def visible(self, value):
         self.__visible=value
-        
-  
-    
- 
