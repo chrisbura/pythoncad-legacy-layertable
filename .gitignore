@@ -1,0 +1,7 @@
+# Eclipse Project Files
+.project
+.pydevproject
+
+# Vim Files
+*.*~
+*.swp
