@@ -29,8 +29,9 @@ class Layer(object):
         """
             name            = name of the layer
         """
-        self.__name=layerName
-        self.__visible=visible
+        self.__name = layerName
+        self.__visible = visible
+        #self.__order = order
 
     @property
     def name(self):

@@ -77,6 +77,14 @@ class LayerModel(QtCore.QAbstractTableModel):
             elif column == VISIBLE:
                 return layer._kernelItem.visible
 
+    def flags(self, index):
+        if not index.isValid():
+            return QtCore.Qt.ItemIsEnabled
+        #TODO: Use default flags
+        #print super(LayerModel, self).flags(index)
+        return QtCore.Qt.ItemIsEnabled | QtCore.Qt.ItemIsSelectable | \
+            QtCore.Qt.ItemIsDragEnabled | QtCore.Qt.ItemIsDropEnabled
+
     def headerData(self, section, orientation, role):
         if role == QtCore.Qt.TextAlignmentRole:
             if orientation == QtCore.Qt.Horizontal:
@@ -95,6 +103,9 @@ class LayerModel(QtCore.QAbstractTableModel):
         self.layers = self.layers[:row] + self.layers[row + count:]
         self.endRemoveRows()
         return True
+
+    def supportedDropActions(self):
+        return QtCore.Qt.CopyAction | QtCore.Qt.MoveAction
 
     def clear(self):
         self.removeRows(0, self.rowCount())
@@ -132,14 +143,21 @@ class LayerView(QtGui.QTableView):
         self.verticalHeader().hide()
         self.horizontalHeader().setClickable(False)
         self.setSelectionBehavior(QtGui.QAbstractItemView.SelectRows)
+        self.setSelectionMode(QtGui.QAbstractItemView.SingleSelection)
         self.populateStructure()
-        
+
+        self.setDragEnabled(True)
+        self.setDragDropMode(QtGui.QAbstractItemView.InternalMove)
+        self.showDropIndicator()
+        self.setDropIndicatorShown(QtGui.QAbstractItemView.AboveItem)
+        self.setAcceptDrops(True)
+
         # Bug in Qt that doesn't resize rows to content on initialization
         # http://www.qtforum.org/article/13421/qtableview-how-to-make-rows-size-smaller.html
         # TODO: Find actual fix
         for row in range(self.model.rowCount()):
             self.resizeRowToContents(row)
-        
+
         # Events
         self._document.getTreeTable.insertEvent = self.updateView
         self._document.getTreeTable.updateEvent = self.updateView
@@ -191,6 +209,7 @@ class LayerView(QtGui.QTableView):
             self._document.getTreeTable.insert(newLayer)
 
     def _remove(self):
+        # TODO: Remove dependance on MAIN_LAYER
         if self.current_selection.name == MAIN_LAYER:
             QtGui.QMessageBox.warning(self, 'Error', 'The main layer cannot be deleted')
             return False

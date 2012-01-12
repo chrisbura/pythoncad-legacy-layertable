@@ -32,22 +32,23 @@ class LayerTable(object):
     """
     Class used to interface with the database/save file
     """
-    def __init__(self,kernel):
-        self.__kr=kernel
+
+    def __init__(self, kernel):
+        self.__kr = kernel
         try:
             # TODO: Make it so the "MAIN_LAYER" isn't needed
-            self.__mainLayer=self.getEntLayerDb(MAIN_LAYER)
+            self.__mainLayer = self.getEntLayerDb(MAIN_LAYER)
         except EntityMissing:
-            mainLayer=Layer(MAIN_LAYER)
-            self.__mainLayer=self.__kr.saveEntity(mainLayer)
+            mainLayer = Layer(MAIN_LAYER)
+            self.__mainLayer = self.__kr.saveEntity(mainLayer)
         except:
             raise StructuralError, "Unable to inizialize LayerTree"
-        self.__activeLayer=self.__mainLayer
-        self.setCurrentEvent=PyCadEvent()
-        self.deleteEvent=PyCadEvent()
-        self.insertEvent=PyCadEvent()
-        self.updateEvent=PyCadEvent()
-        
+        self.__activeLayer = self.__mainLayer
+        self.setCurrentEvent = PyCadEvent()
+        self.deleteEvent = PyCadEvent()
+        self.insertEvent = PyCadEvent()
+        self.updateEvent = PyCadEvent()
+
     def setActiveLayer(self, layerId):
         """
             set the active layer
@@ -74,7 +75,7 @@ class LayerTable(object):
             childEndDb = self.__kr.saveEntity(layer)
         self.__activeLayer=childEndDb
         self.insertEvent(childEndDb) #Fire Event
-        
+
     def _getLayerConstructionElement(self, pyCadEnt):
         """
             Retrive the ConstructionElement in the pyCadEnt
@@ -126,6 +127,10 @@ class LayerTable(object):
                     return layersEnt
         else:
             raise EntityMissing,"Layer name %s missing"%str(layerName)
+
+    def getLayerCount(self):
+        layers = self.__kr.getEntityFromType('LAYER')
+        return len(layers)
 
     def getLayers(self):
         """
@@ -182,9 +187,14 @@ class LayerTable(object):
         """
             delete the current layer and all the entity related to it
         """
-        deleteLayer=self.__kr.getEntity(layerId)
+        deleteLayer = self.__kr.getEntity(layerId)
         if deleteLayer is self.__activeLayer:
             self.setActiveLayer(self.getEntLayerDb(MAIN_LAYER))
+
+        # Delete all entities (SEGMENTS, TEXT, etc.)
+        self.deleteLayerEntity(deleteLayer)
+
+        # Delete the layer
         self.__kr.deleteEntity(layerId)
         self.deleteEvent(layerId)
 
