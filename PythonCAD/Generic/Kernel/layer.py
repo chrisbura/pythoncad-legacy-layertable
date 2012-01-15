@@ -31,7 +31,6 @@ class Layer(object):
         """
         self.__name = layerName
         self.__visible = visible
-        #self.__order = order
 
     @property
     def name(self):

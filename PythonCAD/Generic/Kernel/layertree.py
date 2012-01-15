@@ -128,10 +128,6 @@ class LayerTable(object):
         else:
             raise EntityMissing,"Layer name %s missing"%str(layerName)
 
-    def getLayerCount(self):
-        layers = self.__kr.getEntityFromType('LAYER')
-        return len(layers)
-
     def getLayers(self):
         """
         Returns a dictionary of all the layers
