@@ -35,15 +35,18 @@ class LayerTable(object):
 
     def __init__(self, kernel):
         self.__kr = kernel
-        try:
-            # TODO: Make it so the "MAIN_LAYER" isn't needed
-            self.__mainLayer = self.getEntLayerDb(MAIN_LAYER)
-        except EntityMissing:
-            mainLayer = Layer(MAIN_LAYER)
-            self.__mainLayer = self.__kr.saveEntity(mainLayer)
-        except:
-            raise StructuralError, "Unable to inizialize LayerTree"
-        self.__activeLayer = self.__mainLayer
+
+        # TODO(chrisbura): Check why a layer is created without a document open
+        # Add a default layer if none exists
+        layer_count = self.getLayerCount()
+        if not layer_count:
+            new_layer = self.__kr.saveEntity(Layer('Default'))
+            self.__activeLayer = new_layer
+        else:
+            # Set active layer to first visible layer it finds
+            # TODO(chrisbura): Save active layer between sessions
+            self.__activeLayer = self.getVisibleLayer()
+
         self.setCurrentEvent = PyCadEvent()
         self.deleteEvent = PyCadEvent()
         self.insertEvent = PyCadEvent()
@@ -127,6 +130,19 @@ class LayerTable(object):
                     return layersEnt
         else:
             raise EntityMissing,"Layer name %s missing"%str(layerName)
+
+    def getVisibleLayer(self):
+        # TODO: Cleanup as in getEntLayerDb
+        layer_entities = self.__kr.getEntityFromType('LAYER')
+        for layer_entity in layer_entities:
+            unpickled_layer = layer_entity.getConstructionElements()
+            for key, layer in unpickled_layer.iteritems():
+                if layer.visible:
+                    return layer_entity
+
+    def getLayerCount(self):
+        layers = self.__kr.getEntityFromType('LAYER')
+        return len(layers)
 
     def getLayers(self):
         """
