@@ -41,11 +41,12 @@ class LayerItem(object):
         self._kernelItem = kernelItem
         self._id = id
         self._active = active
-        
+
     @property
     def id(self):
+        # TODO(chrisbura): Name interferes with built-in symbol
         return self._id
-    
+
     @property
     def name(self):
         return self._kernelItem.name
@@ -58,6 +59,7 @@ class LayerModel(QtCore.QAbstractTableModel):
     """
     def __init__(self, parent):
         super(LayerModel, self).__init__(parent)
+        self._document = parent.document
         self.layers = []
 
     def rowCount(self, parent=QtCore.QModelIndex()):
@@ -66,16 +68,42 @@ class LayerModel(QtCore.QAbstractTableModel):
     def columnCount(self, parent):
         return 2
 
+    def flags(self, index):
+        if not index.isValid():
+            return QtCore.Qt.ItemIsEnabled
+        if index.column() == VISIBLE:
+            return QtCore.QAbstractTableModel.flags(self, index) | QtCore.Qt.ItemIsUserCheckable
+        return QtCore.QAbstractTableModel.flags(self, index)
+
     def data(self, index, role):
         if not index.isValid():
             return None
         layer = self.layers[index.row()]
         column = index.column()
+
+        if role == QtCore.Qt.CheckStateRole:
+            if column == VISIBLE:
+                if layer._kernelItem.visible:
+                    return QtCore.Qt.Checked
+                else:
+                    return QtCore.Qt.Unchecked
+
         if role == QtCore.Qt.DisplayRole:
             if column == NAME:
                 return layer._kernelItem.name
-            elif column == VISIBLE:
-                return layer._kernelItem.visible
+
+    def setData(self, index, value, role = QtCore.Qt.EditRole):
+        if index.isValid() and role == QtCore.Qt.CheckStateRole:
+            column = index.column()
+            if column == VISIBLE:
+                layer = self.layers[index.row()]
+                if layer._kernelItem.visible:
+                    self._document.getTreeTable.hide(layer.id)
+                else:
+                    # TODO(chrisbura): Create show wrapper
+                    self._document.getTreeTable.hide(layer.id, False)
+                return True
+        return False
 
     def headerData(self, section, orientation, role):
         if role == QtCore.Qt.TextAlignmentRole:

@@ -136,7 +136,7 @@ class LayerTable(object):
         layer_entities = self.__kr.getEntityFromType('LAYER')
         for layer_entity in layer_entities:
             unpickled_layer = layer_entity.getConstructionElements()
-            for key, layer in unpickled_layer.iteritems():
+            for layer in unpickled_layer.itervalues():
                 if layer.visible:
                     return layer_entity
 
