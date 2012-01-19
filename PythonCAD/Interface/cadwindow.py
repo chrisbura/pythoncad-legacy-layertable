@@ -478,6 +478,14 @@ class CadWindowMdi(QtGui.QMainWindow):
         drawing = QtGui.QFileDialog.getSaveFileName(self, "Save As...", "/home", filter ="Drawings (*.pdr *.dxf)");
         if len(drawing)>0:
             self.__application.saveAs(drawing)
+            
+            # Connection has been closed already so close the child window
+            self.mdiArea.closeActiveSubWindow()
+            # Create new child window with the new path/filename
+            child = self.createMdiChild(drawing)
+            child.show()
+            self.updateRecentFileList()
+            self.view.fit()
 
     def _onPrint(self):
 #       printer.setPaperSize(QPrinter.A4);
