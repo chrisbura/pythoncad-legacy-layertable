@@ -28,6 +28,7 @@
 
 import os
 import sys
+import functools
 
 from PyQt4 import QtCore, QtGui
 
@@ -78,6 +79,9 @@ class CadWindowMdi(QtGui.QMainWindow):
         self.lastDirectory=os.getenv('USERPROFILE') or os.getenv('HOME')
 
         self.readSettings() #now works for position and size and ismaximized, and finally toolbar position
+
+        self.updateOpenFileList()
+        self.updateRecentFileList()
         return
 
     @property
@@ -389,9 +393,27 @@ class CadWindowMdi(QtGui.QMainWindow):
         self.__cmd_intf.registerCommand(self.__cmd_intf.Category.Windows, 'next', 'Ne&xt', self.mdiArea.activateNextSubWindow)
         self.__cmd_intf.registerCommand(self.__cmd_intf.Category.Windows, 'previous', 'Pre&vious', self.mdiArea.activatePreviousSubWindow)
 
+        # Sub menu for displaying currently open files
+        window_menu = self.__cmd_intf.Category.getMenu(self.__cmd_intf.Category.Windows)
+        self.open_window_menu = window_menu.addMenu('Open Documents')
+
         # Help
         self.__cmd_intf.registerCommand(self.__cmd_intf.Category.Help, 'about', '&About PythonCAD', self._onAbout)
+
         return
+
+    def updateOpenFileList(self):
+        # Currently open windows
+        self.open_window_menu.clear()
+        window_list = self.mdiArea.subWindowList()
+        if not window_list:
+            self.open_window_menu.addAction('None').setDisabled(True)
+            return
+        for window in window_list:
+            entry = self.open_window_menu.addAction(window.document.dbPath)
+            self.connect(entry, QtCore.SIGNAL('triggered()'), 
+                functools.partial(self.mdiArea.setActiveSubWindow, window))
+            self.open_window_menu.addAction(entry)
 
     def updateRecentFileList(self):
         """
@@ -419,6 +441,7 @@ class CadWindowMdi(QtGui.QMainWindow):
         '''
         child = self.createMdiChild()
         child.show()
+        self.updateOpenFileList()
         self.updateRecentFileList()
         return
 
@@ -442,6 +465,7 @@ class CadWindowMdi(QtGui.QMainWindow):
                 return
             child.show()
             self.updateRecentFileList()
+            self.updateOpenFileList()
             self.view.fit()
         return
 
@@ -471,6 +495,7 @@ class CadWindowMdi(QtGui.QMainWindow):
                 child = self.createMdiChild(fileName)
                 child.show()
                 self.updateRecentFileList()
+                self.updateOpenFileList()
                 self.view.fit()
         return
 
@@ -485,6 +510,7 @@ class CadWindowMdi(QtGui.QMainWindow):
             child = self.createMdiChild(drawing)
             child.show()
             self.updateRecentFileList()
+            self.updateOpenFileList()
             self.view.fit()
 
     def _onPrint(self):
@@ -506,6 +532,7 @@ class CadWindowMdi(QtGui.QMainWindow):
         path=self.mdiArea.activeSubWindow().fileName
         self.__application.closeDocument(path)
         self.mdiArea.closeActiveSubWindow()
+        self.updateOpenFileList()
         return
 
 #---------------------ON COMMANDS in DRAW
