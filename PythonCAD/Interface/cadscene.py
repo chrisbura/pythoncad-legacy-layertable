@@ -155,15 +155,15 @@ class CadScene(QtGui.QGraphicsScene):
         #
         #This seems needed to preview commands
         #
+        ps=self.geoMousePointOnScene
         if self.activeICommand:
             #SNAP PREVIEW
-            ps=self.geoMousePointOnScene
             if self.activeKernelCommand.activeException()==ExcPoint or self.activeKernelCommand.activeException()==ExcLenght:
-                item=self.activeICommand.getEntity(self.geoMousePointOnScene)
+                item=self.activeICommand.getEntity(ps)
                 if item:
                     ps=self.snappingPoint.getSnapPoint(self.geoMousePointOnScene, item)
                     if ps!=self.geoMousePointOnScene:
-                        self.endMark.move(ps.getx(), ps.gety()*-1)
+                        self.endMark.move(ps.getx(), ps.gety()*-1.0)
                 else:
                     self.hideSnapMarks()
             distance=None
@@ -181,16 +181,11 @@ class CadScene(QtGui.QGraphicsScene):
             self.firePan(True, event.scenePos())
         if not self.isInPan:
             qtItem=self.itemAt(event.scenePos())
-            p= QtCore.QPointF(event.scenePos().x(),event.scenePos().y())
             if qtItem:
                 qtItem.setSelected(True)
                 self.updateSelected()
                 if event.button()==QtCore.Qt.RightButton:
                     self.showContextMenu(qtItem, event)
-
-            #else:
-            #    print "No item selected"
-            #re fire the event
         super(CadScene, self).mousePressEvent(event)
 
     def mouseReleaseEvent(self, event):
@@ -199,28 +194,21 @@ class CadScene(QtGui.QGraphicsScene):
             self.firePan(False, None)
         if not self.isInPan:
             self.updateSelected()
-            qtItems=[item for item in self.selectedItems() if isinstance(item, BaseEntity)]
             if self.activeICommand:
                 if event.button()==QtCore.Qt.RightButton:
                     try:
                         self.activeICommand.applyDefault()
                     except PyCadWrongInputData:
                         self.fireWarning("Wrong input value")
-                    super(CadScene, self).mouseReleaseEvent(event)
-                    return
-
                 if event.button()==QtCore.Qt.LeftButton:
-                    point=None
+                    point=Point(event.scenePos().x(), event.scenePos().y()*-1.0)
+                    qtItems=[item for item in self.selectedItems() if isinstance(item, BaseEntity)]
                     if self.showHandler:
                         if self.posHandler==None:
                             self.posHandler=PositionHandler(event.scenePos())
                             self.addItem(self.posHandler)
-                            return
                         else:
                             self.posHandler.show()
-                            return
-                    if point==None:
-                        point=Point(event.scenePos().x(), event.scenePos().y()*-1.0)
                     # fire the mouse to the ICommand class
                     self.activeICommand.addMauseEvent(point=point,
                                                     entity=qtItems,
