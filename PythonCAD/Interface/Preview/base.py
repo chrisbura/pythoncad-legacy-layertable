@@ -51,7 +51,7 @@ class PreviewBase(QtGui.QGraphicsItem):
         """
             update the data at the preview item
         """
-        self.prepareGeometryChange()
+        self.prepareGeometryChange() #qtCommand for update the scene
         for i in range(0, len(kernelCommand.value)):
             self.value[i]=self.revertToQTObject(kernelCommand.value[i])
         # Assing Command Values
@@ -69,7 +69,6 @@ class PreviewBase(QtGui.QGraphicsItem):
         except:
             print "updatePreview: Exception not managed"
             return
-        self.update(self.boundingRect())
 
     def paint(self, painter,option,widget):
         """

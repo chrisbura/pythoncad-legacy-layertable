@@ -28,6 +28,7 @@
 
 import os
 import sys
+import functools
 
 from PyQt4 import QtCore, QtGui
 
@@ -78,6 +79,9 @@ class CadWindowMdi(QtGui.QMainWindow):
         self.lastDirectory=os.getenv('USERPROFILE') or os.getenv('HOME')
 
         self.readSettings() #now works for position and size and ismaximized, and finally toolbar position
+
+        self.updateOpenFileList()
+        self.updateRecentFileList()
         return
 
     @property
@@ -219,6 +223,7 @@ class CadWindowMdi(QtGui.QMainWindow):
         self.__cmd_intf.setVisible('import', hasMdiChild)
         self.__cmd_intf.setVisible('saveas', hasMdiChild)
         self.__cmd_intf.setVisible('close', hasMdiChild)
+        self.__cmd_intf.setVisible('closeall', hasMdiChild)
         self.__cmd_intf.setVisible('print', hasMdiChild)
         #Edit
         self.__cmd_intf.setVisible('undo', hasMdiChild)
@@ -304,22 +309,21 @@ class CadWindowMdi(QtGui.QMainWindow):
         '''
         self.__cmd_intf.registerCommand(self.__cmd_intf.Category.File, 'new', '&New Drawing', self._onNewDrawing)
         self.__cmd_intf.registerCommand(self.__cmd_intf.Category.File, 'open', '&Open Drawing...', self._onOpenDrawing)
-        self.__cmd_intf.registerCommand(self.__cmd_intf.Category.File, 'import', '&Import Drawing...', self._onImportDrawing)
-        self.__cmd_intf.registerCommand(self.__cmd_intf.Category.File, 'saveas', '&Save As...', self._onSaveAsDrawing)
-        #
-        # Create recentFile structure
-        #
-        self.__cmd_intf.registerCommand(self.__cmd_intf.Category.File, '-')
 
-        i=0
-        for file in self.Application.getRecentFiles:
-            fileName=self.strippedName(file)
-            self.__cmd_intf.registerCommand(self.__cmd_intf.Category.File, 'file_'+str(i), fileName, self._onOpenRecent)
-            i+=1
-        #
-        # separator
+        # Sub menu for recent files
+        file_menu = self.__cmd_intf.Category.getMenu(self.__cmd_intf.Category.File)
+        self.open_recent_menu = file_menu.addMenu('Open Recent Drawing')
+
         self.__cmd_intf.registerCommand(self.__cmd_intf.Category.File, '-')
         self.__cmd_intf.registerCommand(self.__cmd_intf.Category.File, 'close', '&Close', self._onCloseDrawing)
+        self.__cmd_intf.registerCommand(self.__cmd_intf.Category.File, 'closeall', 'Close All', self._onCloseAll)
+
+        self.__cmd_intf.registerCommand(self.__cmd_intf.Category.File, '-')
+        self.__cmd_intf.registerCommand(self.__cmd_intf.Category.File, 'saveas', '&Save As...', self._onSaveAsDrawing)
+
+        self.__cmd_intf.registerCommand(self.__cmd_intf.Category.File, '-')
+        self.__cmd_intf.registerCommand(self.__cmd_intf.Category.File, 'import', '&Import Drawing...', self._onImportDrawing)
+
         # separator
         self.__cmd_intf.registerCommand(self.__cmd_intf.Category.File, '-')
         self.__cmd_intf.registerCommand(self.__cmd_intf.Category.File, 'print', '&Print', self._onPrint)
@@ -389,19 +393,42 @@ class CadWindowMdi(QtGui.QMainWindow):
         self.__cmd_intf.registerCommand(self.__cmd_intf.Category.Windows, 'next', 'Ne&xt', self.mdiArea.activateNextSubWindow)
         self.__cmd_intf.registerCommand(self.__cmd_intf.Category.Windows, 'previous', 'Pre&vious', self.mdiArea.activatePreviousSubWindow)
 
+        # Sub menu for displaying currently open files
+        window_menu = self.__cmd_intf.Category.getMenu(self.__cmd_intf.Category.Windows)
+        self.open_window_menu = window_menu.addMenu('Open Documents')
+
         # Help
         self.__cmd_intf.registerCommand(self.__cmd_intf.Category.Help, 'about', '&About PythonCAD', self._onAbout)
+
         return
+
+    def updateOpenFileList(self):
+        # Currently open windows
+        self.open_window_menu.clear()
+        window_list = self.mdiArea.subWindowList()
+        if not window_list:
+            self.open_window_menu.addAction('None').setDisabled(True)
+            return
+        for window in window_list:
+            entry = self.open_window_menu.addAction(window.document.dbPath)
+            self.connect(entry, QtCore.SIGNAL('triggered()'), 
+                functools.partial(self.mdiArea.setActiveSubWindow, window))
+            self.open_window_menu.addAction(entry)
 
     def updateRecentFileList(self):
         """
             update the menu recent file list
         """
-        i=0
-        for file in self.Application.getRecentFiles:
-            fileName=self.strippedName(file)
-            self.__cmd_intf.updateText('file_'+str(i), fileName)
-            i+=1
+        self.open_recent_menu.clear()
+        recent_files = self.Application.getRecentFiles
+        if not recent_files:
+            self.open_recent_menu.addAction('None').setDisabled(True)
+            return
+        for recent_file in recent_files:
+            entry = self.open_recent_menu.addAction(recent_file)
+            self.connect(entry, QtCore.SIGNAL('triggered()'), 
+                functools.partial(self.openDrawing, recent_file))
+            self.open_recent_menu.addAction(entry)
 
     def strippedName(self, fullFileName):
         """
@@ -409,6 +436,16 @@ class CadWindowMdi(QtGui.QMainWindow):
         """
         return QtCore.QFileInfo(fullFileName).fileName()
 
+    def openDrawing(self, file_path):
+        if not os.path.exists(file_path):
+            # TODO: Return a proper error
+            return
+        child = self.createMdiChild(file_path)
+        child.show()
+        self.updateRecentFileList()
+        self.updateOpenFileList()
+        self.view.fit()
+        return
 
 # ##########################################              ON COMMANDS
 # ##########################################################
@@ -419,6 +456,7 @@ class CadWindowMdi(QtGui.QMainWindow):
         '''
         child = self.createMdiChild()
         child.show()
+        self.updateOpenFileList()
         self.updateRecentFileList()
         return
 
@@ -442,6 +480,7 @@ class CadWindowMdi(QtGui.QMainWindow):
                 return
             child.show()
             self.updateRecentFileList()
+            self.updateOpenFileList()
             self.view.fit()
         return
 
@@ -456,28 +495,19 @@ class CadWindowMdi(QtGui.QMainWindow):
             self.mdiArea.activeSubWindow().importExternalFormat(drawing)
         return
 
-    def _onOpenRecent(self):
-        """
-            on open recent file
-        """
-        #FIXME: if in the command line we insert file_1 or file_2
-        #here we get en error action dose not have command attributes
-        # action is en edit command not an action and have an empty value
-        action = self.sender()
-        if action:
-            spool, index=action.command.split('_')
-            fileName=self.Application.getRecentFiles[int(index)]
-            if len(fileName)>0:
-                child = self.createMdiChild(fileName)
-                child.show()
-                self.updateRecentFileList()
-                self.view.fit()
-        return
-
     def _onSaveAsDrawing(self):
         drawing = QtGui.QFileDialog.getSaveFileName(self, "Save As...", "/home", filter ="Drawings (*.pdr *.dxf)");
         if len(drawing)>0:
             self.__application.saveAs(drawing)
+            
+            # Connection has been closed already so close the child window
+            self.mdiArea.closeActiveSubWindow()
+            # Create new child window with the new path/filename
+            child = self.createMdiChild(drawing)
+            child.show()
+            self.updateRecentFileList()
+            self.updateOpenFileList()
+            self.view.fit()
 
     def _onPrint(self):
 #       printer.setPaperSize(QPrinter.A4);
@@ -498,6 +528,15 @@ class CadWindowMdi(QtGui.QMainWindow):
         path=self.mdiArea.activeSubWindow().fileName
         self.__application.closeDocument(path)
         self.mdiArea.closeActiveSubWindow()
+        self.updateOpenFileList()
+        return
+
+    def _onCloseAll(self):
+        window_list = self.mdiArea.subWindowList()
+        for window in window_list:
+            self.__application.closeDocument(window.fileName)
+        self.mdiArea.closeAllSubWindows()
+        self.updateOpenFileList()
         return
 
 #---------------------ON COMMANDS in DRAW
