@@ -131,14 +131,17 @@ class LayerTable(object):
         else:
             raise EntityMissing,"Layer name %s missing"%str(layerName)
 
-    def getVisibleLayer(self):
+    def getVisibleLayer(self, ignore = []):
         # TODO: Cleanup as in getEntLayerDb
         layer_entities = self.__kr.getEntityFromType('LAYER')
         for layer_entity in layer_entities:
-            unpickled_layer = layer_entity.getConstructionElements()
-            for layer in unpickled_layer.itervalues():
-                if layer.visible:
-                    return layer_entity
+            if layer_entity.getId() not in ignore:
+                unpickled_layer = layer_entity.getConstructionElements()
+                for layer in unpickled_layer.itervalues():
+                    if layer.visible:
+                        # TODO: Refactor, indent pretty deep
+                        return layer_entity
+        return False
 
     def getLayerCount(self):
         layers = self.__kr.getEntityFromType('LAYER')
@@ -234,40 +237,44 @@ class LayerTable(object):
         self.__kr.saveEntity(layer)
         self.updateEvent(layer)
 
-    def _hide(self, layer, hide=True):
-        """
-            inner function for hiding the layer
-        """
-        # Hide/Show all the children entity
-        self.hideLayerEntity(layer, hide)
-        # Hide and update the layer object    
-        layer.getConstructionElements()['LAYER'].visible=not hide
+    def _show(self, layer):
+        # Show all the children entity
+        for entity in self.getLayerChildren(layer):
+            self.__kr.unHideEntity(entity = entity)
+        # Show and update the layer object
+        layer.getConstructionElements()['LAYER'].visible = True
         self.__kr.saveEntity(layer)
         self.updateEvent(layer)
-        
-    def isMainLayer(self, layer):
-        """
-            check if the layer is the main layer
-        """
-        if layer.getConstructionElements()['LAYER'].name==MAIN_LAYER:
-            return True
-        return False
-        
-    def hide(self, layerId, hide=True):
-        layer = self.__kr.getEntity(layerId)  
-        if self.isMainLayer(layer):
-            raise PythonCadWarning("Unable to hide/show the main Layer")   
-        if layerId is self.__activeLayer.getId():
-            self.setActiveLayer(self.getEntLayerDb(MAIN_LAYER).getId())
-        self._hide(layer, hide)
 
-    def hideLayerEntity(self, layer, hide=True):    
-        """
-            hide all the entity of the layer
-        """
-        if hide:
-            for ent in self.getLayerChildren(layer):
-                self.__kr.hideEntity(entity=ent)
-        else:
-            for ent in self.getLayerChildren(layer):
-                self.__kr.unHideEntity(entity=ent)
+    def show(self, layer_id):
+        layer = self.__kr.getEntity(layer_id)
+        self._show(layer)
+
+    def _hide(self, layer):
+        # Hide all the children entity
+        for entity in self.getLayerChildren(layer):
+            self.__kr.hideEntity(entity = entity)
+
+        # Hide and update the layer object
+        layer.getConstructionElements()['LAYER'].visible = False
+        self.__kr.saveEntity(layer)
+
+        self.updateEvent(layer)
+
+    def hide(self, layerId):
+        # Prevent trying to hide the only layer 
+        if self.getLayerCount() <= 1:
+            raise PythonCadWarning("Unable to hide the only Layer")
+            return False
+
+        layer = self.__kr.getEntity(layerId)
+
+        # If layer is currently active, find the first visible layer and set it active
+        if layerId is self.__activeLayer.getId():
+            visible_layer = self.getVisibleLayer(ignore = [layerId, ])
+            if not visible_layer:
+                raise PythonCadWarning("Unable to hide the last visible layer")
+                return False
+            self.setActiveLayer(visible_layer.getId())
+
+        self._hide(layer)

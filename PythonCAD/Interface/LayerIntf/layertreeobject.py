@@ -51,6 +51,10 @@ class LayerItem(object):
     def name(self):
         return self._kernelItem.name
 
+    @property
+    def active(self):
+        return self._active
+
 class LayerModel(QtCore.QAbstractTableModel):
     """
     The model of the Qt Model/View pattern
@@ -98,10 +102,10 @@ class LayerModel(QtCore.QAbstractTableModel):
             if column == VISIBLE:
                 layer = self.layers[index.row()]
                 if layer._kernelItem.visible:
-                    self._document.getTreeTable.hide(layer.id)
+                    # Replace with a 'toggle' signal
+                    self.emit(QtCore.SIGNAL('hide_layer'), layer.id)
                 else:
-                    # TODO(chrisbura): Create show wrapper
-                    self._document.getTreeTable.hide(layer.id, False)
+                    self.emit(QtCore.SIGNAL('show_layer'), layer.id)
                 return True
         return False
 
@@ -175,6 +179,10 @@ class LayerView(QtGui.QTableView):
         self._document.getTreeTable.deleteEvent = self.updateView
         self._document.getTreeTable.setCurrentEvent = self.updateView
 
+        # Signals
+        self.connect(self.model, QtCore.SIGNAL('hide_layer'), self._hide)
+        self.connect(self.model, QtCore.SIGNAL('show_layer'), self._show)
+
     def updateView(self, layer):
         self.model.clear()
         self.populateStructure()
@@ -233,13 +241,28 @@ class LayerView(QtGui.QTableView):
             layerId = self.current_selection.id
             self._document.getTreeTable.rename(layerId, text)
 
-    def _hide(self):
-        layerId = self.current_selection.id
-        self._document.getTreeTable.hide(layerId)
+    def _hide(self, layer_id = None):
+        # TODO: Move to object property
+        tree_table = self._document.getTreeTable
+        if tree_table.getLayerCount() <= 1:
+            QtGui.QMessageBox.warning(self, 'Error', 'You cannot hide the only layer')
+            return False
 
-    def _show(self):
-        layerId = self.current_selection.id
-        self._document.getTreeTable.hide(layerId, False)
+        if not layer_id:
+            layer_id = self.current_selection.id
+
+        if layer_id is tree_table.getActiveLayer().getId():
+            visible_layer = tree_table.getVisibleLayer(ignore = [layer_id, ])
+            if not visible_layer:
+                QtGui.QMessageBox.warning(self, 'Error', 'Unable to hide the last visible layer')
+                return False
+
+        self._document.getTreeTable.hide(layer_id)
+
+    def _show(self, layer_id = None):
+        if not layer_id:
+            layer_id = self.current_selection.id
+        self._document.getTreeTable.show(layer_id)
 
     def _setCurrent(self):
         cito = self.current_selection
