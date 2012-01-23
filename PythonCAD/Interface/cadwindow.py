@@ -308,19 +308,14 @@ class CadWindowMdi(QtGui.QMainWindow):
         '''
         self.__cmd_intf.registerCommand(self.__cmd_intf.Category.File, 'new', '&New Drawing', self._onNewDrawing)
         self.__cmd_intf.registerCommand(self.__cmd_intf.Category.File, 'open', '&Open Drawing...', self._onOpenDrawing)
+
+        # Sub menu for recent files
+        file_menu = self.__cmd_intf.Category.getMenu(self.__cmd_intf.Category.File)
+        self.open_recent_menu = file_menu.addMenu('Open Recent Drawing')
+
         self.__cmd_intf.registerCommand(self.__cmd_intf.Category.File, 'import', '&Import Drawing...', self._onImportDrawing)
         self.__cmd_intf.registerCommand(self.__cmd_intf.Category.File, 'saveas', '&Save As...', self._onSaveAsDrawing)
-        #
-        # Create recentFile structure
-        #
-        self.__cmd_intf.registerCommand(self.__cmd_intf.Category.File, '-')
 
-        i=0
-        for file in self.Application.getRecentFiles:
-            fileName=self.strippedName(file)
-            self.__cmd_intf.registerCommand(self.__cmd_intf.Category.File, 'file_'+str(i), fileName, self._onOpenRecent)
-            i+=1
-        #
         # separator
         self.__cmd_intf.registerCommand(self.__cmd_intf.Category.File, '-')
         self.__cmd_intf.registerCommand(self.__cmd_intf.Category.File, 'close', '&Close', self._onCloseDrawing)
@@ -419,11 +414,16 @@ class CadWindowMdi(QtGui.QMainWindow):
         """
             update the menu recent file list
         """
-        i=0
-        for file in self.Application.getRecentFiles:
-            fileName=self.strippedName(file)
-            self.__cmd_intf.updateText('file_'+str(i), fileName)
-            i+=1
+        self.open_recent_menu.clear()
+        recent_files = self.Application.getRecentFiles
+        if not recent_files:
+            self.open_recent_menu.addAction('None').setDisabled(True)
+            return
+        for recent_file in recent_files:
+            entry = self.open_recent_menu.addAction(recent_file)
+            self.connect(entry, QtCore.SIGNAL('triggered()'), 
+                functools.partial(self.openDrawing, recent_file))
+            self.open_window_menu.addAction(entry)
 
     def strippedName(self, fullFileName):
         """
@@ -431,6 +431,16 @@ class CadWindowMdi(QtGui.QMainWindow):
         """
         return QtCore.QFileInfo(fullFileName).fileName()
 
+    def openDrawing(self, file_path):
+        if not os.path.exists(file_path):
+            # TODO: Return a proper error
+            return
+        child = self.createMdiChild(file_path)
+        child.show()
+        self.updateRecentFileList()
+        self.updateOpenFileList()
+        self.view.fit()
+        return
 
 # ##########################################              ON COMMANDS
 # ##########################################################
@@ -478,25 +488,6 @@ class CadWindowMdi(QtGui.QMainWindow):
         if len(drawing)>0:
             self.lastDirectory=os.path.split(drawing)[0]
             self.mdiArea.activeSubWindow().importExternalFormat(drawing)
-        return
-
-    def _onOpenRecent(self):
-        """
-            on open recent file
-        """
-        #FIXME: if in the command line we insert file_1 or file_2
-        #here we get en error action dose not have command attributes
-        # action is en edit command not an action and have an empty value
-        action = self.sender()
-        if action:
-            spool, index=action.command.split('_')
-            fileName=self.Application.getRecentFiles[int(index)]
-            if len(fileName)>0:
-                child = self.createMdiChild(fileName)
-                child.show()
-                self.updateRecentFileList()
-                self.updateOpenFileList()
-                self.view.fit()
         return
 
     def _onSaveAsDrawing(self):
