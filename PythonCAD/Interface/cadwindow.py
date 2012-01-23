@@ -223,6 +223,7 @@ class CadWindowMdi(QtGui.QMainWindow):
         self.__cmd_intf.setVisible('import', hasMdiChild)
         self.__cmd_intf.setVisible('saveas', hasMdiChild)
         self.__cmd_intf.setVisible('close', hasMdiChild)
+        self.__cmd_intf.setVisible('closeall', hasMdiChild)
         self.__cmd_intf.setVisible('print', hasMdiChild)
         #Edit
         self.__cmd_intf.setVisible('undo', hasMdiChild)
@@ -313,12 +314,16 @@ class CadWindowMdi(QtGui.QMainWindow):
         file_menu = self.__cmd_intf.Category.getMenu(self.__cmd_intf.Category.File)
         self.open_recent_menu = file_menu.addMenu('Open Recent Drawing')
 
-        self.__cmd_intf.registerCommand(self.__cmd_intf.Category.File, 'import', '&Import Drawing...', self._onImportDrawing)
-        self.__cmd_intf.registerCommand(self.__cmd_intf.Category.File, 'saveas', '&Save As...', self._onSaveAsDrawing)
-
-        # separator
         self.__cmd_intf.registerCommand(self.__cmd_intf.Category.File, '-')
         self.__cmd_intf.registerCommand(self.__cmd_intf.Category.File, 'close', '&Close', self._onCloseDrawing)
+        self.__cmd_intf.registerCommand(self.__cmd_intf.Category.File, 'closeall', 'Close All', self._onCloseAll)
+
+        self.__cmd_intf.registerCommand(self.__cmd_intf.Category.File, '-')
+        self.__cmd_intf.registerCommand(self.__cmd_intf.Category.File, 'saveas', '&Save As...', self._onSaveAsDrawing)
+
+        self.__cmd_intf.registerCommand(self.__cmd_intf.Category.File, '-')
+        self.__cmd_intf.registerCommand(self.__cmd_intf.Category.File, 'import', '&Import Drawing...', self._onImportDrawing)
+
         # separator
         self.__cmd_intf.registerCommand(self.__cmd_intf.Category.File, '-')
         self.__cmd_intf.registerCommand(self.__cmd_intf.Category.File, 'print', '&Print', self._onPrint)
@@ -423,7 +428,7 @@ class CadWindowMdi(QtGui.QMainWindow):
             entry = self.open_recent_menu.addAction(recent_file)
             self.connect(entry, QtCore.SIGNAL('triggered()'), 
                 functools.partial(self.openDrawing, recent_file))
-            self.open_window_menu.addAction(entry)
+            self.open_recent_menu.addAction(entry)
 
     def strippedName(self, fullFileName):
         """
@@ -523,6 +528,14 @@ class CadWindowMdi(QtGui.QMainWindow):
         path=self.mdiArea.activeSubWindow().fileName
         self.__application.closeDocument(path)
         self.mdiArea.closeActiveSubWindow()
+        self.updateOpenFileList()
+        return
+
+    def _onCloseAll(self):
+        window_list = self.mdiArea.subWindowList()
+        for window in window_list:
+            self.__application.closeDocument(window.fileName)
+        self.mdiArea.closeAllSubWindows()
         self.updateOpenFileList()
         return
 
