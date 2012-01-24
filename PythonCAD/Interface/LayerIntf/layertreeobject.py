@@ -30,7 +30,6 @@ sip.setapi('QVariant', 2)
 
 from PyQt4                              import QtCore, QtGui
 
-from Kernel.initsetting                 import MAIN_LAYER
 from Kernel.layer                       import Layer
 from Kernel.exception                   import PythonCadWarning
 
@@ -44,7 +43,7 @@ class LayerItem(object):
 
     @property
     def id(self):
-        # TODO(chrisbura): Name interferes with built-in symbol
+        # TODO: Name interferes with built-in symbol
         return self._id
 
     @property
@@ -203,7 +202,7 @@ class LayerView(QtGui.QTableView):
     def contextMenuEvent(self, event):
         contextMenu = QtGui.QMenu(self)
         
-        addLayerAction = QtGui.QAction('New Layer', self, triggered=self._addLayer)
+        addLayerAction = QtGui.QAction('Add Layer', self, triggered=self._addLayer)
         renameLayerAction = QtGui.QAction('Rename Layer', self, triggered=self._rename)
         removeAction = QtGui.QAction('Remove Layer', self, triggered=self._remove)
         hideAction = QtGui.QAction('Hide', self, triggered=self._hide)
@@ -221,17 +220,18 @@ class LayerView(QtGui.QTableView):
         del(contextMenu)
 
     def _addLayer(self):
-        text, ok = QtGui.QInputDialog.getText(self, 'New Layer', 'Enter Layer Name')
-        if ok:
-            layerName = text
-            newLayer = self._document.saveEntity(Layer(layerName))
-            self._document.getTreeTable.insert(newLayer)
+        layer_name, ok = QtGui.QInputDialog.getText(self, 'Add Layer', 'Enter a name for the layer')
+
+        # Layer name cannot be empty
+        if not ok or not layer_name:
+            # TODO: Give user a warning message
+            return False
+
+        newLayer = self._document.saveEntity(Layer(layer_name))
+        self._document.getTreeTable.insert(newLayer)
 
     def _remove(self):
-        # TODO: Remove dependance on MAIN_LAYER
-        if self.current_selection.name == MAIN_LAYER:
-            QtGui.QMessageBox.warning(self, 'Error', 'The main layer cannot be deleted')
-            return False
+        # TODO: Add warning
         layerId = self.current_selection.id
         self._document.getTreeTable.delete(layerId)
 

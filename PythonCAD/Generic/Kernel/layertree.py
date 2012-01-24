@@ -25,7 +25,6 @@
 
 from Kernel.layer               import Layer
 from Kernel.exception           import *
-from Kernel.initsetting         import MAIN_LAYER
 from Kernel.pycadevent          import PyCadEvent
 
 class LayerTable(object):
@@ -36,7 +35,7 @@ class LayerTable(object):
     def __init__(self, kernel):
         self.__kr = kernel
 
-        # TODO(chrisbura): Check why a layer is created without a document open
+        # TODO: Check why a layer is created without a document open
         # Add a default layer if none exists
         layer_count = self.getLayerCount()
         if not layer_count:
@@ -44,7 +43,7 @@ class LayerTable(object):
             self.__activeLayer = new_layer
         else:
             # Set active layer to first visible layer it finds
-            # TODO(chrisbura): Save active layer between sessions
+            # TODO: Save active layer between sessions
             self.__activeLayer = self.getVisibleLayer()
 
         self.setCurrentEvent = PyCadEvent()
@@ -175,8 +174,9 @@ class LayerTable(object):
         exitDb={}
         exitDb[rootDbEnt.getId()]=(c,createNode(rootDbEnt) )
         return exitDb
-    
+
     def getLayerdbTree(self):
+        # TODO: Update DXF export/import
         """
             create a dictionary with all the layer nested as db entity
         """
@@ -190,7 +190,7 @@ class LayerTable(object):
         exitDb={}
         exitDb[rootDbEnt.getId()]=(rootDbEnt,createNode(rootDbEnt) )
         return exitDb
-        
+
     def getParentLayer(self,layer):
         """
             get the parent layer
@@ -203,8 +203,14 @@ class LayerTable(object):
             delete the current layer and all the entity related to it
         """
         deleteLayer = self.__kr.getEntity(layerId)
-        if deleteLayer is self.__activeLayer:
-            self.setActiveLayer(self.getEntLayerDb(MAIN_LAYER))
+
+        # If layer is currently active, find the first visible layer and set it active
+        if layerId is self.__activeLayer.getId():
+            visible_layer = self.getVisibleLayer(ignore = [layerId, ])
+            if not visible_layer:
+                raise PythonCadWarning("Unable to delete the last visible layer")
+                return False
+            self.setActiveLayer(visible_layer.getId())
 
         # Delete all entities (SEGMENTS, TEXT, etc.)
         self.deleteLayerEntity(deleteLayer)
