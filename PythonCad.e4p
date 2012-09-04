@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-4.6.dtd">
 <!-- eric4 project file for project PythonCad -->
-<!-- Saved: 2012-04-23, 23:20:01 -->
+<!-- Saved: 2012-04-24, 11:59:58 -->
 <!-- Copyright (C) 2012 Matteo Boscolo, matteo.boscolo@boscolini.eu -->
 <Project version="4.6">
   <Language>en</Language>
@@ -146,9 +146,11 @@
     <Source>PythonCAD/Interface/DrawingHelper/polarguides.py</Source>
     <Source>PythonCAD/Interface/DrawingHelper/evaluator.py</Source>
     <Source>PythonCAD/Interface/Preview/point.py</Source>
+    <Source>PythonCAD/Interface/Dialogs/Ui_preferencies.py</Source>
   </Sources>
   <Forms>
     <Form>PythonCAD/Interface/Dialogs/property.ui</Form>
+    <Form>PythonCAD/Interface/Dialogs/preferencies.ui</Form>
   </Forms>
   <Translations>
   </Translations>
