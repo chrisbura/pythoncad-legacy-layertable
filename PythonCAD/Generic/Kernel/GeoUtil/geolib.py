@@ -23,6 +23,7 @@
 import math
 
 from Kernel.GeoEntity.point  import Point
+from Kernel.exception import EntityMissing
 
 class Vector:
     """
@@ -33,9 +34,9 @@ class Vector:
             Default Constructor
         """
         if(not isinstance(p1,Point)):
-          raise TypeError,"Invalid Argument p1: Point Required"
+            raise EntityMissing("Invalid Argument p1: Point Required")
         if(not isinstance(p2,Point)):
-          raise TypeError,"Invalid Argument p2: Point Required"
+            raise EntityMissing("Invalid Argument p2: Point Required")
         x,y=p1.getCoords()
         x1,y1=p2.getCoords()
         self.X=x1-x
@@ -61,7 +62,7 @@ class Vector:
             the 2 vecror are equal
         """ 
         if(not isinstance(vector,Vector)):
-          raise TypeError,"Invalid Argument vector: Vector Required"   
+            raise TypeError,"Invalid Argument vector: Vector Required"   
         if(self.point==vector.point):
             return True             
         else:
@@ -94,7 +95,7 @@ class Vector:
         v1=vector.point.getCoords()
         som=0
         for a, b in zip(v0, v1):
-          som+=a*b
+            som+=a*b
         return som  
         
     def cross(self,vector):

@@ -36,6 +36,7 @@ import cadwindow_rc
 
 from Generic.application            import Application
 
+#Interface
 from Interface.LayerIntf.layerdock  import LayerDock
 from Interface.cadscene             import CadScene
 from Interface.cadview              import CadView
@@ -44,6 +45,8 @@ from Interface.CmdIntf.cmdintf      import CmdIntf
 from Interface.Entity.base          import BaseEntity
 from Interface.Command.icommand     import ICommand
 from Interface.cadinitsetting       import *
+from Interface.Dialogs.preferences  import Preferences
+#Kernel
 from Kernel.exception               import *
 from Kernel.initsetting             import * #SNAP_POINT_ARRAY, ACTIVE_SNAP_POINT
 
@@ -465,7 +468,7 @@ class CadWindowMdi(QtGui.QMainWindow):
             Open an existing drawing PDR or DXF
         '''
         # ask the user to select an existing drawing
-        drawing = QtGui.QFileDialog.getOpenFileName(parent=self,directory=self.lastDirectory,  caption ="Open Drawing", filter ="Drawings (*.pdr *.dxf)");
+        drawing = str(QtGui.QFileDialog.getOpenFileName(parent=self,directory=self.lastDirectory,  caption ="Open Drawing", filter ="Drawings (*.pdr *.dxf)"))
         # open a document and load the drawing
         if len(drawing)>0:
             self.lastDirectory=os.path.split(drawing)[0]
@@ -620,8 +623,11 @@ class CadWindowMdi(QtGui.QMainWindow):
         self.callCommand('PROPERTY')
 
     def preferences(self):
-        p=ConfigDialog()
-        #p.exec_()
+        p=Preferences(self)
+        #TODO: Fill up preferences
+        if (p.exec_() == QtGui.QDialog.Accepted):
+            #TODO: save Preferences
+            pass
 
 #---------------------------ON COMMANDS in MODIFY
 
