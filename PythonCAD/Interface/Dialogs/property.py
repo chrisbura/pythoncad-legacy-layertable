@@ -25,15 +25,16 @@
 # 
 #
 #
-#Qt Import
+# Qt Import
 #
 
-from PyQt4.QtGui import QDialog
-from PyQt4.QtCore import pyqtSignature
+from PyQt4.QtGui    import QDialog,QAbstractItemView,QMenu,QAction
+from PyQt4.QtCore   import pyqtSignature
 
-from Ui_property import Ui_Dialog
+from Ui_property    import Ui_Dialog
 
 from Interface.cadinitsetting import *
+from Interface.Dialogs.dataModel import populateTable
 
 class Property(QDialog, Ui_Dialog):
     """
@@ -46,20 +47,68 @@ class Property(QDialog, Ui_Dialog):
         self.setupUi(self)
         self.containers={}
         self._isOk=False
+        self.entity=entity
         styleprops=entity[0].style.props
+        self.customProperty.contextMenuEvent=self.customPropertyContextMenuEvent
         for propName in styleprops:
             val=styleprops[propName]
             if propName in PYTHONCAD_STYLE_WIDGET:
                 propDescription=PYTHONCAD_STYLE_DESCRIPTION[propName]
-                self.containers[propName]=PYTHONCAD_STYLE_WIDGET[propName](parent, oldValue=val,label=propDescription)
+                self.containers[propName]=PYTHONCAD_STYLE_WIDGET[propName](None, oldValue=val,label=propDescription)
                 self.propertyConteiner.addLayout(self.containers[propName])
+        self.populateCustomProperty(entity)
         self.exec_()
-        
+    
+    def populateCustomProperty(self,entity):
+        """
+            populate the dialog with the custom property
+        """
+        tableObject=[[k,v] for k,v in entity[0]._entity.properties.items()]
+        populateTable(self.customProperty,tableObject,['Name','Value'])
+     
+    def customPropertyContextMenuEvent(self,event):
+        contexMenu=QMenu(self)
+        #
+        # Create Actions
+        #
+        newAction   =   QAction("New", self, triggered=self._newCustomProperty)
+        delAction   =   QAction("Delete", self, triggered=self._delCustomProperty)  
+        #
+        # Add action to the context menu   
+        #
+        contexMenu.addAction(newAction)
+        contexMenu.addAction(delAction)
+        #
+        contexMenu.exec_(event.globalPos())
+        del(contexMenu)       
+    
+    def _newCustomProperty(self):
+        """
+            Open an empty ParameterUi
+        """
+        self.customProperty.model().addNewRow()
+                
+    def _delCustomProperty(self):
+        """
+            Edit the selected parameter values
+        """
+        rows=self.customProperty.selectionModel().selectedRows()
+        if len(rows)>0:
+            row=rows[0]
+            self.customProperty.model().removeRow(row.row())
+    
+    def uppdateCustomProperty(self):
+        """
+            update the custom property
+        """ 
+        self._properties = dict(self.customProperty.model().arraydata)
+
     @pyqtSignature("")
     def on_buttonBox_accepted(self):
         """
             implements the accept button
         """
+        self.uppdateCustomProperty()
         self._isOk=True
         self.close()
         
@@ -85,4 +134,7 @@ class Property(QDialog, Ui_Dialog):
                 obj=self.containers[name]
                 if obj.changed:
                     exitVal[name]=obj.value
+        #Update custom propertis
+        if len(self._properties)>0:
+            exitVal['property']=self._properties
         return exitVal

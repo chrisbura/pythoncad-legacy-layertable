@@ -20,23 +20,52 @@
 #
 # This module provide basic pythoncadObject
 #
-from Kernel.GeoEntity.style            import Style
+from Kernel.GeoEntity.style             import Style
+from Kernel.exception                   import EntityMissing
 
 class PyCadObject(object):
     """
-        This class provide basic information usefoul for the
-        db like id for exsample
+        This class provide basic information for all the pythoncad object 
     """
-    def __init__(self,objId,style,eType):
+    def __init__(self,objId,style,eType,properties={}):
         from Kernel.initsetting import OBJECT_STATE
         self.OBJECT_STATE=OBJECT_STATE
         self.__entityId=objId
         self.__state="MODIFIE"
-        self.__index=0
+        self._index=0
         self.__visible=1
         self.__style=style
         self.__entType=eType
+        self.__properties=properties
+
+    
+    def addPropertie(self,name,value):
+        """
+            add a properties to the object
+        """
+        self.__properties[name]=value
         
+    def getPropertie(self,name):
+        """
+            get the properties with a given name
+        """
+        if name in self.__properties:
+            return self.__properties[name]
+        raise EntityMissing("No entity with name %s"%str(name))
+
+    def resetProperty(self):
+        """
+            reset the property 
+        """
+        self.__properties={}
+
+    @property
+    def properties(self):
+        """
+            get all the properties from the entity
+        """
+        return self.__properties
+    
     def setVisible(self, visible):
         """
             set the visible value
@@ -77,17 +106,17 @@ class PyCadObject(object):
         """
             get the index of the revision index of the current object
         """
-        return self.__index
+        return self._index
     
     def getNewIndex(self):
         """
             Get the new index of the current entity
         """
-        if index :
-            self.__index+=self.__index
+        if self._index:
+            self._index+=self._index
             self.__state=self.OBJECT_STATE[0]
         else: 
-            self.__index=0
+            self._index=0
             self.__state=self.OBJECT_STATE[0]
     
     def setIndex(self,index):
@@ -95,7 +124,7 @@ class PyCadObject(object):
             Set The index of the entity
         """
         if index:
-            self.__index=index
+            self._index=index
     index=property(getIndex, setIndex, "Get The new index of the current entity")
     
     def delete(self):

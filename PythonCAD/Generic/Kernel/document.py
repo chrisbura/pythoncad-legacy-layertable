@@ -98,13 +98,14 @@ class Document(BaseDb):
         self.__RelationDb=RelationDb(self.getConnection())
         # Some inizialization parameter
         self.__bulkCommit=False
-        self.__bulkUndoIndex=-1     # undo index are alweys positive so we do not breke in case missing entity id
+        self.__bulkUndoIndex=-1     # undo index are always positive so we do not brake in case missing entity id
         self.__entId=self.__EntityDb.getNewEntId()
         #   set the default style
         self.__logger.debug('Set Style')
         self.__activeStyleObj=None
         self.__activeStyleObj=self.getMainStyle()
         self.__settings=self.getDbSettingsObject()
+        self.__property={}
         #************************
         #Inizialize Layer structure
         #************************
@@ -114,7 +115,28 @@ class Document(BaseDb):
         except StructuralError:
             raise StructuralError, 'Unable to create LayerTree structure'
         self.__logger.debug('Done inizialization')
-
+    
+    def addPropertie(self,name,value):
+        """
+            add a properties to the object
+        """
+        self.__property[name]=value
+        
+    def getPropertie(self,name):
+        """
+            get the properties with a given name
+        """
+        if name in self.__property:
+            return self.__property[name]
+        raise EntityMissing("No entity with name %s"%str(name))
+    
+    @property
+    def properties(self):
+        """
+            get all the properties from the entity
+        """
+        return self.__property
+    
     def getMainStyle(self):
         """
             get all the db styles

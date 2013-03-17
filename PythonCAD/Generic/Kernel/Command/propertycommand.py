@@ -31,21 +31,24 @@ class PropertyCommand(BaseCommand):
     """
     def __init__(self, document):
         BaseCommand.__init__(self, document)
+        self.autorestart=False
         self.exception=[ExcMultiEntity,ExcDicTuple]
         self.defaultValue=[None]
         self.message=["Select Entities: ", 
                         "Give me the property name and value :('color','green') ", 
                         ]
 
-    def changeProp(self, id):    
+    def changeProp(self, _id):    
         """
             change the property at the entity 
         """
-        entity=self.document.getEntity(id)
+        entity=self.document.getEntity(_id)
         style=entity.getInnerStyle()
         style.Derived()
-        for name in self.value[1]:
-            style.setStyleProp(name,self.value[1][name])
+        entity.resetProperty()
+        for PropName,PropValue in self.value[1].get('property',{}).items():
+            entity.addPropertie(PropName,PropValue)
+            #style.setStyleProp(stylePropName,stylePropValue)
         entity.style=self.document.saveEntity(style)   
         self.document.saveEntity(entity)
 
@@ -55,7 +58,9 @@ class PropertyCommand(BaseCommand):
         try:
             self.document.startMassiveCreation()
             
-            for id in str(self.value[0]).split(','):
-                self.changeProp(id)
+            for _id in str(self.value[0]).split(','):
+                self.changeProp(_id)
+        except Exception,ex:
+            raise ex
         finally:
             self.document.stopMassiveCreation()

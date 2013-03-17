@@ -39,7 +39,7 @@ class BaseCommand(object):
         self.index=0
         self.document=document
         self.automaticApply=True
-
+        self.autorestart=True
     def __iter__(self):
         return self
 

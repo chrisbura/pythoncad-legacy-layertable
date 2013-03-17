@@ -21,9 +21,11 @@
 # This module provide basic DB class for storing entity in pythoncad
 #
 
+
 from Kernel.Db.pycadobject             import *
 from Kernel.GeoEntity.point            import Point
 from Kernel.GeoEntity.style            import Style
+
 class Entity(PyCadObject):
     """
         basic PythonCAD entity structure
@@ -36,6 +38,10 @@ class Entity(PyCadObject):
             raise TypeError,'type error in dictionary'
         PyCadObject.__init__(self,eType=entType, objId=objId,style=style)
         self.setConstructionElements(constructionElements)
+        
+        self._snapPoints=[]
+    
+    
     def __str__(self):
         return 'Entity : %s'%self.eType
     def getBBox(self):
