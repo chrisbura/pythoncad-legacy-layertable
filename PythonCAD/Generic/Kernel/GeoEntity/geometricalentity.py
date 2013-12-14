@@ -1,5 +1,5 @@
 #
-# Copyright (c) 2010 Matteo Boscolo
+# Copyright (c) 2010 - 2013 Matteo Boscolo
 #
 # This file is part of PythonCAD.
 #
@@ -32,7 +32,7 @@ class GeometricalEntity(dict):
     """
     def __init__(self, kw, argNameType):
         """
-            argv name must be created befor init the base class
+            argv name must be created before init the base class
         """
         if kw is None and argNameType is None:
             return
@@ -132,7 +132,7 @@ class GeometricalEntityComposed(dict):
         like dimension labels ...
     """
     def __init__(self, kw, argNameType):
-        if kw is None and argNameType is none:
+        if kw is None and argNameType is None:
             return
         if len(kw)!=len(argNameType):
             raise TypeError, "Wrong number of items "
